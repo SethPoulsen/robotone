@@ -1,0 +1,455 @@
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+\\
+
+\begin{tabular}{ll}%
+H1.\ $\textrm{$H$ is a subgroup}$&\\
+H2.\ $\textrm{$K$ is a subgroup}$&
+\Bstrut\\\hline\Tstrut
+\textbf{\boldmath T1.\ $\forall x, y.(\textrm{$x\in H\cap K$}\wedge \textrm{$y\in H\cap K$}\Rightarrow \textrm{$xy\in H\cap K$})$\unboldmath }&\textbf{\boldmath \unboldmath }
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent1. Apply `let' trick and move premise of universal-conditional target T1 above the line.\nopagebreak[4]
+\marginpar{Let $x$ and $y$ be such that $x\in H\cap K$ and $y\in H\cap K$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+\textbf{\boldmath H1.\ $\textrm{$H$ is a subgroup}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H2.\ $\textrm{$K$ is a subgroup}$&\\
+H3.\ $\textrm{$x\in H\cap K$}$&\\
+H4.\ $\textrm{$y\in H\cap K$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent2. Quantifier-free expansion of hypothesis H1.\nopagebreak[4]
+\marginpar{Since $H$ is a subgroup, $H$ is closed under taking inverses, $e\in H$ and $H$ is closed under multiplication.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+H7.\ $\textrm{$H$ is closed under multiplication}$&\\
+\textbf{\boldmath H2.\ $\textrm{$K$ is a subgroup}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H3.\ $\textrm{$x\in H\cap K$}$&\\
+H4.\ $\textrm{$y\in H\cap K$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent3. Quantifier-free expansion of hypothesis H2.\nopagebreak[4]
+\marginpar{Since $K$ is a subgroup, $K$ is closed under taking inverses, $e\in K$ and $K$ is closed under multiplication.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+H7.\ $\textrm{$H$ is closed under multiplication}$&\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+H10.\ $\textrm{$K$ is closed under multiplication}$&\\
+\textbf{\boldmath H3.\ $\textrm{$x\in H\cap K$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H4.\ $\textrm{$y\in H\cap K$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent4. Quantifier-free expansion of hypothesis H3.\nopagebreak[4]
+\marginpar{Since $x\in H\cap K$, $x\in H$ and $x\in K$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+H7.\ $\textrm{$H$ is closed under multiplication}$&\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+H10.\ $\textrm{$K$ is closed under multiplication}$&\\
+H11.\ $\textrm{$x\in H$}$&\\
+H12.\ $\textrm{$x\in K$}$&\\
+\textbf{\boldmath H4.\ $\textrm{$y\in H\cap K$}$\unboldmath }&\textbf{\boldmath \unboldmath }
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent5. Quantifier-free expansion of hypothesis H4.\nopagebreak[4]
+\marginpar{Since $y\in H\cap K$, $y\in H$ and $y\in K$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\textbf{\boldmath H7.\ $\textrm{$H$ is closed under multiplication}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+H10.\ $\textrm{$K$ is closed under multiplication}$&\\
+\textbf{\boldmath H11.\ $\textrm{$x\in H$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H12.\ $\textrm{$x\in K$}$&\\
+\textbf{\boldmath H13.\ $\textrm{$y\in H$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H14.\ $\textrm{$y\in K$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent6. Forwards reasoning using library result ``'' with (H7,H11,H13).\nopagebreak[4]
+\marginpar{Since $H$ is closed under multiplication, $x\in H$ and $y\in H$, we have that $xy\in H$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+H7.\ $\textrm{$H$ is closed under multiplication}$&[Vuln.]\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+H10.\ $\textrm{$K$ is closed under multiplication}$&\\
+H11.\ $\textrm{$x\in H$}$&[Vuln.]\\
+H12.\ $\textrm{$x\in K$}$&\\
+H13.\ $\textrm{$y\in H$}$&[Vuln.]\\
+H14.\ $\textrm{$y\in K$}$&\\
+H15.\ $\textrm{$xy\in H$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent7. Deleted H7, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
+\marginpar{}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+H10.\ $\textrm{$K$ is closed under multiplication}$&\\
+H11.\ $\textrm{$x\in H$}$&[Vuln.]\\
+H12.\ $\textrm{$x\in K$}$&\\
+H13.\ $\textrm{$y\in H$}$&[Vuln.]\\
+H14.\ $\textrm{$y\in K$}$&\\
+H15.\ $\textrm{$xy\in H$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent8. Deleted H11, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
+\marginpar{}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+H10.\ $\textrm{$K$ is closed under multiplication}$&\\
+\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
+H12.\ $\textrm{$x\in K$}$&\\
+H13.\ $\textrm{$y\in H$}$&[Vuln.]\\
+H14.\ $\textrm{$y\in K$}$&\\
+H15.\ $\textrm{$xy\in H$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent9. Deleted H13, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
+\marginpar{}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+\textbf{\boldmath H10.\ $\textrm{$K$ is closed under multiplication}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
+\textbf{\boldmath H12.\ $\textrm{$x\in K$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
+\textbf{\boldmath H14.\ $\textrm{$y\in K$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H15.\ $\textrm{$xy\in H$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent10. Forwards reasoning using library result ``'' with (H10,H12,H14).\nopagebreak[4]
+\marginpar{Since $K$ is closed under multiplication, $x\in K$ and $y\in K$, we have that $xy\in K$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+H10.\ $\textrm{$K$ is closed under multiplication}$&[Vuln.]\\
+\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
+H12.\ $\textrm{$x\in K$}$&[Vuln.]\\
+\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
+H14.\ $\textrm{$y\in K$}$&[Vuln.]\\
+H15.\ $\textrm{$xy\in H$}$&\\
+H16.\ $\textrm{$xy\in K$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent11. Deleted H10, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
+\marginpar{}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
+H12.\ $\textrm{$x\in K$}$&[Vuln.]\\
+\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
+H14.\ $\textrm{$y\in K$}$&[Vuln.]\\
+H15.\ $\textrm{$xy\in H$}$&\\
+H16.\ $\textrm{$xy\in K$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent12. Deleted H12, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
+\marginpar{}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
+\grey{H12.\ $\textrm{$x\in K$}$}&\grey{[Vuln.]}\\
+\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
+H14.\ $\textrm{$y\in K$}$&[Vuln.]\\
+H15.\ $\textrm{$xy\in H$}$&\\
+H16.\ $\textrm{$xy\in K$}$&
+\Bstrut\\\hline\Tstrut
+T2.\ $\textrm{$xy\in H\cap K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent13. Deleted H14, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
+\marginpar{}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
+\grey{H12.\ $\textrm{$x\in K$}$}&\grey{[Vuln.]}\\
+\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
+\grey{H14.\ $\textrm{$y\in K$}$}&\grey{[Vuln.]}\\
+H15.\ $\textrm{$xy\in H$}$&\\
+H16.\ $\textrm{$xy\in K$}$&
+\Bstrut\\\hline\Tstrut
+\textbf{\boldmath T2.\ $\textrm{$xy\in H\cap K$}$\unboldmath }&\textbf{\boldmath \unboldmath }
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent14. Quantifier-free expansion of target T2.\nopagebreak[4]
+\marginpar{We would like to show that $xy\in H\cap K$, i.e. that $xy\in H$ and $xy\in K$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
+\grey{H12.\ $\textrm{$x\in K$}$}&\grey{[Vuln.]}\\
+\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
+\grey{H14.\ $\textrm{$y\in K$}$}&\grey{[Vuln.]}\\
+\textbf{\boldmath H15.\ $\textrm{$xy\in H$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H16.\ $\textrm{$xy\in K$}$&
+\Bstrut\\\hline\Tstrut
+\textbf{\boldmath T3.\ $\textrm{$xy\in H$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+T4.\ $\textrm{$xy\in K$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent15. Hypothesis H15 matches target T3, so we can remove T3.\nopagebreak[4]
+\marginpar{}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\\
+
+\begin{tabular}{ll}%
+H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
+H6.\ $\textrm{$e\in H$}$&\\
+\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
+H9.\ $\textrm{$e\in K$}$&\\
+\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
+\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
+\grey{H12.\ $\textrm{$x\in K$}$}&\grey{[Vuln.]}\\
+\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
+\grey{H14.\ $\textrm{$y\in K$}$}&\grey{[Vuln.]}\\
+H15.\ $\textrm{$xy\in H$}$&\\
+\textbf{\boldmath H16.\ $\textrm{$xy\in K$}$\unboldmath }&\textbf{\boldmath \unboldmath }
+\Bstrut\\\hline\Tstrut
+\textbf{\boldmath T4.\ $\textrm{$xy\in K$}$\unboldmath }&\textbf{\boldmath \unboldmath }
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent16. Hypothesis H16 matches target T4, so L1 is done.\nopagebreak[4]
+\marginpar{We are done.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}%
+\node[tableau] (main) {%
+\ \ \,Done
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+
+Problem solved.
+\cleardoublepage
+
