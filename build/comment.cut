@@ -3,10 +3,9 @@
 \\
 
 \begin{tabular}{ll}%
-H1.\ $\textrm{$H$ is a subgroup}$&\\
-H2.\ $\textrm{$K$ is a subgroup}$&
+H1.\ $\textrm{$f$ is an injection}$&
 \Bstrut\\\hline\Tstrut
-\textbf{\boldmath T1.\ $\forall x, y.(\textrm{$x\in H\cap K$}\wedge \textrm{$y\in H\cap K$}\Rightarrow \textrm{$xy\in H\cap K$})$\unboldmath }&\textbf{\boldmath \unboldmath }
+\textbf{\boldmath T1.\ $\textrm{$f(A)\cap f(B)\subset f(A\cap B)$}$\unboldmath }&\textbf{\boldmath \unboldmath }
 \end{tabular}%
 };%
 \node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
@@ -14,21 +13,18 @@ H2.\ $\textrm{$K$ is a subgroup}$&
 \end{fit}
 \smallskip
 
-\noindent1. Apply `let' trick and move premise of universal-conditional target T1 above the line.\nopagebreak[4]
-\marginpar{Let $x$ and $y$ be such that $x\in H\cap K$ and $y\in H\cap K$.}\nopagebreak[4]
+\noindent1. Expand pre-universal target T1.\nopagebreak[4]
+\marginpar{}\nopagebreak[4]
 \smallskip\nopagebreak[4]
 
 \begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
 \node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
+\\
 
 \begin{tabular}{ll}%
-\textbf{\boldmath H1.\ $\textrm{$H$ is a subgroup}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-H2.\ $\textrm{$K$ is a subgroup}$&\\
-H3.\ $\textrm{$x\in H\cap K$}$&\\
-H4.\ $\textrm{$y\in H\cap K$}$&
+H1.\ $\textrm{$f$ is an injection}$&
 \Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
+\textbf{\boldmath T2.\ $\forall x.(\textrm{$x\in f(A)\cap f(B)$}\Rightarrow \textrm{$x\in f(A\cap B)$})$\unboldmath }&\textbf{\boldmath \unboldmath }
 \end{tabular}%
 };%
 \node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
@@ -36,23 +32,19 @@ T2.\ $\textrm{$xy\in H\cap K$}$&
 \end{fit}
 \smallskip
 
-\noindent2. Quantifier-free expansion of hypothesis H1.\nopagebreak[4]
-\marginpar{Since $H$ is a subgroup, $H$ is closed under taking inverses, $e\in H$ and $H$ is closed under multiplication.}\nopagebreak[4]
+\noindent2. Apply `let' trick and move premise of universal-conditional target T2 above the line.\nopagebreak[4]
+\marginpar{Let $x$ be an element of $f(A)\cap f(B)$.}\nopagebreak[4]
 \smallskip\nopagebreak[4]
 
 \begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
 \node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
+$x$\\
 
 \begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-H7.\ $\textrm{$H$ is closed under multiplication}$&\\
-\textbf{\boldmath H2.\ $\textrm{$K$ is a subgroup}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-H3.\ $\textrm{$x\in H\cap K$}$&\\
-H4.\ $\textrm{$y\in H\cap K$}$&
+H1.\ $\textrm{$f$ is an injection}$&\\
+\textbf{\boldmath H2.\ $\textrm{$x\in f(A)\cap f(B)$}$\unboldmath }&\textbf{\boldmath \unboldmath }
 \Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
+T3.\ $\textrm{$x\in f(A\cap B)$}$&
 \end{tabular}%
 };%
 \node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
@@ -61,24 +53,19 @@ T2.\ $\textrm{$xy\in H\cap K$}$&
 \smallskip
 
 \noindent3. Quantifier-free expansion of hypothesis H2.\nopagebreak[4]
-\marginpar{Since $K$ is a subgroup, $K$ is closed under taking inverses, $e\in K$ and $K$ is closed under multiplication.}\nopagebreak[4]
+\marginpar{Since $x\in f(A)\cap f(B)$, $x\in f(A)$ and $x\in f(B)$.}\nopagebreak[4]
 \smallskip\nopagebreak[4]
 
 \begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
 \node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
+$x$\\
 
 \begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-H7.\ $\textrm{$H$ is closed under multiplication}$&\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-H10.\ $\textrm{$K$ is closed under multiplication}$&\\
-\textbf{\boldmath H3.\ $\textrm{$x\in H\cap K$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-H4.\ $\textrm{$y\in H\cap K$}$&
+H1.\ $\textrm{$f$ is an injection}$&\\
+\textbf{\boldmath H3.\ $\textrm{$x\in f(A)$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H4.\ $\textrm{$x\in f(B)$}$&
 \Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
+T3.\ $\textrm{$x\in f(A\cap B)$}$&
 \end{tabular}%
 };%
 \node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
@@ -86,8 +73,8 @@ T2.\ $\textrm{$xy\in H\cap K$}$&
 \end{fit}
 \smallskip
 
-\noindent4. Quantifier-free expansion of hypothesis H3.\nopagebreak[4]
-\marginpar{Since $x\in H\cap K$, $x\in H$ and $x\in K$.}\nopagebreak[4]
+\noindent4. Expand pre-existential hypothesis H3.\nopagebreak[4]
+\marginpar{By definition, since $x\in f(A)$, there exists $y\in A$ such that $f(y) = x$.}\nopagebreak[4]
 \smallskip\nopagebreak[4]
 
 \begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
@@ -95,17 +82,12 @@ T2.\ $\textrm{$xy\in H\cap K$}$&
 $x$\hspace{1.5mm}$y$\\
 
 \begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-H7.\ $\textrm{$H$ is closed under multiplication}$&\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-H10.\ $\textrm{$K$ is closed under multiplication}$&\\
-H11.\ $\textrm{$x\in H$}$&\\
-H12.\ $\textrm{$x\in K$}$&\\
-\textbf{\boldmath H4.\ $\textrm{$y\in H\cap K$}$\unboldmath }&\textbf{\boldmath \unboldmath }
+H1.\ $\textrm{$f$ is an injection}$&\\
+H5.\ $\textrm{$y\in A$}$&\\
+H6.\ $\textrm{$f(y) = x$}$&\\
+\textbf{\boldmath H4.\ $\textrm{$x\in f(B)$}$\unboldmath }&\textbf{\boldmath \unboldmath }
 \Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
+T3.\ $\textrm{$x\in f(A\cap B)$}$&
 \end{tabular}%
 };%
 \node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
@@ -113,27 +95,22 @@ T2.\ $\textrm{$xy\in H\cap K$}$&
 \end{fit}
 \smallskip
 
-\noindent5. Quantifier-free expansion of hypothesis H4.\nopagebreak[4]
-\marginpar{Since $y\in H\cap K$, $y\in H$ and $y\in K$.}\nopagebreak[4]
+\noindent5. Expand pre-existential hypothesis H4.\nopagebreak[4]
+\marginpar{By definition, since $x\in f(B)$, there exists $z\in B$ such that $f(z) = x$.}\nopagebreak[4]
 \smallskip\nopagebreak[4]
 
 \begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
 \node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
+$x$\hspace{1.5mm}$y$\hspace{1.5mm}$z$\\
 
 \begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\textbf{\boldmath H7.\ $\textrm{$H$ is closed under multiplication}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-H10.\ $\textrm{$K$ is closed under multiplication}$&\\
-\textbf{\boldmath H11.\ $\textrm{$x\in H$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-H12.\ $\textrm{$x\in K$}$&\\
-\textbf{\boldmath H13.\ $\textrm{$y\in H$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-H14.\ $\textrm{$y\in K$}$&
+\textbf{\boldmath H1.\ $\textrm{$f$ is an injection}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H5.\ $\textrm{$y\in A$}$&\\
+\textbf{\boldmath H6.\ $\textrm{$f(y) = x$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+H7.\ $\textrm{$z\in B$}$&\\
+\textbf{\boldmath H8.\ $\textrm{$f(z) = x$}$\unboldmath }&\textbf{\boldmath \unboldmath }
 \Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
+T3.\ $\textrm{$x\in f(A\cap B)$}$&
 \end{tabular}%
 };%
 \node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
@@ -141,28 +118,23 @@ T2.\ $\textrm{$xy\in H\cap K$}$&
 \end{fit}
 \smallskip
 
-\noindent6. Forwards reasoning using library result ``'' with (H7,H11,H13).\nopagebreak[4]
-\marginpar{Since $H$ is closed under multiplication, $x\in H$ and $y\in H$, we have that $xy\in H$.}\nopagebreak[4]
+\noindent6. Forwards reasoning using H1 with (H6,H8).\nopagebreak[4]
+\marginpar{Since $f$ is an injection, $f(y) = x$ and $f(z) = x$, we have that $y = z$.}\nopagebreak[4]
 \smallskip\nopagebreak[4]
 
 \begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
 \node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
+$x$\hspace{1.5mm}$y$\hspace{1.5mm}$z$\\
 
 \begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-H7.\ $\textrm{$H$ is closed under multiplication}$&[Vuln.]\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-H10.\ $\textrm{$K$ is closed under multiplication}$&\\
-H11.\ $\textrm{$x\in H$}$&[Vuln.]\\
-H12.\ $\textrm{$x\in K$}$&\\
-H13.\ $\textrm{$y\in H$}$&[Vuln.]\\
-H14.\ $\textrm{$y\in K$}$&\\
-H15.\ $\textrm{$xy\in H$}$&
+H1.\ $\textrm{$f$ is an injection}$&[Vuln.; Used with (H6,H8).]\\
+H5.\ $\textrm{$y\in A$}$&\\
+H6.\ $\textrm{$f(y) = x$}$&[Vuln.]\\
+H7.\ $\textrm{$z\in B$}$&\\
+H8.\ $\textrm{$f(z) = x$}$&[Vuln.]\\
+H9.\ $\textrm{$y = z$}$&
 \Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
+\textbf{\boldmath T3.\ $\textrm{$x\in f(A\cap B)$}$\unboldmath }&\textbf{\boldmath \unboldmath }
 \end{tabular}%
 };%
 \node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
@@ -170,28 +142,181 @@ T2.\ $\textrm{$xy\in H\cap K$}$&
 \end{fit}
 \smallskip
 
-\noindent7. Deleted H7, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
+\noindent7. Expand pre-existential target T3.\nopagebreak[4]
+\marginpar{We would like to find $u\in A\cap B$ s.t. $f(u) = x$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\hspace{1.5mm}$z$\\
+
+\begin{tabular}{ll}%
+H1.\ $\textrm{$f$ is an injection}$&[Vuln.; Used with (H6,H8).]\\
+H5.\ $\textrm{$y\in A$}$&\\
+H6.\ $\textrm{$f(y) = x$}$&[Vuln.]\\
+H7.\ $\textrm{$z\in B$}$&\\
+H8.\ $\textrm{$f(z) = x$}$&[Vuln.]\\
+H9.\ $\textrm{$y = z$}$&
+\Bstrut\\\hline\Tstrut
+\textbf{\boldmath T4.\ $\exists u.(\textrm{$u\in A\cap B$}\wedge \textrm{$f(u) = x$})$\unboldmath }&\textbf{\boldmath \unboldmath }
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent8. Unlock existential target T4.\nopagebreak[4]
+\marginpar{We would like to find $u\in A\cap B$ s.t. $f(u) = x$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\hspace{1.5mm}$z$\\
+
+\begin{tabular}{ll}%
+H1.\ $\textrm{$f$ is an injection}$&[Vuln.; Used with (H6,H8).]\\
+H5.\ $\textrm{$y\in A$}$&\\
+H6.\ $\textrm{$f(y) = x$}$&[Vuln.]\\
+H7.\ $\textrm{$z\in B$}$&\\
+H8.\ $\textrm{$f(z) = x$}$&[Vuln.]\\
+H9.\ $\textrm{$y = z$}$&
+\Bstrut\\\hline\Tstrut
+\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$u^\blacklozenge $\\
+
+\begin{tabular}{ll}%
+
+\Bstrut\\\hline\Tstrut
+\textbf{\boldmath T5.\ $\textrm{$u^\blacklozenge \in A\cap B$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
+T6.\ $\textrm{$f(u^\blacklozenge ) = x$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L2$^\blacklozenge$};
+\end{tikzpicture}%
+
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent9. Quantifier-free expansion of target T5.\nopagebreak[4]
+\marginpar{But $u\in A\cap B$ if and only if $u\in A$ and $u\in B$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\hspace{1.5mm}$z$\\
+
+\begin{tabular}{ll}%
+H1.\ $\textrm{$f$ is an injection}$&[Vuln.; Used with (H6,H8).]\\
+H5.\ $\textrm{$y\in A$}$&\\
+H6.\ $\textrm{$f(y) = x$}$&[Vuln.]\\
+H7.\ $\textrm{$z\in B$}$&\\
+H8.\ $\textrm{$f(z) = x$}$&[Vuln.]\\
+\textbf{\boldmath H9.\ $\textrm{$y = z$}$\unboldmath }&\textbf{\boldmath \unboldmath }
+\Bstrut\\\hline\Tstrut
+\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$u^\blacklozenge $\\
+
+\begin{tabular}{ll}%
+
+\Bstrut\\\hline\Tstrut
+T7.\ $\textrm{$u^\blacklozenge \in A$}$&\\
+T8.\ $\textrm{$u^\blacklozenge \in B$}$&\\
+T6.\ $\textrm{$f(u^\blacklozenge ) = x$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L2$^\blacklozenge$};
+\end{tikzpicture}%
+
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent10. Rewrite $z$ as $y$ throughout the tableau using hypothesis H9.\nopagebreak[4]
+\marginpar{Since $y = z$, we have that $y\in B$.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\hspace{1.5mm}$z$\\
+
+\begin{tabular}{ll}%
+H1.\ $\textrm{$f$ is an injection}$&[Vuln.; Used with (H6,H8).]\\
+H5.\ $\textrm{$y\in A$}$&\\
+H6.\ $\textrm{$f(y) = x$}$&[Vuln.]\\
+H10.\ $\textrm{$y\in B$}$&
+\Bstrut\\\hline\Tstrut
+\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$u^\blacklozenge $\\
+
+\begin{tabular}{ll}%
+
+\Bstrut\\\hline\Tstrut
+T7.\ $\textrm{$u^\blacklozenge \in A$}$&\\
+T8.\ $\textrm{$u^\blacklozenge \in B$}$&\\
+T6.\ $\textrm{$f(u^\blacklozenge ) = x$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L2$^\blacklozenge$};
+\end{tikzpicture}%
+
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent11. Moved H6 down, as $x$ can only be utilised by T6.\nopagebreak[4]
 \marginpar{}\nopagebreak[4]
 \smallskip\nopagebreak[4]
 
 \begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
 \node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
+$x$\hspace{1.5mm}$y$\hspace{1.5mm}$z$\\
 
 \begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-H10.\ $\textrm{$K$ is closed under multiplication}$&\\
-H11.\ $\textrm{$x\in H$}$&[Vuln.]\\
-H12.\ $\textrm{$x\in K$}$&\\
-H13.\ $\textrm{$y\in H$}$&[Vuln.]\\
-H14.\ $\textrm{$y\in K$}$&\\
-H15.\ $\textrm{$xy\in H$}$&
+H1.\ $\textrm{$f$ is an injection}$&[Vuln.; Used with (H6,H8).]\\
+H5.\ $\textrm{$y\in A$}$&\\
+H10.\ $\textrm{$y\in B$}$&
 \Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
+\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$u^\blacklozenge $\\
+
+\begin{tabular}{ll}%
+
+\Bstrut\\\hline\Tstrut
+T7.\ $\textrm{$u^\blacklozenge \in A$}$&\\
+T8.\ $\textrm{$u^\blacklozenge \in B$}$&\\
+\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+\\
+
+\begin{tabular}{ll}%
+H6.\ $\textrm{$f(y) = x$}$&[Vuln.; From L1.]
+\Bstrut\\\hline\Tstrut
+T6.\ $\textrm{$f(u^\blacklozenge ) = x$}$&
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L3};
+\end{tikzpicture}%
+
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L2$^\blacklozenge$};
+\end{tikzpicture}%
+
 \end{tabular}%
 };%
 \node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
@@ -199,247 +324,35 @@ T2.\ $\textrm{$xy\in H\cap K$}$&
 \end{fit}
 \smallskip
 
-\noindent8. Deleted H11, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
+\noindent12. Choosing $u^\blacklozenge  = y$ matches all targets inside L2$^\blacklozenge$ against hypotheses, so L2$^\blacklozenge$ is done.\nopagebreak[4]
+\marginpar{Therefore, setting $u = y$, we are done.}\nopagebreak[4]
+\smallskip\nopagebreak[4]
+
+\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
+\node[tableau] (main) {%
+$x$\hspace{1.5mm}$y$\hspace{1.5mm}$z$\\
+
+\begin{tabular}{ll}%
+H1.\ $\textrm{$f$ is an injection}$&[Vuln.; Used with (H6,H8).]\\
+H5.\ $\textrm{$y\in A$}$&\\
+H10.\ $\textrm{$y\in B$}$&
+\Bstrut\\\hline\Tstrut
+\begin{tikzpicture}%
+\node[tableau] (main) {%
+\ \ \,Done
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L2$^\blacklozenge$};
+\end{tikzpicture}%
+
+\end{tabular}%
+};%
+\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
+\end{tikzpicture}%
+\end{fit}
+\smallskip
+
+\noindent13. All targets of L1 are `Done', so L1 is itself done.\nopagebreak[4]
 \marginpar{}\nopagebreak[4]
-\smallskip\nopagebreak[4]
-
-\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
-\node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
-
-\begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-H10.\ $\textrm{$K$ is closed under multiplication}$&\\
-\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
-H12.\ $\textrm{$x\in K$}$&\\
-H13.\ $\textrm{$y\in H$}$&[Vuln.]\\
-H14.\ $\textrm{$y\in K$}$&\\
-H15.\ $\textrm{$xy\in H$}$&
-\Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
-\end{tabular}%
-};%
-\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
-\end{tikzpicture}%
-\end{fit}
-\smallskip
-
-\noindent9. Deleted H13, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
-\marginpar{}\nopagebreak[4]
-\smallskip\nopagebreak[4]
-
-\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
-\node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
-
-\begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-\textbf{\boldmath H10.\ $\textrm{$K$ is closed under multiplication}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
-\textbf{\boldmath H12.\ $\textrm{$x\in K$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
-\textbf{\boldmath H14.\ $\textrm{$y\in K$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-H15.\ $\textrm{$xy\in H$}$&
-\Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
-\end{tabular}%
-};%
-\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
-\end{tikzpicture}%
-\end{fit}
-\smallskip
-
-\noindent10. Forwards reasoning using library result ``'' with (H10,H12,H14).\nopagebreak[4]
-\marginpar{Since $K$ is closed under multiplication, $x\in K$ and $y\in K$, we have that $xy\in K$.}\nopagebreak[4]
-\smallskip\nopagebreak[4]
-
-\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
-\node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
-
-\begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-H10.\ $\textrm{$K$ is closed under multiplication}$&[Vuln.]\\
-\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
-H12.\ $\textrm{$x\in K$}$&[Vuln.]\\
-\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
-H14.\ $\textrm{$y\in K$}$&[Vuln.]\\
-H15.\ $\textrm{$xy\in H$}$&\\
-H16.\ $\textrm{$xy\in K$}$&
-\Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
-\end{tabular}%
-};%
-\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
-\end{tikzpicture}%
-\end{fit}
-\smallskip
-
-\noindent11. Deleted H10, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
-\marginpar{}\nopagebreak[4]
-\smallskip\nopagebreak[4]
-
-\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
-\node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
-
-\begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
-H12.\ $\textrm{$x\in K$}$&[Vuln.]\\
-\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
-H14.\ $\textrm{$y\in K$}$&[Vuln.]\\
-H15.\ $\textrm{$xy\in H$}$&\\
-H16.\ $\textrm{$xy\in K$}$&
-\Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
-\end{tabular}%
-};%
-\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
-\end{tikzpicture}%
-\end{fit}
-\smallskip
-
-\noindent12. Deleted H12, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
-\marginpar{}\nopagebreak[4]
-\smallskip\nopagebreak[4]
-
-\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
-\node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
-
-\begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
-\grey{H12.\ $\textrm{$x\in K$}$}&\grey{[Vuln.]}\\
-\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
-H14.\ $\textrm{$y\in K$}$&[Vuln.]\\
-H15.\ $\textrm{$xy\in H$}$&\\
-H16.\ $\textrm{$xy\in K$}$&
-\Bstrut\\\hline\Tstrut
-T2.\ $\textrm{$xy\in H\cap K$}$&
-\end{tabular}%
-};%
-\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
-\end{tikzpicture}%
-\end{fit}
-\smallskip
-
-\noindent13. Deleted H14, as this unexpandable atomic statement is unmatchable.\nopagebreak[4]
-\marginpar{}\nopagebreak[4]
-\smallskip\nopagebreak[4]
-
-\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
-\node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
-
-\begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
-\grey{H12.\ $\textrm{$x\in K$}$}&\grey{[Vuln.]}\\
-\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
-\grey{H14.\ $\textrm{$y\in K$}$}&\grey{[Vuln.]}\\
-H15.\ $\textrm{$xy\in H$}$&\\
-H16.\ $\textrm{$xy\in K$}$&
-\Bstrut\\\hline\Tstrut
-\textbf{\boldmath T2.\ $\textrm{$xy\in H\cap K$}$\unboldmath }&\textbf{\boldmath \unboldmath }
-\end{tabular}%
-};%
-\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
-\end{tikzpicture}%
-\end{fit}
-\smallskip
-
-\noindent14. Quantifier-free expansion of target T2.\nopagebreak[4]
-\marginpar{We would like to show that $xy\in H\cap K$, i.e. that $xy\in H$ and $xy\in K$.}\nopagebreak[4]
-\smallskip\nopagebreak[4]
-
-\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
-\node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
-
-\begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
-\grey{H12.\ $\textrm{$x\in K$}$}&\grey{[Vuln.]}\\
-\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
-\grey{H14.\ $\textrm{$y\in K$}$}&\grey{[Vuln.]}\\
-\textbf{\boldmath H15.\ $\textrm{$xy\in H$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-H16.\ $\textrm{$xy\in K$}$&
-\Bstrut\\\hline\Tstrut
-\textbf{\boldmath T3.\ $\textrm{$xy\in H$}$\unboldmath }&\textbf{\boldmath \unboldmath }\\
-T4.\ $\textrm{$xy\in K$}$&
-\end{tabular}%
-};%
-\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
-\end{tikzpicture}%
-\end{fit}
-\smallskip
-
-\noindent15. Hypothesis H15 matches target T3, so we can remove T3.\nopagebreak[4]
-\marginpar{}\nopagebreak[4]
-\smallskip\nopagebreak[4]
-
-\begin{fit}\begin{tikzpicture}[baseline=(main.base)]%
-\node[tableau] (main) {%
-$x$\hspace{1.5mm}$y$\\
-
-\begin{tabular}{ll}%
-H5.\ $\textrm{$H$ is closed under taking inverses}$&\\
-H6.\ $\textrm{$e\in H$}$&\\
-\grey{H7.\ $\textrm{$H$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-H8.\ $\textrm{$K$ is closed under taking inverses}$&\\
-H9.\ $\textrm{$e\in K$}$&\\
-\grey{H10.\ $\textrm{$K$ is closed under multiplication}$}&\grey{[Vuln.]}\\
-\grey{H11.\ $\textrm{$x\in H$}$}&\grey{[Vuln.]}\\
-\grey{H12.\ $\textrm{$x\in K$}$}&\grey{[Vuln.]}\\
-\grey{H13.\ $\textrm{$y\in H$}$}&\grey{[Vuln.]}\\
-\grey{H14.\ $\textrm{$y\in K$}$}&\grey{[Vuln.]}\\
-H15.\ $\textrm{$xy\in H$}$&\\
-\textbf{\boldmath H16.\ $\textrm{$xy\in K$}$\unboldmath }&\textbf{\boldmath \unboldmath }
-\Bstrut\\\hline\Tstrut
-\textbf{\boldmath T4.\ $\textrm{$xy\in K$}$\unboldmath }&\textbf{\boldmath \unboldmath }
-\end{tabular}%
-};%
-\node[tableaulabel] at (main.north west) [xshift=4mm, yshift=-5.5mm] {L1};
-\end{tikzpicture}%
-\end{fit}
-\smallskip
-
-\noindent16. Hypothesis H16 matches target T4, so L1 is done.\nopagebreak[4]
-\marginpar{We are done.}\nopagebreak[4]
 \smallskip\nopagebreak[4]
 
 \begin{fit}\begin{tikzpicture}%

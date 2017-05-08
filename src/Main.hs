@@ -37,7 +37,7 @@ import TidyingMoves
 import ApplyingMoves
 import Suspension
 
-import qualified TestData
+import qualified TestData3
 
 ----------------------------------------------------------------------------------------------------
 
@@ -94,8 +94,8 @@ lengthAtLeast n (_:xs) = lengthAtLeast (n-1) xs
 printMax = 100
 
 main = do
-    let pd = TestData.printingData
-        lib = TestData.library
+    let pd = TestData3.printingData
+        lib = TestData3.library
 
     let movesFrom :: RobotState -> Tableau -> [(MoveDescription, Tableau)]
         movesFrom s t = case mapMaybe (runRobotM pd lib s) (allMovesByPriority t) of
@@ -164,7 +164,7 @@ main = do
 
 
     putStrLn texHeader
-    mapM_ attemptProblem TestData.problems
+    mapM_ attemptProblem TestData3.problems
     putStrLn texFooter
 
 ----------------------------------------------------------------------------------------------------

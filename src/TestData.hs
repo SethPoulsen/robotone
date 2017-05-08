@@ -19,10 +19,6 @@ import Library
 import Writeup
 import Printing
 
-negativeEx1 = Problem
-    "If $f$ is a surjection then $f(A)\\cap f(B)\\subset f(A\\cap B)$"
-        ["surjection(f)"]
-        "subsetof(intersect(image(f,A),image(f,B)),image(f,intersect(A,B)))"
 
 iffInjectionThenfAcapfBsubsetfAcapB = Problem
     "If $f$ is an injection then $f(A)\\cap f(B)\\subset f(A\\cap B)$"

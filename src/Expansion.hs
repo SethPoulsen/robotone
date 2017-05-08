@@ -54,7 +54,7 @@ allExpansions = primaryExpansion
 
 ----------------------------------------------------------------------------------------------------
 
---NB: this term rewriting code does not use renameFormula  -- so DO NOT ever put quantifiers on RHS
+--NB: this term rewriting code does not use reomeFormula  -- so DO NOT ever put quantifiers on RHS
 --      of the rewrite trable.
 --  (This is only relevant if we introduce sets, etc., so that formulae can be inside terms.)
 

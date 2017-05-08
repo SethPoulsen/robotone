@@ -160,8 +160,6 @@ allVariablesInTerm = nub . sort . accumulateVariableInTerm return
 allVariablesInFormula :: Formula -> [Variable]
 allVariablesInFormula = nub . sort . accumulateVariableInFormula return
 
-
-
 allDirectVariablesInFormula :: Formula -> [Variable]
 allDirectVariablesInFormula = nub . sort . accumulateDirectVariableInFormula return
 ----------------------------------------------------------------------------------------------------

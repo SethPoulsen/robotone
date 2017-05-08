@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2017.2.20)  27 MAR 2017 22:49
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2017.2.20)  7 MAY 2017 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1838,38 +1838,6 @@ Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;mapping=tex-text;+tnum;+lnum;" at 14.4pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
 RB.otf
-Requested font "cmr12" at 14.4pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-Requested font "cmmi12" at 14.4pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-Requested font "cmsy10" at 14.4pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-Requested font "cmex10" at 14.4pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-Requested font "cmex7" at 7.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-Requested font "msam10" at 14.4pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-Requested font "msam10" at 10.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-Requested font "msam7" at 7.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Requested font "msbm10" at 14.4pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-Requested font "msbm10" at 10.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-Requested font "msbm7" at 7.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 Requested font "cmr8" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 Requested font "cmr6" at 6.0pt
@@ -1892,12 +1860,22 @@ Requested font "cmex8" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 Requested font "cmex7" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+LaTeX Font Info:    Try loading font information for U+msa on input line 57.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
 Requested font "msam10" at 12.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 Requested font "msam10" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 Requested font "msam7" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+LaTeX Font Info:    Try loading font information for U+msb on input line 57.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 Requested font "msbm10" at 12.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 Requested font "msbm10" at 8.0pt
@@ -1909,26 +1887,20 @@ Including 'steps' comment.
 \openout4 = `comment.cut'.
 
  Straight input of comment.cut. (./comment.cut
-Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;mapping=tex-text;+tnum;+lnum;" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RI.otf
 Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;+lnum;" at 8.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
 R.otf
-Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;mapping=tex-text;+tnum;+lnum;" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RI.otf
+Requested font "cmex7" at 5.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+Requested font "msam5" at 5.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+Requested font "msbm5" at 5.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;+lnum;" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
 R.otf
-Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;mapping=tex-text;+tnum;+lnum;" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RI.otf
 Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;mapping=tex-text;+tnum;+lnum;" at 12.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
@@ -1961,25 +1933,37 @@ Requested font "cmmib5" at 5.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 Requested font "cmbsy5" at 5.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
-Requested font "cmex7" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-Requested font "msam5" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-Requested font "msbm5" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;mapping=tex-text;+tnum;+lnum;" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
 RB.otf
 
-Underfull \hbox (badness 1540) in paragraph at lines 36--36
-[]\EU1/LinLibertine(0)/m/n/12 Let $[]\OML/cmm/m/it/12 x[]$ \EU1/LinLibertine(0)
-/m/n/12 be an element of
- []
-
 [1
 
-] [2]) Including 'steps' comment.
+] [2])
+Requested font "cmr12" at 14.4pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+Requested font "cmmi12" at 14.4pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+Requested font "cmsy10" at 14.4pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+Requested font "cmex10" at 14.4pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+Requested font "cmex7" at 7.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+Requested font "msam10" at 14.4pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+Requested font "msam10" at 10.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+Requested font "msam7" at 7.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+Requested font "msbm10" at 14.4pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+Requested font "msbm10" at 10.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+Requested font "msbm7" at 7.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+ Including 'steps' comment.
 \openout4 = `comment.cut'.
 
  Straight input of comment.cut.
@@ -1999,318 +1983,14 @@ Underfull \hbox (badness 2318) in paragraph at lines 122--122
 
 ] [4] [5] [6
 
-]) Including 'steps' comment.
-\openout4 = `comment.cut'.
-
- Straight input of comment.cut.
-(./comment.cut
-Requested font "[LinLibertine_RBI.otf]/OT:script=latn;language=DFLT;mapping=tex
--text;mapping=tex-text;+tnum;+lnum;" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RBI.otf
-Requested font "[LinLibertine_RBI.otf]/OT:script=latn;language=DFLT;mapping=tex
--text;mapping=tex-text;+tnum;+lnum;" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RBI.otf
-Requested font "[LinLibertine_RBI.otf]/OT:script=latn;language=DFLT;mapping=tex
--text;mapping=tex-text;+tnum;+lnum;" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RBI.otf
-Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;mapping=tex-text;+tnum;+lnum;" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RB.otf
-Requested font "[LinLibertine_RBI.otf]/OT:script=latn;language=DFLT;mapping=tex
--text;mapping=tex-text;+tnum;+lnum;" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RBI.otf
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;mapping=tex-text;+tnum;+lnum;" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-R.otf
-Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;mapping=tex-text;+tnum;+lnum;" at 5.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RI.otf
-
-Underfull \hbox (badness 1242) in paragraph at lines 81--81
-[]\OML/cmm/m/it/12 A[]$\EU1/LinLibertine(0)/m/n/12 , there exists $[]\OML/cmm/m
-/it/12 ^^Q > \OT1/cmr/m/n/12 0[]$
- []
-
-[7]
-Underfull \hbox (badness 1205) in paragraph at lines 150--150
-[]\OML/cmm/m/it/12 B[]$\EU1/LinLibertine(0)/m/n/12 , there exists $[]\OML/cmm/m
-/it/12 ^^R > \OT1/cmr/m/n/12 0[]$
- []
-
-[8]
-Underfull \hbox (badness 1331) in paragraph at lines 295--295
-[]\EU1/LinLibertine(0)/m/n/12 We know that $[]\OML/cmm/m/it/12 y \OMS/cmsy/m/n/
-12 2 \OML/cmm/m/it/12 A[]$
- []
-
-[9]
-Underfull \hbox (badness 1226) in paragraph at lines 369--369
-[]\EU1/LinLibertine(0)/m/n/12 We know that $[]\OML/cmm/m/it/12 y \OMS/cmsy/m/n/
-12 2 \OML/cmm/m/it/12 B[]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 443--443
-[]\EU1/LinLibertine(0)/m/n/12 Assume now that
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 480--480
-[]\EU1/LinLibertine(0)/m/n/12 Since $[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y
-\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 < ^^N[]$\EU1/LinLibertine(0)/m/n/12 ,
- []
-
-
-Overfull \hbox (1.99942pt too wide) in paragraph at lines 562--564
-[]  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 566--566
-[]\EU1/LinLibertine(0)/m/n/12 Since $[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y
-\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 < ^^N[]$\EU1/LinLibertine(0)/m/n/12 ,
- []
-
-[11]
-Underfull \hbox (badness 4872) in paragraph at lines 701--701
-[]\EU1/LinLibertine(0)/m/n/12 We may therefore take
- []
-
-[12] [13] [14
-
-]) Including 'steps' comment.
-\openout4 = `comment.cut'.
-
- Straight input of comment.cut.
-(./comment.cut
-Underfull \hbox (badness 1540) in paragraph at lines 38--38
-[]\EU1/LinLibertine(0)/m/n/12 Let $[]\OML/cmm/m/it/12 x[]$ \EU1/LinLibertine(0)
-/m/n/12 be an element of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-[]\EU1/LinLibertine(0)/m/n/12 Since $[]\OML/cmm/m/it/12 U[]$ \EU1/LinLibertine(
-0)/m/n/12 is open and
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 214--214
-[]\EU1/LinLibertine(0)/m/n/12 We know that
- []
-
-
-Underfull \hbox (badness 5203) in paragraph at lines 214--214
-[]\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) \OMS/c
-msy/m/n/12 2 \OML/cmm/m/it/12 U[]$ \EU1/LinLibertine(0)/m/n/12 whenever
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]\EU1/LinLibertine(0)/m/n/12 Since $[]\OML/cmm/m/it/12 f[]$ \EU1/LinLibertine(
-0)/m/n/12 is continuous,
- []
-
-
-Underfull \hbox (badness 1057) in paragraph at lines 282--282
-\EU1/LinLibertine(0)/m/n/12 that $[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/c
-mr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; f\OT1/cmr/m/n/
-12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )) \OML/cmm/m/it/12 < ^^Q[]$
- []
-
-
-Overfull \hbox (1.99641pt too wide) in paragraph at lines 346--348
-[]  
- []
-
-[17] [18
-
-])
-Underfull \hbox (badness 3108) in paragraph at lines 1822--1823
-[]\EU1/LinLibertine(0)/m/n/12 Take $[]\OML/cmm/m/it/12 x[]$ \EU1/LinLibertine(0
-)/m/n/12 and $[]\OML/cmm/m/it/12 ^^O > \OT1/cmr/m/n/12 0[]$\EU1/LinLibertine(0)
-/m/n/12 . We would like to find $[]\OML/cmm/m/it/12 ^^N > \OT1/cmr/m/n/12 0[]$ 
-\EU1/LinLibertine(0)/m/n/12 s.t.
- []
-
-Including 'steps' comment.
-\openout4 = `comment.cut'.
-
- Straight input of comment.cut. (./comment.cut
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
-[]\EU1/LinLibertine(0)/m/n/12 We would like to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
-\EU1/LinLibertine(0)/m/n/12 find $[]\OML/cmm/m/it/12 ^^N > \OT1/cmr/m/n/12 0[]$
- \EU1/LinLibertine(0)/m/n/12 s.t.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-[]\EU1/LinLibertine(0)/m/n/12 Since $[]\OML/cmm/m/it/12 g[]$ \EU1/LinLibertine(
-0)/m/n/12 is contin-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-\EU1/LinLibertine(0)/m/n/12 uous, there exists
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-[]\OML/cmm/m/it/12 ^^Q > \OT1/cmr/m/n/12 0[]$ \EU1/LinLibertine(0)/m/n/12 such 
-that
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/
-cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 ; g\OT1/cmr/m/
-n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ))) 
-\OML/cmm/m/it/12 <[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-[]\OML/cmm/m/it/12 ^^O[]$ \EU1/LinLibertine(0)/m/n/12 whenever
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
-[]\EU1/LinLibertine(0)/m/n/12 Since $[]\OML/cmm/m/it/12 f[]$ \EU1/LinLibertine(
-0)/m/n/12 is continuous,
- []
-
-
-Underfull \hbox (badness 1057) in paragraph at lines 154--154
-\EU1/LinLibertine(0)/m/n/12 that $[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/c
-mr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; f\OT1/cmr/m/n/
-12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )) \OML/cmm/m/it/12 < ^^Q[]$
- []
-
-[19] [20]) Including 'steps' comment.
-\openout4 = `comment.cut'.
-
- Straight input of comment.cut.
-(./comment.cut
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-[]\EU1/LinLibertine(0)/m/n/12 Since $[]\OML/cmm/m/it/12 f[]$ \EU1/LinLibertine(
-0)/m/n/12 is continuous,
- []
-
-[21
-
-]
-Underfull \hbox (badness 1365) in paragraph at lines 218--218
-[]\EU1/LinLibertine(0)/m/n/12 Therefore, setting $[]\OML/cmm/m/it/12 N \OT1/cmr
-/m/n/12 =[]
- []
-
-[22]) Including 'steps' comment.
-\openout4 = `comment.cut'.
-
- Straight input of comment.cut. (./comment.cut
-[23
-
-]
-Underfull \hbox (badness 1077) in paragraph at lines 129--129
-[]\EU1/LinLibertine(0)/m/n/12 Since $[]\OML/cmm/m/it/12 A[]$ \EU1/LinLibertine(
-0)/m/n/12 is closed in $[]\OML/cmm/m/it/12 X[]$\EU1/LinLibertine(0)/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 1845) in paragraph at lines 177--177
-[]\EU1/LinLibertine(0)/m/n/12 We would like to show
- []
-
-[24]) Including 'steps' comment.
-\openout4 = `comment.cut'.
-
- Straight input of comment.cut. (./comment.cut
-Underfull \hbox (badness 1540) in paragraph at lines 36--36
-[]\EU1/LinLibertine(0)/m/n/12 Let $[]\OML/cmm/m/it/12 x[]$ \EU1/LinLibertine(0)
-/m/n/12 be an element of
- []
-
-
-Underfull \hbox (badness 6961) in paragraph at lines 55--55
-[]\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/
-cmm/m/it/12 A\OT1/cmr/m/n/12 ))[]$\EU1/LinLibertine(0)/m/n/12 , there exists
- []
-
-
-Underfull \hbox (badness 1286) in paragraph at lines 55--55
-[]\OML/cmm/m/it/12 y \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\O
-ML/cmm/m/it/12 A\OT1/cmr/m/n/12 )[]$ \EU1/LinLibertine(0)/m/n/12 such that
- []
-
-
-Underfull \hbox (badness 1033) in paragraph at lines 75--75
-[]\EU1/LinLibertine(0)/m/n/12 Since $[]\OML/cmm/m/it/12 y \OMS/cmsy/m/n/12 2 \O
-ML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )[]$\EU1/L
-inLibertine(0)/m/n/12 , we
- []
-
-[25
-
-] [26
-
-]) Including 'steps' comment.
-\openout4 = `comment.cut'.
-
- Straight input of comment.cut.
-(./comment.cut
-Underfull \hbox (badness 1845) in paragraph at lines 55--55
-[]\EU1/LinLibertine(0)/m/n/12 We would like to show
- []
-
-
-Underfull \hbox (badness 1845) in paragraph at lines 74--74
-[]\EU1/LinLibertine(0)/m/n/12 We would like to show
- []
-
-[27] [28
-
-]) Including 'steps' comment.
-\openout4 = `comment.cut'.
-
- Straight input of comment.cut.
-(./comment.cut
-Underfull \hbox (badness 1205) in paragraph at lines 40--40
-\EU1/LinLibertine(0)/m/n/12 verses, $[]\OML/cmm/m/it/12 e \OMS/cmsy/m/n/12 2 \O
-ML/cmm/m/it/12 H[]$ \EU1/LinLibertine(0)/m/n/12 and $[]\OML/cmm/m/it/12 H[]$
- []
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 64--64
-\EU1/LinLibertine(0)/m/n/12 verses, $[]\OML/cmm/m/it/12 e \OMS/cmsy/m/n/12 2 \O
-ML/cmm/m/it/12 K[]$ \EU1/LinLibertine(0)/m/n/12 and $[]\OML/cmm/m/it/12 K[]$
- []
-
-[29] [30] [31] [32]
-Underfull \hbox (badness 1845) in paragraph at lines 381--381
-[]\EU1/LinLibertine(0)/m/n/12 We would like to show
- []
-
-[33] [34
-
 ]) (./robotone.aux) ) 
 Here is how much of TeX's memory you used:
- 35114 strings out of 493727
- 740198 string characters out of 6147890
- 669132 words of memory out of 5000000
- 37989 multiletter control sequences out of 15000+600000
- 15949 words of font info for 100 fonts, out of 8000000 for 9000
+ 35078 strings out of 493727
+ 738768 string characters out of 6147890
+ 655365 words of memory out of 5000000
+ 37979 multiletter control sequences out of 15000+600000
+ 15812 words of font info for 90 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 56i,38n,63p,10413b,1855s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,37n,63p,10413b,1813s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on robotone.pdf (34 pages).
+Output written on robotone.pdf (6 pages).
