@@ -1,4 +1,4 @@
-module TestData3 (
+module RealAnalysis (
     problems, library, printingData
 ) where
 
@@ -79,12 +79,12 @@ expansionTableSource :: [(String, String)]
 expansionTableSource = [
     ("in(x,intersect(A,B))", "in(x,A) & in(x,B)"),
     ("in(x,union(A,B))", "in(x,A) | in(x,B)"),
-    ("subsetof(A,intersect(B,C))","subsetof(A,B) & subsetof(A,C)"),
-    ("subsetof(A,B)", "forall x.(in(x,A) => in(x,B))"),
     ("in(x,preimage(f,U))", "in(applyfn(f,x),U)"),
     ("in(x,image(f,A))", "exists y.(in(y,A) & equals(applyfn(f,y),x))"),
     ("in(x,complement(A))", "notin(x,A)"),
     ("notin(x,A)","¬in(x,A)"),
+    ("subsetof(A,intersect(B,C))","subsetof(A,B) & subsetof(A,C)"),
+    ("subsetof(A,B)", "forall x.(in(x,A) => in(x,B))"),
     ("injection(f)", "forall x y z.(equals(applyfn(f,x),z) & equals(applyfn(f,y),z) => equals(x,y))"),
     ("converges(an)", "exists a.(tendsto(an,a))"),
     ("cauchy(an)", "forall epsilon.(exists N.(forall m n.(atleast(m,N) & atleast(n,N) => lessthan(d(kthterm(an,m),kthterm(an,n)),epsilon))))"),
@@ -185,13 +185,22 @@ library = Library [
     Result "transitivity" [
         parse formula "lessthan(alpha,beta)",
         parse formula "atmost(beta,gamma)"]
+        (parse formula "lessthan(alpha,gamma)"),
+    Result "" [
+        parse formula "subsetof(A,B)",
+        parse formula "subsetof(B,C)"]
+        (parse formula "subsetof(A,C)"),
+    Result "a closed set contains its limit points" [
+        parse formula "closedin(F,X)",
+        parse formula "sequencein(an,F)",
+        parse formula "tendsto(an,a)"]
+        (parse formula "in(a,F)"),
+    Result "transitivity" [
+        parse formula "lessthan(alpha,beta)",
+        parse formula "atmost(beta,gamma)"]
         (parse formula "lessthan(alpha,gamma)")
           ]
 -- library = Library [
---     Result "transitivity" [
---         parse formula "lessthan(alpha,beta)",
---         parse formula "atmost(beta,gamma)"]
---         (parse formula "lessthan(alpha,gamma)"),
 --     Result "" [
 --         parse formula "subset(A,ball(x,beta))",
 --         parse formula "atmost(beta,gamma)"]
@@ -199,10 +208,6 @@ library = Library [
 --     Result "transitivity" [
 --         parse formula "atmost(alpha,beta)"]
 --         (parse formula "subsetof(ball(x,alpha),ball(x,beta))"),
---     Result "" [
---         parse formula "subsetof(A,B)",
---         parse formula "subsetof(B,C)"]
---         (parse formula "subsetof(A,C)"),
 --     Result "" [
 --         parse formula "closedunderinverse(H)",
 --         parse formula "in(x,H)"]
@@ -212,12 +217,7 @@ library = Library [
 --         parse formula "in(x,H)",
 --         parse formula "in(y,H)"]
 --         (parse formula "in(product(x,y),H)"),
---     Result "a closed set contains its limit points" [
---         parse formula "closedin(F,X)",
---         parse formula "sequencein(an,F)",
---         parse formula "tendsto(an,a)"]
---         (parse formula "in(a,F)"),
---     Result "" [parse formula "issameas(A,complement(B))"] (parse formula "equals(twoBack(f,A),complement(preimage(f,B)))")
+    -- Result "" [parse formula "issameas(A,complement(B))"] (parse formula "equals(twoBack(f,A),complement(preimage(f,B)))")
 --  ]
     [
      Solution [parse variable "eta"] [

@@ -5,11 +5,11 @@ WORKDIR /source
 
 ADD . /source
 
+ENV PATH /Library/TeX/texbin:$PATH
 
-## Warning: Take a much longer time to build tex into the Docker image
-#RUN apt-get update -q && apt-get install -qy \
-#    texlive-full \
-#    python-pygments gnuplot
+# # Warning: Take a much longer time to build tex into the Docker image
+# RUN apt-get update -q && apt-get install -qy \
+#    texlive-full 
 
 
 # Requires Haskell packages
@@ -22,4 +22,6 @@ RUN runhaskell Setup.lhs configure --user
 
 RUN runhaskell Setup.lhs build
 
-CMD ["bash", "run-docker.sh"]
+CMD ["bash", "run.sh"]
+
+CMD ["xelatex", "robotone.tex"]
