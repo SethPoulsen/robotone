@@ -38,6 +38,7 @@ import ApplyingMoves
 import Suspension
 
 import qualified RealAnalysis
+import qualified Problems
 
 ----------------------------------------------------------------------------------------------------
 
@@ -92,79 +93,91 @@ lengthAtLeast n (_:xs) = lengthAtLeast (n-1) xs
 ----------------------------------------------------------------------------------------------------
 
 printMax = 100
+pd = RealAnalysis.printingData
+lib = RealAnalysis.library
+
+
+
+movesFrom :: RobotState -> Tableau -> [(MoveDescription, Tableau)]
+movesFrom s t = case mapMaybe (runRobotM pd lib s) (allMovesByPriority t) of
+                  [] -> []
+                  (move@(MoveDescription _ _ _, t'), s'):_ -> move:movesFrom s' t'
+
+
+
+solve :: Problem -> (Tableau, [(MoveDescription, Tableau)])
+solve (Problem _ hs t) =
+    let initialTableauM = createTableau False (parse formula <$> hs) $ parse formula t
+        Just (initialTableau, s) = runRobotM pd lib initialRobotState initialTableauM
+     in (initialTableau, movesFrom s initialTableau)
+
+
+
+-- printMove: prints oldTableau + move text
+printMove :: Int -> Tableau -> MoveDescription -> IO ()
+printMove n oldTableau (MoveDescription statementsUsed clauses text) = do
+    putStrLn . fit $ texTableauBolding pd statementsUsed oldTableau
+    putStrLn "\\smallskip"
+    putStrLn ""
+    putStrLn $ {-trace (show n ++ ". " ++ text) $-} "\\noindent" ++ show n ++ ". " ++ text ++ "\\nopagebreak[4] "
+    putStrLn $ "\\marginpar{" ++ unwords (asSentence . writeup pd <$> clauses) ++ "}" ++ "\\nopagebreak[4] "
+    putStrLn $ "\\smallskip" ++ "\\nopagebreak[4] "
+    putStrLn ""
+
+
+-- Print the solution to 1 problem
+printSolution :: Int -> Problem -> IO ()
+printSolution max p =
+  let (initialTableau, moves) = solve p
+      (moveDescriptions, outputTableaux) = unzip moves
+      proof = compress . eliminate . fuse $ concat [cs | MoveDescription _ cs _ <- moveDescriptions]
+
+  in  if null moves
+        then putStrLn (fit $ tex pd initialTableau) >> putStrLn "No moves possible."
+        else do
+--            putStrLn "\\begin{center}"
+--            putStrLn "\\vspace{-3mm}"
+--            putStrLn . fit $ tex initialTableau
+--            putStrLn "\\end{center}"
+            when (not $ lengthAtLeast (max+1) moves) $ do
+                putStrLn "\\begin{center}"
+                putStrLn "\\begin{minipage}{120mm}"
+                putStrLn . unwords $ asSentence . writeup pd <$> proof
+                putStrLn "\\end{minipage}"
+                putStrLn "\\end{center}"
+                putStrLn ""
+                putStrLn "\\bigskip"
+
+            putStrLn "\\begin{steps}"
+            sequence_ $ zipWith3 printMove [1..max] (initialTableau:outputTableaux) moveDescriptions
+            putStrLn . fit . tex pd . last . take max $ outputTableaux --print final tableau
+            putStrLn ""
+            if lengthAtLeast (max+1) moves
+              then putStrLn $ show max ++ " moves made; stopping as the Robot may be in an infinite loop."
+              else case last moves of
+                (_, Done _) -> trace ("\t" ++ show (length moves) ++ " moves made; problem solved.") $
+                                 putStrLn "Problem solved."
+                _ -> trace ("\t" ++ show (length moves) ++ " moves made.") $
+                                 putStrLn "No moves possible."
+            putStrLn "\\cleardoublepage\n"
+            putStrLn "\\end{steps}" --}
+
+
+-- Solve a problem and print the solution
+attemptProblem :: Problem -> IO ()
+attemptProblem p@(Problem description _ _) = do
+--    putStrLn "\\vspace{-3mm}"
+    putStrLn $ "{\\begin{center} \\large " ++ textbf description ++ "\\end{center}}\\nopagebreak[4]"
+    putStrLn ""
+    printSolution printMax p
+
 
 main = do
-    let pd = RealAnalysis.printingData
-        lib = RealAnalysis.library
-
-    let movesFrom :: RobotState -> Tableau -> [(MoveDescription, Tableau)]
-        movesFrom s t = case mapMaybe (runRobotM pd lib s) (allMovesByPriority t) of
-            [] -> []
-            (move@(MoveDescription _ _ _, t'), s'):_ -> move:movesFrom s' t'
-
-        solve :: Problem -> (Tableau, [(MoveDescription, Tableau)])
-        solve (Problem _ hs t) =
-            let initialTableauM = createTableau False (parse formula <$> hs) $ parse formula t
-                Just (initialTableau, s) = runRobotM pd lib initialRobotState initialTableauM
-             in (initialTableau, movesFrom s initialTableau)
-
-        -- printMove: prints oldTableau + move text
-        printMove :: Int -> Tableau -> MoveDescription -> IO ()
-        printMove n oldTableau (MoveDescription statementsUsed clauses text) = do
-            putStrLn . fit $ texTableauBolding pd statementsUsed oldTableau
-            putStrLn "\\smallskip"
-            putStrLn ""
-            putStrLn $ {-trace (show n ++ ". " ++ text) $-} "\\noindent" ++ show n ++ ". " ++ text ++ "\\nopagebreak[4] "
-            putStrLn $ "\\marginpar{" ++ unwords (asSentence . writeup pd <$> clauses) ++ "}" ++ "\\nopagebreak[4] "
-            putStrLn $ "\\smallskip" ++ "\\nopagebreak[4] "
-            putStrLn ""
-
-        printSolution :: Int -> Problem -> IO ()
-        printSolution max p =
-          let (initialTableau, moves) = solve p
-              (moveDescriptions, outputTableaux) = unzip moves
-              proof = compress . eliminate . fuse $ concat [cs | MoveDescription _ cs _ <- moveDescriptions]
-
-          in  if null moves
-                then putStrLn (fit $ tex pd initialTableau) >> putStrLn "No moves possible."
-                else do
-        --            putStrLn "\\begin{center}"
-        --            putStrLn "\\vspace{-3mm}"
-        --            putStrLn . fit $ tex initialTableau
-        --            putStrLn "\\end{center}"
-                    when (not $ lengthAtLeast (max+1) moves) $ do
-                        putStrLn "\\begin{center}"
-                        putStrLn "\\begin{minipage}{120mm}"
-                        putStrLn . unwords $ asSentence . writeup pd <$> proof
-                        putStrLn "\\end{minipage}"
-                        putStrLn "\\end{center}"
-                        putStrLn ""
-                        putStrLn "\\bigskip"
-
-                    putStrLn "\\begin{steps}"
-                    sequence_ $ zipWith3 printMove [1..max] (initialTableau:outputTableaux) moveDescriptions
-                    putStrLn . fit . tex pd . last . take max $ outputTableaux --print final tableau
-                    putStrLn ""
-                    if lengthAtLeast (max+1) moves
-                      then putStrLn $ show max ++ " moves made; stopping as the Robot may be in an infinite loop."
-                      else case last moves of
-                        (_, Done _) -> trace ("\t" ++ show (length moves) ++ " moves made; problem solved.") $
-                                         putStrLn "Problem solved."
-                        _ -> trace ("\t" ++ show (length moves) ++ " moves made.") $
-                                         putStrLn "No moves possible."
-                    putStrLn "\\cleardoublepage\n"
-                    putStrLn "\\end{steps}" --}
-
-        attemptProblem :: Problem -> IO ()
-        attemptProblem p@(Problem description _ _) = do
-        --    putStrLn "\\vspace{-3mm}"
-            putStrLn $ "{\\begin{center} \\large " ++ textbf description ++ "\\end{center}}\\nopagebreak[4]"
-            putStrLn ""
-            printSolution printMax p
-
-
     putStrLn texHeader
-    mapM_ attemptProblem RealAnalysis.problems -- move list of problems out?
+
+    -- Maps the function <attemptProblem> to each element in array Problems.problems
+    mapM_ attemptProblem Problems.problems
+    
     putStrLn texFooter
 
 ----------------------------------------------------------------------------------------------------

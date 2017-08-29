@@ -101,7 +101,7 @@ fit :: String -> String
 fit s = "\\begin{fit}" ++ s ++ "\\end{fit}"
 
 texHeader =
-    "\\documentclass[a4paper,twoside,12pt]{article}\n\
+    "\\documentclass[a4paper,twoside,12pt]{article} %TESTING \n\ 
     \\\usepackage[hmargin={12mm,55mm},vmargin=10mm,footskip=7mm,asymmetric]{geometry}\n\
     \\\usepackage{amsmath}\n\
     \\\usepackage{amssymb}\n\

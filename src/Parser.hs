@@ -133,7 +133,7 @@ formula' = do
 formula'' :: Parser Formula
 formula'' = tryInTurn [
     bracketed formula,
-    Not <$> (string "¬" *> formula''),
+    Not <$> (string "~" *> formula''),
     forall_,
     univCond,
     exists,
@@ -155,9 +155,9 @@ exists :: Parser Formula
 exists = Exists <$> (string "exists " *> spaces *> sepBy variable spaces1)
                 <*> (punct ".(" *> formula <* spaces <* string ")")
 
-testF = "forall x.(in(x, intersect(A, B)) => exists delta.(forall y.(lessthan(d(x, y), delta) => in(y, intersect(A, B)))))"
-testF2 = "forall y.(lessthan(d(x, y), delta) => in(y, intersect(A, B)))"
-testF3 = "exists delta.(in(y, intersect(A, B)) & lessthan(d(x, y), delta))"
-pu = Parser.parse univCond
-pe = Parser.parse exists
+-- testF = "forall x.(in(x, intersect(A, B)) => exists delta.(forall y.(lessthan(d(x, y), delta) => in(y, intersect(A, B)))))"
+-- testF2 = "forall y.(lessthan(d(x, y), delta) => in(y, intersect(A, B)))"
+-- testF3 = "exists delta.(in(y, intersect(A, B)) & lessthan(d(x, y), delta))"
+-- pu = Parser.parse univCond
+-- pe = Parser.parse exists
 
