@@ -47,6 +47,7 @@ conventionalTypes = Map.fromList [
     ("g", TFunction),
     ("h", TFunction),
     ("n", TNaturalNumber),
+    ("m", TNaturalNumber),
     ("x", TPoint),
     ("y", TPoint),
     ("z", TPoint),
@@ -66,6 +67,7 @@ conventionalTypes = Map.fromList [
     ("H", TGroup),
     ("K", TGroup),
     ("N", TNaturalNumber),
+    ("M", TPositiveRealNumber),
     ("U", TSet),
     ("V", TSet),
     ("X", TSet),
@@ -76,7 +78,8 @@ conventionalTypes = Map.fromList [
     ("epsilon", TPositiveRealNumber),
     ("eta", TPositiveRealNumber),
     ("theta", TPositiveRealNumber),
-    ("an", TSequence)
+    ("an", TSequence),
+    ("xn", TSequence)
   ]
 
 ----------------------------------------------------------------------------------------------------

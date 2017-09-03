@@ -18,6 +18,9 @@ import Control.Monad.Trans.State.Lazy
 import Control.Monad.Identity hiding (msum)
 
 import Debug.Trace
+import System.IO
+import System.Environment
+import GHC.IO.Handle
 
 import Types
 import Rename
@@ -39,6 +42,7 @@ import Suspension
 
 import qualified RealAnalysis
 import qualified Problems
+
 
 ----------------------------------------------------------------------------------------------------
 
@@ -172,12 +176,27 @@ attemptProblem p@(Problem description _ _) = do
     printSolution printMax p
 
 
+--run :: [Problem] -> FilePath -> IO ()
+--run problems filepath = do
 main = do
+  -- Redirect output in ghci from stdout to desired <filepath>
+    [filepath] <- getArgs
+    output <- openFile filepath WriteMode
+    hDuplicateTo output stdout
+    
     putStrLn texHeader
 
-    -- Maps the function <attemptProblem> to each element in array Problems.problems
+    -- Maps the function <attemptProblem> to each element in array <problems>
     mapM_ attemptProblem Problems.problems
     
     putStrLn texFooter
+
+-- main = do
+--     putStrLn texHeader
+
+--     -- Maps the function <attemptProblem> to each element in array Problems.problems
+--     mapM_ attemptProblem Problems.problems
+    
+--     putStrLn texFooter
 
 ----------------------------------------------------------------------------------------------------

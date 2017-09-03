@@ -302,7 +302,7 @@ Statement n _ _ === Statement n' _ _ = n == n'
 ss =:= s's = and $ zipWith (===) ss s's
 
 nameElem :: Statement -> [Statement] -> Bool
-nameElem s (s':s's)
+nameElem s (s':s's) 
     | s === s' = True
     | otherwise = s `nameElem` s's
 nameElem s [] = False

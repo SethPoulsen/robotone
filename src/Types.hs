@@ -23,7 +23,7 @@ data Predicate = Predicate String                                           deri
 type ID = Int
 type HasBullet = Bool  --TODO: rename to isKey/hasDagger
 
-data Type_ = TPoint | TSet | TFunction | TPositiveRealNumber | TSequence | TNaturalNumber | TGroup
+data Type_ = TPoint | TSet | TFunction | TPositiveRealNumber | TSequence | TNaturalNumber | TGroup | TRealNumber 
                                                                             deriving (Eq, Ord, Show)
 data VariableType = VTNormal | VTDiamond | VTBullet                         deriving (Eq, Ord, Show)
 

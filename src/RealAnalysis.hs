@@ -1,5 +1,5 @@
 module RealAnalysis (
-    problems, library, printingData
+    library, printingData
 ) where
 
 import Prelude hiding ((/))
@@ -22,20 +22,33 @@ import Printing
         
 expansionTableSource :: [(String, String)]
 expansionTableSource = [
+    ("sequencein(an,intersect(A,B))", "sequencein(an,A) & sequencein(an,B)"),
     ("in(x,intersect(A,B))", "in(x,A) & in(x,B)"),
     ("in(x,union(A,B))", "in(x,A) | in(x,B)"),
+    ("subsetof(A,intersect(B,C))","subsetof(A,B) & subsetof(A,C)"),
+    ("subsetof(A,B)", "forall x.(in(x,A) => in(x,B))"),
     ("in(x,preimage(f,U))", "in(applyfn(f,x),U)"),
+    ("sequencein(x,preimage(f,U))", "sequencein(applyfnpointwise(f,x),U)"), 
     ("in(x,image(f,A))", "exists y.(in(y,A) & equals(applyfn(f,y),x))"),
     ("in(x,complement(A))", "notin(x,A)"),
     ("notin(x,A)","~in(x,A)"),
-    ("subsetof(A,intersect(B,C))","subsetof(A,B) & subsetof(A,C)"),
-    ("subsetof(A,B)", "forall x.(in(x,A) => in(x,B))"),
+    --("setequals(A,B)", "subsetof(A,B) & subsetof(B,A)"),--new | clones issameas()
     ("injection(f)", "forall x y z.(equals(applyfn(f,x),z) & equals(applyfn(f,y),z) => equals(x,y))"),
+    ("sequencein(an,A)", "forall n.(in(kthterm(an,n),A))"),
+    ("open(A)", "forall x.(in(x, A) => exists delta.(forall y.(lessthan(d(x, y), delta) => in(y, A))))"),
+    ("continuous(f)", "forall x epsilon.(exists delta.(forall y.(lessthan(d(x, y), delta) => lessthan(d(applyfn(f,x), applyfn(f,y)), epsilon))))"),
+    ("tendsto(an,a)", "forall epsilon.(exists N.(forall n.(atleast(n,N) => lessthan(d(a,kthterm(an,n)),epsilon))))"),
+    ("completespace(X)", "forall an.(cauchy(an) => converges(an))"),
+    ("complete(A)", "forall an.(cauchy(an) & sequencein(an,A) => convergesin(an,A))"),
     ("converges(an)", "exists a.(tendsto(an,a))"),
+    ("convergesin(an,A)", "exists a.(in(a,A) & tendsto(an,a))"),
+    ("closed(A)", "forall an a.(sequencein(an,A) & tendsto(an,a) => in(a,A))"),
     ("cauchy(an)", "forall epsilon.(exists N.(forall m n.(atleast(m,N) & atleast(n,N) => lessthan(d(kthterm(an,m),kthterm(an,n)),epsilon))))"),
---    ("surjection(f)", "forall x y.(equals(applyfn(f,x),z) => equals(x,y))"),
-    ("surjection(f, A, B)", "forall y.(in(y, B) => (exists x.(in(x, A) & equals(applyfn(f,x),y))))")
---    ("notsurjection(f)","¬surjection(f)"),
+    -- ("surjection(f, A, B)", "forall y.(in(y, B) => (exists x.(in(x, A) & equals(applyfn(f,x),y))))"),
+    ("surjection(f, A, B)", "forall y.(in(y, B) => in(y, image(f, A)))"),--new
+    ("islimitpoint(x, A)", "exists an.(sequencein(an, A) & tendsto(an, x) & forall n.(~equals(x, kthterm(an, n))))"), --new
+    ("bounded(an)", "exists N.(forall n.(lessthan(d(0,kthterm(an,n)), N)))"),--new
+    ("monotone(an)", "forall m n.(lessthan(m,n) => lessthan(kthterm(an, m), kthterm(an, n))) | forall m n.(lessthan(m,n) => lessthan(kthterm(an, n), kthterm(an, m)))")--new
     --("surjection(f)","forall y.(exists x.(equals(applyfn(f,x), y)))"),
 --    ("isEmptySet(A)", "forall x.(notin(x, A))")
     ]
@@ -70,7 +83,7 @@ termPatterns' = Map.fromList [
     ("applyfn", "%(%)"),
     ("image", "%(%)"),
     ("preimage", "%^{-1}(%)"),
-    ("complement", "%^c"),
+    ("complement", "(%)^c"),
     ("product", "%%"),
     ("inverse", "%^{-1}"),
     ("e", "e"),
@@ -83,6 +96,7 @@ formulaPatterns' = Map.fromList [
     ("notin", "$%\\notin %$"),
     ("subsetof", "$%\\subset %$"),
     ("equals", "$% = %$"),
+    ("issameas", "$% = %$"),
     ("lessthan", "$% < %$"),
     ("atleast", "$%\\geqslant %$"),
     ("atmost", "$%\\leqslant %$"),
@@ -102,7 +116,9 @@ formulaPatterns' = Map.fromList [
     ("closedunderinverse", "$%$ is closed under taking inverses"),
     ("closedundermultiplication", "$%$ is closed under multiplication"),
     ("surjection", "$%$ from $%$ to $%$ is a surjection"),
-    ("isEmptySet", "$%$ is an empty set")
+    ("isEmptySet", "$%$ is an empty set"),
+    ("bounded", "$%$ is bounded"),
+    ("monotone", "$%$ is monotone")
   ]
 
 nounPatterns' :: Map String Pattern
@@ -138,10 +154,13 @@ library = Library [
         parse formula "sequencein(an,F)",
         parse formula "tendsto(an,a)"]
         (parse formula "in(a,F)"),
-    Result "transitivity" [
-        parse formula "lessthan(alpha,beta)",
-        parse formula "atmost(beta,gamma)"]
-        (parse formula "lessthan(alpha,gamma)")
+    Result "Monotone Subsequence Theorem" [
+        parse formula "bounded(an)",
+        parse formula "monotone(an)"]
+        (parse formula "converges(an)"),
+    Result "every convergent sequence is bounded" [
+        parse formula "converges(an)"]
+        (parse formula "bounded(an)")
           ]
 -- library = Library [
 --     Result "" [

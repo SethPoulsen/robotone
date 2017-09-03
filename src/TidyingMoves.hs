@@ -55,7 +55,7 @@ peelBareUniversalTarget = tableauwise onTableau where
     onTableau :: [Statement] -> Surroundings -> Tableau -> RobotM (MoveDescription, Tableau)
     onTableau _ s tableau@(Tableau tID tVs hs (Target [Left (Statement n (Forall vs c) _)])) = do
         c' <- createStatement STTarget c
-        return (MoveDescription [n] [Take vs] $ "pply `let' trick and move premise of universal target " ++ texSN n ++ " above the line.",
+        return (MoveDescription [n] [Take vs] $ "Apply `let' trick and move premise of universal target " ++ texSN n ++ " above the line.",
                 markBulletedIndependencies vs . s $ Tableau tID (tVs ++ vs) hs (Target [Left c']))
     onTableau _ _ _ = mzero
 
@@ -122,7 +122,8 @@ splitDisjunctiveHypothesis = tableauwise onTableau where
         copiedTs <- mapM copyTarget [t | _ <- disjunctHs]
         newTableaux <- zipWithM (createTableau' False) (return <$> disjunctHs) copiedTs
 
-        return (MoveDescription [n] [StubClause "Split disjunctive hypothesis"] $ "Split into cases to handle disjunctive hypothesis " ++ texSN n ++ ".",
+        return (MoveDescription [n] --[StubClause "Split disjunctive hypothesis"] $
+                [] $ "Split into cases to handle disjunctive hypothesis " ++ texSN n ++ ".",
                 s . Tableau tID tVs (context []) . Target $ Right . return <$> newTableaux)
 
     onTableau _ _ _ = mzero
@@ -144,7 +145,8 @@ splitDisjunctiveTarget = tableauwise onTableau where
         newTableaux' <- mapM copyTableau newTableaux  --rename all targets (inc. the disjuncts)
 
 
-        return (MoveDescription [n] [StubClause "Split disjunctive target"] $ "Split up disjunctive target " ++ texSN n ++ ".",
+        return (MoveDescription [n] --[StubClause "Split disjunctive target"] $
+                [] $ "Split up disjunctive target " ++ texSN n ++ ".",
                 s . Tableau tID tVs hs . Target . context . return . Right $ newTableaux')
 
     onTableau _ _ _ = mzero
@@ -196,7 +198,7 @@ matchTargetWithHypothesis = tableauwise onTableau  where
         matching <- oneOf . maybeToList $ match (f / boundVariablesInFormula f) f'
 
         case targetContext [] of
-            [] ->  return (MoveDescription [n, n'] [ProofDone] $
+            [] ->  return (MoveDescription [n, n'] [ClearlyTheCaseDone] $
                            "Hypothesis " ++ texSN n ++ " matches target " ++ texSN n' ++ "," ++
                            " so " ++ texTN tID ++ " is done.",
                            s $ Done tID)
@@ -246,7 +248,7 @@ matchExistentialConjunctiveTargetWithHypotheses = tableauwise onTableau  where
                            message ++ ", so " ++ texTN tID ++ " is done.",
                            s $ Done tID)
 
-            ps' -> return (MoveDescription (ns ++ [n']) [StubClause "remove one existential target"] $
+            ps' -> return (MoveDescription (ns ++ [n']) proofClauses $ --[StubClause "remove one existential target"] $ -- Khoa
                            message ++ ", so we can remove " ++ texSN n' ++ ".",
                            s . Tableau tID tVs hs $ Target ps')
 
