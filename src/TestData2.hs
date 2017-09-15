@@ -45,7 +45,7 @@ intersectionOpenSets = Problem
     "open(B)"]
     "open(intersect(A,B))"
 
-unionClosedSets = Problem
+unionClosedSets = Problem -- not working
     "If $A$ and $B$ are closed sets, then $A \\cup B$ is also closed." --"The union of two closed sets is closed."
    ["closed(A)",
     "closed(B)"]

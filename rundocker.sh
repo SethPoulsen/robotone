@@ -1,18 +1,49 @@
-docker build -t robotone .
-docker run -v ~/Documents/CollegeOfWooster/ISProject/source/is-robotone/:/knguyen18 -it test /bin/bash
+#!/bin/bash
 
-# id=$(docker create test)
-# docker cp $id:/source/build/robotone.tex - > ./build/tmp.tex
-# docker rm -v $id
+#docker build -t robotone . #uncomment this line out if building new Docker image
 
+# enter desired output file
+outfile=$1 #path to desired output file
 
-# # delete random chars on top of copied .tex file
-# str='\\documentclass[a4paper,twoside,12pt]{article}'
-# sed "1s/.*/$str/" ./build/tmp.tex > ./build/robotone2.tex
+if [[ -n "$outfile" ]]; then # If command-line argument present
+	outfile=$(basename "$1")
+else
+	echo "Error: Missing path to output file."
+	exit
+fi
 
-# # compile .tex file and remove tmp file
-# cd ./build
-# #xelatex robotone2.tex -quiet
-# xelatex "\def\showsteps{1} \input{robotone2.tex}"
-# rm tmp.tex
-# cd ..
+# # create container for the robotone image
+# docker create -v $(pwd):/root-robotone --name cont_robotone robotone /bin/bash
+# wait
+
+# # start that container
+# docker container start cont_robotone
+# wait
+
+# write the proofs 
+docker exec -i cont_robotone bash -c "cd root-robotone && bash run.sh /root-robotone/build/$outfile"
+wait
+
+# # stop that container
+# docker container stop cont_robotone
+# wait
+
+# docker container rm cont_robotone
+# wait
+
+# copy .tex file from container to host
+pushd "$(pwd)/build"
+cp $outfile $1
+wait
+rm $outfile
+wait
+popd
+
+pushd "$(dirname $1)"
+# latex compile to generate pdf
+read -p "Show proof steps? Y/N " yn
+    case $yn in
+        [Yy]* ) xelatex "\def\showsteps{1} \input{$outfile}" ; break;;
+        * )	xelatex "\input{$outfile}" ;;
+    esac
+popd

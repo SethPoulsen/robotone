@@ -1,0 +1,504 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AppDelegate"
+provides-nominal:
+- "C8robotone11AppDelegate"
+provides-member:
+- ["C8robotone11AppDelegate", ""]
+provides-dynamic-lookup:
+- "applicationDidFinishLaunching"
+- "build_docker_image"
+- "window"
+- "applicationWillTerminate"
+- "load_proofs"
+depends-top-level:
+- !private "BooleanLiteralType"
+- "NSButtonCell"
+- !private "Process"
+- !private "StringLiteralType"
+- "Notification"
+- "AppDelegate"
+- "NSApplicationDelegate"
+- "AssignmentPrecedence"
+- "NSObject"
+- !private "Array"
+- "NSWindow"
+depends-member:
+- !private ["Ps9AnyObject", "Process"]
+- ["Ps9AnyObject", "application"]
+- ["Ps9AnyObject", "applicationDidBecomeActive"]
+- ["Ps9AnyObject", "applicationDidChangeOcclusionState"]
+- ["Ps9AnyObject", "applicationDidChangeScreenParameters"]
+- ["Ps9AnyObject", "applicationDidFinishLaunching"]
+- ["Ps9AnyObject", "applicationDidHide"]
+- ["Ps9AnyObject", "applicationDidResignActive"]
+- ["Ps9AnyObject", "applicationDidUnhide"]
+- ["Ps9AnyObject", "applicationDidUpdate"]
+- ["Ps9AnyObject", "applicationDockMenu"]
+- ["Ps9AnyObject", "applicationOpenUntitledFile"]
+- ["Ps9AnyObject", "applicationShouldHandleReopen"]
+- ["Ps9AnyObject", "applicationShouldOpenUntitledFile"]
+- ["Ps9AnyObject", "applicationShouldTerminate"]
+- ["Ps9AnyObject", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["Ps9AnyObject", "applicationWillBecomeActive"]
+- ["Ps9AnyObject", "applicationWillFinishLaunching"]
+- ["Ps9AnyObject", "applicationWillHide"]
+- ["Ps9AnyObject", "applicationWillResignActive"]
+- ["Ps9AnyObject", "applicationWillTerminate"]
+- ["Ps9AnyObject", "applicationWillUnhide"]
+- ["Ps9AnyObject", "applicationWillUpdate"]
+- ["Ps9AnyObject", "build_docker_image"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isEnabled"]
+- !private ["Ps9AnyObject", "launchedProcess"]
+- ["Ps9AnyObject", "load_proofs"]
+- !private ["Ps9AnyObject", "waitUntilExit"]
+- ["Ps9AnyObject", "window"]
+- ["Ps9AnyObject", ""]
+- ["C8robotone11AppDelegate", "NSButtonCell"]
+- ["C8robotone11AppDelegate", "NSWindow"]
+- ["C8robotone11AppDelegate", "Notification"]
+- !private ["C8robotone11AppDelegate", "Process"]
+- ["C8robotone11AppDelegate", "application"]
+- ["C8robotone11AppDelegate", "applicationDidBecomeActive"]
+- ["C8robotone11AppDelegate", "applicationDidChangeOcclusionState"]
+- ["C8robotone11AppDelegate", "applicationDidChangeScreenParameters"]
+- ["C8robotone11AppDelegate", "applicationDidFinishLaunching"]
+- ["C8robotone11AppDelegate", "applicationDidHide"]
+- ["C8robotone11AppDelegate", "applicationDidResignActive"]
+- ["C8robotone11AppDelegate", "applicationDidUnhide"]
+- ["C8robotone11AppDelegate", "applicationDidUpdate"]
+- ["C8robotone11AppDelegate", "applicationDockMenu"]
+- ["C8robotone11AppDelegate", "applicationOpenUntitledFile"]
+- ["C8robotone11AppDelegate", "applicationShouldHandleReopen"]
+- ["C8robotone11AppDelegate", "applicationShouldOpenUntitledFile"]
+- ["C8robotone11AppDelegate", "applicationShouldTerminate"]
+- ["C8robotone11AppDelegate", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["C8robotone11AppDelegate", "applicationWillBecomeActive"]
+- ["C8robotone11AppDelegate", "applicationWillFinishLaunching"]
+- ["C8robotone11AppDelegate", "applicationWillHide"]
+- ["C8robotone11AppDelegate", "applicationWillResignActive"]
+- ["C8robotone11AppDelegate", "applicationWillTerminate"]
+- ["C8robotone11AppDelegate", "applicationWillUnhide"]
+- ["C8robotone11AppDelegate", "applicationWillUpdate"]
+- ["C8robotone11AppDelegate", "build_docker_image"]
+- ["C8robotone11AppDelegate", "deinit"]
+- ["C8robotone11AppDelegate", "init"]
+- ["C8robotone11AppDelegate", "load_proofs"]
+- ["C8robotone11AppDelegate", "window"]
+- !private ["Sa", "Element"]
+- ["Sa", "deinit"]
+- !private ["Ps23BidirectionalCollection", "Element"]
+- !private ["Ps22BidirectionalIndexable", "Element"]
+- ["Sb", "deinit"]
+- !private ["Ps7CVarArg", "Element"]
+- !private ["Ps7CVarArg", "Process"]
+- ["Ps7CVarArg", "application"]
+- ["Ps7CVarArg", "applicationDidBecomeActive"]
+- ["Ps7CVarArg", "applicationDidChangeOcclusionState"]
+- ["Ps7CVarArg", "applicationDidChangeScreenParameters"]
+- ["Ps7CVarArg", "applicationDidFinishLaunching"]
+- ["Ps7CVarArg", "applicationDidHide"]
+- ["Ps7CVarArg", "applicationDidResignActive"]
+- ["Ps7CVarArg", "applicationDidUnhide"]
+- ["Ps7CVarArg", "applicationDidUpdate"]
+- ["Ps7CVarArg", "applicationDockMenu"]
+- ["Ps7CVarArg", "applicationOpenUntitledFile"]
+- ["Ps7CVarArg", "applicationShouldHandleReopen"]
+- ["Ps7CVarArg", "applicationShouldOpenUntitledFile"]
+- ["Ps7CVarArg", "applicationShouldTerminate"]
+- ["Ps7CVarArg", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["Ps7CVarArg", "applicationWillBecomeActive"]
+- ["Ps7CVarArg", "applicationWillFinishLaunching"]
+- ["Ps7CVarArg", "applicationWillHide"]
+- ["Ps7CVarArg", "applicationWillResignActive"]
+- ["Ps7CVarArg", "applicationWillTerminate"]
+- ["Ps7CVarArg", "applicationWillUnhide"]
+- ["Ps7CVarArg", "applicationWillUpdate"]
+- ["Ps7CVarArg", "build_docker_image"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isEnabled"]
+- !private ["Ps7CVarArg", "launchedProcess"]
+- ["Ps7CVarArg", "load_proofs"]
+- !private ["Ps7CVarArg", "waitUntilExit"]
+- ["Ps7CVarArg", "window"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Collection", "Element"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Process"]
+- ["Ps28CustomDebugStringConvertible", "application"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidChangeOcclusionState"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidChangeScreenParameters"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidFinishLaunching"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidHide"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidResignActive"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidUnhide"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidUpdate"]
+- ["Ps28CustomDebugStringConvertible", "applicationDockMenu"]
+- ["Ps28CustomDebugStringConvertible", "applicationOpenUntitledFile"]
+- ["Ps28CustomDebugStringConvertible", "applicationShouldHandleReopen"]
+- ["Ps28CustomDebugStringConvertible", "applicationShouldOpenUntitledFile"]
+- ["Ps28CustomDebugStringConvertible", "applicationShouldTerminate"]
+- ["Ps28CustomDebugStringConvertible", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillBecomeActive"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillFinishLaunching"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillHide"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillUnhide"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillUpdate"]
+- ["Ps28CustomDebugStringConvertible", "build_docker_image"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isEnabled"]
+- !private ["Ps28CustomDebugStringConvertible", "launchedProcess"]
+- ["Ps28CustomDebugStringConvertible", "load_proofs"]
+- !private ["Ps28CustomDebugStringConvertible", "waitUntilExit"]
+- ["Ps28CustomDebugStringConvertible", "window"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "Element"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Process"]
+- ["Ps23CustomStringConvertible", "application"]
+- ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
+- ["Ps23CustomStringConvertible", "applicationDidChangeOcclusionState"]
+- ["Ps23CustomStringConvertible", "applicationDidChangeScreenParameters"]
+- ["Ps23CustomStringConvertible", "applicationDidFinishLaunching"]
+- ["Ps23CustomStringConvertible", "applicationDidHide"]
+- ["Ps23CustomStringConvertible", "applicationDidResignActive"]
+- ["Ps23CustomStringConvertible", "applicationDidUnhide"]
+- ["Ps23CustomStringConvertible", "applicationDidUpdate"]
+- ["Ps23CustomStringConvertible", "applicationDockMenu"]
+- ["Ps23CustomStringConvertible", "applicationOpenUntitledFile"]
+- ["Ps23CustomStringConvertible", "applicationShouldHandleReopen"]
+- ["Ps23CustomStringConvertible", "applicationShouldOpenUntitledFile"]
+- ["Ps23CustomStringConvertible", "applicationShouldTerminate"]
+- ["Ps23CustomStringConvertible", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["Ps23CustomStringConvertible", "applicationWillBecomeActive"]
+- ["Ps23CustomStringConvertible", "applicationWillFinishLaunching"]
+- ["Ps23CustomStringConvertible", "applicationWillHide"]
+- ["Ps23CustomStringConvertible", "applicationWillResignActive"]
+- ["Ps23CustomStringConvertible", "applicationWillTerminate"]
+- ["Ps23CustomStringConvertible", "applicationWillUnhide"]
+- ["Ps23CustomStringConvertible", "applicationWillUpdate"]
+- ["Ps23CustomStringConvertible", "build_docker_image"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isEnabled"]
+- !private ["Ps23CustomStringConvertible", "launchedProcess"]
+- ["Ps23CustomStringConvertible", "load_proofs"]
+- !private ["Ps23CustomStringConvertible", "waitUntilExit"]
+- ["Ps23CustomStringConvertible", "window"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "Process"]
+- ["Ps9Equatable", "application"]
+- ["Ps9Equatable", "applicationDidBecomeActive"]
+- ["Ps9Equatable", "applicationDidChangeOcclusionState"]
+- ["Ps9Equatable", "applicationDidChangeScreenParameters"]
+- ["Ps9Equatable", "applicationDidFinishLaunching"]
+- ["Ps9Equatable", "applicationDidHide"]
+- ["Ps9Equatable", "applicationDidResignActive"]
+- ["Ps9Equatable", "applicationDidUnhide"]
+- ["Ps9Equatable", "applicationDidUpdate"]
+- ["Ps9Equatable", "applicationDockMenu"]
+- ["Ps9Equatable", "applicationOpenUntitledFile"]
+- ["Ps9Equatable", "applicationShouldHandleReopen"]
+- ["Ps9Equatable", "applicationShouldOpenUntitledFile"]
+- ["Ps9Equatable", "applicationShouldTerminate"]
+- ["Ps9Equatable", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["Ps9Equatable", "applicationWillBecomeActive"]
+- ["Ps9Equatable", "applicationWillFinishLaunching"]
+- ["Ps9Equatable", "applicationWillHide"]
+- ["Ps9Equatable", "applicationWillResignActive"]
+- ["Ps9Equatable", "applicationWillTerminate"]
+- ["Ps9Equatable", "applicationWillUnhide"]
+- ["Ps9Equatable", "applicationWillUpdate"]
+- ["Ps9Equatable", "build_docker_image"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isEnabled"]
+- !private ["Ps9Equatable", "launchedProcess"]
+- ["Ps9Equatable", "load_proofs"]
+- !private ["Ps9Equatable", "waitUntilExit"]
+- ["Ps9Equatable", "window"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "Element"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "Process"]
+- ["Ps8Hashable", "application"]
+- ["Ps8Hashable", "applicationDidBecomeActive"]
+- ["Ps8Hashable", "applicationDidChangeOcclusionState"]
+- ["Ps8Hashable", "applicationDidChangeScreenParameters"]
+- ["Ps8Hashable", "applicationDidFinishLaunching"]
+- ["Ps8Hashable", "applicationDidHide"]
+- ["Ps8Hashable", "applicationDidResignActive"]
+- ["Ps8Hashable", "applicationDidUnhide"]
+- ["Ps8Hashable", "applicationDidUpdate"]
+- ["Ps8Hashable", "applicationDockMenu"]
+- ["Ps8Hashable", "applicationOpenUntitledFile"]
+- ["Ps8Hashable", "applicationShouldHandleReopen"]
+- ["Ps8Hashable", "applicationShouldOpenUntitledFile"]
+- ["Ps8Hashable", "applicationShouldTerminate"]
+- ["Ps8Hashable", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["Ps8Hashable", "applicationWillBecomeActive"]
+- ["Ps8Hashable", "applicationWillFinishLaunching"]
+- ["Ps8Hashable", "applicationWillHide"]
+- ["Ps8Hashable", "applicationWillResignActive"]
+- ["Ps8Hashable", "applicationWillTerminate"]
+- ["Ps8Hashable", "applicationWillUnhide"]
+- ["Ps8Hashable", "applicationWillUpdate"]
+- ["Ps8Hashable", "build_docker_image"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isEnabled"]
+- !private ["Ps8Hashable", "launchedProcess"]
+- ["Ps8Hashable", "load_proofs"]
+- !private ["Ps8Hashable", "waitUntilExit"]
+- ["Ps8Hashable", "window"]
+- ["Ps8Hashable", ""]
+- ["SQ", "deinit"]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Ps13IndexableBase", "Element"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "Element"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["PSo15NSAccessibility", "isEnabled"]
+- !private ["PSo30NSAccessibilityElementProtocol", "isEnabled"]
+- !private ["CSo12NSActionCell", "isEnabled"]
+- !private ["PSo21NSApplicationDelegate", "Process"]
+- ["PSo21NSApplicationDelegate", "application"]
+- ["PSo21NSApplicationDelegate", "applicationDidBecomeActive"]
+- ["PSo21NSApplicationDelegate", "applicationDidChangeOcclusionState"]
+- ["PSo21NSApplicationDelegate", "applicationDidChangeScreenParameters"]
+- ["PSo21NSApplicationDelegate", "applicationDidFinishLaunching"]
+- ["PSo21NSApplicationDelegate", "applicationDidHide"]
+- ["PSo21NSApplicationDelegate", "applicationDidResignActive"]
+- ["PSo21NSApplicationDelegate", "applicationDidUnhide"]
+- ["PSo21NSApplicationDelegate", "applicationDidUpdate"]
+- ["PSo21NSApplicationDelegate", "applicationDockMenu"]
+- ["PSo21NSApplicationDelegate", "applicationOpenUntitledFile"]
+- ["PSo21NSApplicationDelegate", "applicationShouldHandleReopen"]
+- ["PSo21NSApplicationDelegate", "applicationShouldOpenUntitledFile"]
+- ["PSo21NSApplicationDelegate", "applicationShouldTerminate"]
+- ["PSo21NSApplicationDelegate", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["PSo21NSApplicationDelegate", "applicationWillBecomeActive"]
+- ["PSo21NSApplicationDelegate", "applicationWillFinishLaunching"]
+- ["PSo21NSApplicationDelegate", "applicationWillHide"]
+- ["PSo21NSApplicationDelegate", "applicationWillResignActive"]
+- ["PSo21NSApplicationDelegate", "applicationWillTerminate"]
+- ["PSo21NSApplicationDelegate", "applicationWillUnhide"]
+- ["PSo21NSApplicationDelegate", "applicationWillUpdate"]
+- ["PSo21NSApplicationDelegate", ""]
+- ["CSo12NSButtonCell", "deinit"]
+- !private ["CSo12NSButtonCell", "isEnabled"]
+- !private ["CSo6NSCell", "isEnabled"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isEnabled"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "isEnabled"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "NSButtonCell"]
+- ["CSo8NSObject", "NSWindow"]
+- ["CSo8NSObject", "Notification"]
+- !private ["CSo8NSObject", "Process"]
+- ["CSo8NSObject", "application"]
+- ["CSo8NSObject", "applicationDidBecomeActive"]
+- ["CSo8NSObject", "applicationDidChangeOcclusionState"]
+- ["CSo8NSObject", "applicationDidChangeScreenParameters"]
+- ["CSo8NSObject", "applicationDidFinishLaunching"]
+- ["CSo8NSObject", "applicationDidHide"]
+- ["CSo8NSObject", "applicationDidResignActive"]
+- ["CSo8NSObject", "applicationDidUnhide"]
+- ["CSo8NSObject", "applicationDidUpdate"]
+- ["CSo8NSObject", "applicationDockMenu"]
+- ["CSo8NSObject", "applicationOpenUntitledFile"]
+- ["CSo8NSObject", "applicationShouldHandleReopen"]
+- ["CSo8NSObject", "applicationShouldOpenUntitledFile"]
+- ["CSo8NSObject", "applicationShouldTerminate"]
+- ["CSo8NSObject", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["CSo8NSObject", "applicationWillBecomeActive"]
+- ["CSo8NSObject", "applicationWillFinishLaunching"]
+- ["CSo8NSObject", "applicationWillHide"]
+- ["CSo8NSObject", "applicationWillResignActive"]
+- ["CSo8NSObject", "applicationWillTerminate"]
+- ["CSo8NSObject", "applicationWillUnhide"]
+- ["CSo8NSObject", "applicationWillUpdate"]
+- ["CSo8NSObject", "build_docker_image"]
+- ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isEnabled"]
+- !private ["CSo8NSObject", "launchedProcess"]
+- ["CSo8NSObject", "load_proofs"]
+- !private ["CSo8NSObject", "waitUntilExit"]
+- ["CSo8NSObject", "window"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "Process"]
+- ["PSo16NSObjectProtocol", "application"]
+- ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
+- ["PSo16NSObjectProtocol", "applicationDidChangeOcclusionState"]
+- ["PSo16NSObjectProtocol", "applicationDidChangeScreenParameters"]
+- ["PSo16NSObjectProtocol", "applicationDidFinishLaunching"]
+- ["PSo16NSObjectProtocol", "applicationDidHide"]
+- ["PSo16NSObjectProtocol", "applicationDidResignActive"]
+- ["PSo16NSObjectProtocol", "applicationDidUnhide"]
+- ["PSo16NSObjectProtocol", "applicationDidUpdate"]
+- ["PSo16NSObjectProtocol", "applicationDockMenu"]
+- ["PSo16NSObjectProtocol", "applicationOpenUntitledFile"]
+- ["PSo16NSObjectProtocol", "applicationShouldHandleReopen"]
+- ["PSo16NSObjectProtocol", "applicationShouldOpenUntitledFile"]
+- ["PSo16NSObjectProtocol", "applicationShouldTerminate"]
+- ["PSo16NSObjectProtocol", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["PSo16NSObjectProtocol", "applicationWillBecomeActive"]
+- ["PSo16NSObjectProtocol", "applicationWillFinishLaunching"]
+- ["PSo16NSObjectProtocol", "applicationWillHide"]
+- ["PSo16NSObjectProtocol", "applicationWillResignActive"]
+- ["PSo16NSObjectProtocol", "applicationWillTerminate"]
+- ["PSo16NSObjectProtocol", "applicationWillUnhide"]
+- ["PSo16NSObjectProtocol", "applicationWillUpdate"]
+- ["PSo16NSObjectProtocol", "build_docker_image"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isEnabled"]
+- !private ["PSo16NSObjectProtocol", "launchedProcess"]
+- ["PSo16NSObjectProtocol", "load_proofs"]
+- !private ["PSo16NSObjectProtocol", "waitUntilExit"]
+- ["PSo16NSObjectProtocol", "window"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo19NSPasteboardReading", "init"]
+- !private ["PSo19NSPasteboardWriting", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["PSo33NSUserInterfaceItemIdentification", "isEnabled"]
+- ["CSo7Process", "deinit"]
+- !private ["CSo7Process", "launchedProcess"]
+- !private ["CSo7Process", "waitUntilExit"]
+- !private ["Ps22RandomAccessCollection", "Element"]
+- !private ["Ps21RandomAccessIndexable", "Element"]
+- !private ["Ps26RangeReplaceableCollection", "Element"]
+- !private ["Ps25RangeReplaceableIndexable", "Element"]
+- !private ["Ps8Sequence", "Element"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps14_ArrayProtocol", "Element"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Process"]
+- ["Ps9_Hashable", "application"]
+- ["Ps9_Hashable", "applicationDidBecomeActive"]
+- ["Ps9_Hashable", "applicationDidChangeOcclusionState"]
+- ["Ps9_Hashable", "applicationDidChangeScreenParameters"]
+- ["Ps9_Hashable", "applicationDidFinishLaunching"]
+- ["Ps9_Hashable", "applicationDidHide"]
+- ["Ps9_Hashable", "applicationDidResignActive"]
+- ["Ps9_Hashable", "applicationDidUnhide"]
+- ["Ps9_Hashable", "applicationDidUpdate"]
+- ["Ps9_Hashable", "applicationDockMenu"]
+- ["Ps9_Hashable", "applicationOpenUntitledFile"]
+- ["Ps9_Hashable", "applicationShouldHandleReopen"]
+- ["Ps9_Hashable", "applicationShouldOpenUntitledFile"]
+- ["Ps9_Hashable", "applicationShouldTerminate"]
+- ["Ps9_Hashable", "applicationShouldTerminateAfterLastWindowClosed"]
+- ["Ps9_Hashable", "applicationWillBecomeActive"]
+- ["Ps9_Hashable", "applicationWillFinishLaunching"]
+- ["Ps9_Hashable", "applicationWillHide"]
+- ["Ps9_Hashable", "applicationWillResignActive"]
+- ["Ps9_Hashable", "applicationWillTerminate"]
+- ["Ps9_Hashable", "applicationWillUnhide"]
+- ["Ps9_Hashable", "applicationWillUpdate"]
+- ["Ps9_Hashable", "build_docker_image"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isEnabled"]
+- !private ["Ps9_Hashable", "launchedProcess"]
+- ["Ps9_Hashable", "load_proofs"]
+- !private ["Ps9_Hashable", "waitUntilExit"]
+- ["Ps9_Hashable", "window"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C8robotone11AppDelegate"
+- "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps22BidirectionalIndexable"
+- "Sb"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "SQ"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- !private "Ps16MutableIndexable"
+- !private "PSo15NSAccessibility"
+- !private "PSo30NSAccessibilityElementProtocol"
+- !private "CSo12NSActionCell"
+- "PSo21NSApplicationDelegate"
+- "CSo12NSButtonCell"
+- !private "CSo6NSCell"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo19NSPasteboardReading"
+- !private "PSo19NSPasteboardWriting"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "PSo33NSUserInterfaceItemIdentification"
+- "CSo7Process"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps21RandomAccessIndexable"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps25RangeReplaceableIndexable"
+- !private "Ps8Sequence"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+interface-hash: "da47d9173840d4f15939cdc64b7e91d6"

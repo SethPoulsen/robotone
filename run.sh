@@ -1,10 +1,13 @@
 #!/usr/bin/bash
 wd=$(dirname "$0")
-xelatex=$(which xelatex)
+output=$1 #path to desired output file
 
-"$wd/dist/build/robotone/robotone" > "$wd/build/robotone.tex"
-echo "TeX"
-pushd "$wd/build"
-"$xelatex" "\input{robotone.tex}" -jobname=robotoneshort -quiet
-"$xelatex" "\def\showsteps{1} \input{robotone.tex}" -jobname=robotone -quiet
+pushd "$wd/src"
+if [[ -n "$output" ]]; then # If command-line argument present
+	runghc Main.hs "$1"
+else
+	echo "Error: Missing path to output file."
+	exit
+fi
 popd
+

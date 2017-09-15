@@ -11,15 +11,47 @@ import Data.Map (Map)
 
 import Types
 
-problems = [ifGandFareInjectionsThenGoFisInjection,
-            fAintersectBsubsetfAintersectfB,
-            preimAcapBequalsPreimAcapPreimB1,
-            preimAcapBequalsPreimAcapPreimB2,
-            preimAcupBequalsPreimAcupPreimB1,
-            preimAcupBequalsPreimAcupPreimB2
-            ]
+-- -- Newly added problems
+-- problems = [ifGandFareInjectionsThenGoFisInjection,
+--             fAintersectBsubsetfAintersectfB,
+--             preimAcapBequalsPreimAcapPreimB1,
+--             preimAcapBequalsPreimAcapPreimB2,
+--             preimAcupBequalsPreimAcupPreimB1,
+--             preimAcupBequalsPreimAcupPreimB2
+--             ]
 
 
+-- All working problems
+-- problems = [iffInjectionThenfAcapfBsubsetfAcapB,
+--             ifGandFareInjectionsThenGoFisInjection,
+--             setAisSubsetOfPreimageOfImageOfA,
+--             ffminusoneAsubsetA,
+--             fAintersectBsubsetfAintersectfB,
+--             preimAcapBequalsPreimAcapPreimB1,
+--             preimAcapBequalsPreimAcapPreimB2,
+--             preimAcupBequalsPreimAcupPreimB1,
+--             preimAcupBequalsPreimAcupPreimB2,
+--             unionOpenSets,
+--             union3OpenSets,
+--             intersectionOpenSets,
+--             intersectionClosedSets,
+--             continuousPreimageClosed,
+--             continuousPreimageOpen,
+--             compositionContinuousFunctions,
+--             continuousFunctionsPreserveLimits
+--            ]
+
+-- All non-working problems
+problems = [ifGandFareSurjectionsThenGoFisSurjection,
+            ifSurjectionThenCompfASubsetfCompA,
+            --convergenceIsCauchy,
+            --boundedMonotoneImpliesConvergence,
+            compOfIntersectionEqualsUnionOfComps1,
+            compOfIntersectionEqualsUnionOfComps2,
+            compOfUnionEqualsIntersectionOfComps,
+            intersection3OpenSets,
+            unionClosedSets
+           ]
 ----------------------------------------------------------------------
 -- INJECTION & SURJECTION FUNCTIONS PROOFS ------------------------------
 -- Surjection is NOT working for most cases
@@ -52,17 +84,17 @@ ifSurjectionThenCompfASubsetfCompA = Problem --Not working
 -- SEQUENCE PROOFS ------------------------------
 ----------------------------------------------------------------------
 
-convergenceIsCauchy = Problem -- not working
+convergenceIsCauchy = Problem -- not working/cause error, proof needs eps/2
     "If $x_n$ is convergent then $x_n$ is Cauchy."
-    ["exists a.(forall epsilon.(exists N.(forall n.(atleast(n,N) => lessthan(d(a,kthterm(an,n)),epsilon)))))"]
+    ["tendsto(an, a)"]
     "cauchy(an)"
 
-boundedMonotoneImpliesConvergence = Problem -- not working/cause error
+boundedMonotoneImpliesConvergence = Problem -- not working/loop, proof needs alg 
     "If $a_n$ is bounded and monotone, then $a_n$ converges."
-    ["exists N.(forall n.(lessthan(d(0,kthterm(an,n)), N)))",
-     "forall m n.(lessthan(m,n) => lessthan(kthterm(an, m), kthterm(an, n))) | forall m n.(lessthan(m,n) => lessthan(kthterm(an, n), kthterm(an, m)))"]
-    "exists a.(forall epsilon.(exists N.(forall n.(atleast(n,N) => lessthan(d(a,kthterm(an,n)),epsilon)))))"
-    
+    ["bounded(an)",
+     "monotone(an)"]
+    "converges(an)"
+
 
 ----------------------------------------------------------------------
 -- IMAGE & PREIMAGE OF FUNCTIONS PROOFS ------------------------------
@@ -129,7 +161,7 @@ union3OpenSets = Problem
     "open(C)"]
     "open(union(A,union(B,C)))"
 
-intersection3OpenSets = Problem
+intersection3OpenSets = Problem -- not working
     "If $A$, $B$,and $C$ are open sets, then $A \\cap (B \\cap C)$ is also open." --"The intersection of three open sets is open."
    ["open(A)",
     "open(B)",
@@ -148,7 +180,7 @@ intersectionOpenSets = Problem
     "open(B)"]
     "open(intersect(A,B))"
 
-unionClosedSets = Problem
+unionClosedSets = Problem -- not working
     "If $A$ and $B$ are closed sets, then $A \\cup B$ is also closed." --"The union of two closed sets is closed."
    ["closed(A)",
     "closed(B)"]

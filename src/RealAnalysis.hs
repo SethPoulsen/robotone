@@ -44,11 +44,19 @@ expansionTableSource = [
     ("convergesin(an,A)", "exists a.(in(a,A) & tendsto(an,a))"),
     ("closed(A)", "forall an a.(sequencein(an,A) & tendsto(an,a) => in(a,A))"),
     ("cauchy(an)", "forall epsilon.(exists N.(forall m n.(atleast(m,N) & atleast(n,N) => lessthan(d(kthterm(an,m),kthterm(an,n)),epsilon))))"),
-    -- ("surjection(f, A, B)", "forall y.(in(y, B) => (exists x.(in(x, A) & equals(applyfn(f,x),y))))"),
-    ("surjection(f, A, B)", "forall y.(in(y, B) => in(y, image(f, A)))"),--new
+    --- NEW DEFS ---
+    ("surjection(f, A, B)", "forall y.(in(y, B) => (exists x.(in(x, A) & equals(applyfn(f,x),y) & in(applyfn(f,x), B))))"), --new
+--    ("surjection(f, A, B)", "forall y.(in(y, B) => in(y, image(f, A)))"),--new
     ("islimitpoint(x, A)", "exists an.(sequencein(an, A) & tendsto(an, x) & forall n.(~equals(x, kthterm(an, n))))"), --new
     ("bounded(an)", "exists N.(forall n.(lessthan(d(0,kthterm(an,n)), N)))"),--new
-    ("monotone(an)", "forall m n.(lessthan(m,n) => lessthan(kthterm(an, m), kthterm(an, n))) | forall m n.(lessthan(m,n) => lessthan(kthterm(an, n), kthterm(an, m)))")--new
+    ("bounded(A)", "exists N.(forall a.(in(a,A) => lessthan(a, N)))"),--new
+    ("compact(A)", "closed(A) & bounded(A)"),--new
+    ("increasing(an)", "forall m n.(lessthan(m,n) => lessthan(kthterm(an, m), kthterm(an, n)))"), --new
+    ("decreasing(an)", "forall m n.(lessthan(m,n) => lessthan(kthterm(an, n), kthterm(an, m)))"), --new
+    ("monotone(an)", "increasing(an) | decreasing(an)"),--new
+    ("sup(s, A)", "forall a.(in(a, A) => lessthan(a, s)) & forall v.(lessthan(v, s) => exists b.(in(b, A) & lessthan(v, b)))"), -- new
+    ("inf(s, A)", "forall a.(in(a, A) => lessthan(s, A)) & forall v.(lessthan(s, v) => exists b.(in(b, A) & lessthan(b, v)))") -- new
+    
     --("surjection(f)","forall y.(exists x.(equals(applyfn(f,x), y)))"),
 --    ("isEmptySet(A)", "forall x.(notin(x, A))")
     ]
@@ -161,7 +169,7 @@ library = Library [
     Result "every convergent sequence is bounded" [
         parse formula "converges(an)"]
         (parse formula "bounded(an)")
-          ]
+    ]
 -- library = Library [
 --     Result "" [
 --         parse formula "subset(A,ball(x,beta))",

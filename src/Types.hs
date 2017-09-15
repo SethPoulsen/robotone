@@ -119,7 +119,7 @@ instance Pretty Formula where
     pretty (AtomicFormula (Predicate "open") [a]) = pretty a ++ " is open"
 
     pretty (AtomicFormula pred args) = pretty pred ++ "(" ++ intercalate "," (pretty <$> args) ++ ")"
-    pretty (Not f) = "¬" ++ pretty f
+    pretty (Not f) = "~" ++ pretty f
     pretty (And fs) = intercalate " & " $ pretty <$> fs
     pretty (Or fs) = intercalate " v " $ pretty <$> fs
     pretty (Forall vs f) = "forall " ++ intercalate ", " (pretty <$> vs) ++ ".(" ++ pretty f ++ ")"

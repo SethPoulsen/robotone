@@ -43,6 +43,7 @@ spaces1 = many1 space
 conventionalTypes = Map.fromList [
     ("a", TPoint),
     ("b", TPoint),
+    ("c", TRealNumber),
     ("f", TFunction),
     ("g", TFunction),
     ("h", TFunction),
