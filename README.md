@@ -5,7 +5,7 @@ As the original article states: This article is distributed under the terms of t
 
 This software has been modified from its original source to customize towards the course MATH-332 Real Analysis I at The College of Wooster, OH. 
 
-# Build and run
+# Build
 
 Install Docker, a software container platform (details can be found at https://www.docker.com). Also make sure you have a latex engine installed.
 
@@ -35,7 +35,8 @@ $ docker container start cont_robotone
             
 If you encounter errors of the form, "Error response from daemon: Container [...] is not running", use the command above.
 
- 
+# Run
+
 Now, whenever you update the problems in `src/Problems.hs` or the theorems and definitions in `src/RealAnalysis.hs`, run the script `rundocker.sh` from this project directory with: 
 
 ```bash
