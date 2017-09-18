@@ -168,7 +168,11 @@ library = Library [
         (parse formula "converges(an)"),
     Result "every convergent sequence is bounded" [
         parse formula "converges(an)"]
-        (parse formula "bounded(an)")
+        (parse formula "bounded(an)"),
+    Result "" [
+        parse formula "in(x, complement(A))",
+        parse formula "in(x, complement(B))"]
+        (parse formula "notin(x, union(A, B))")
     ]
 -- library = Library [
 --     Result "" [

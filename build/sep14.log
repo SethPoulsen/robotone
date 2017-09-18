@@ -1,12 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  15 SEP 2017 09:46
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  16 SEP 2017 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**all.tex
-(./all.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+**\input{sep14.tex}
+(./sep14.tex (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -1447,8 +1444,8 @@ LaTeX Info: Redefining \liningnums on input line 459.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/libertine/LinBiolinum_K.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/libertine/LinLibertine_I.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/libertine/LKey.tex))
-Excluding comment 'steps' (./all.aux)
-\openout1 = `all.aux'.
+Excluding comment 'steps' (./sep14.aux)
+\openout1 = `sep14.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
@@ -1522,45 +1519,6 @@ Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;mapping=tex-text;+tnum;+lnum;" at 14.4pt
  -> /usr/local/texlive/2016/texmf-dist/fonts/opentype/public/libertine/LinLiber
 tine_RB.otf
-Requested font "cmr12" at 14.4pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-Requested font "cmmi12" at 14.4pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-Requested font "cmsy10" at 14.4pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-Requested font "cmex10" at 14.4pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-Requested font "cmex7" at 7.0pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.
-tfm
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-Requested font "msam10" at 14.4pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10
-.tfm
-Requested font "msam10" at 10.0pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10
-.tfm
-Requested font "msam7" at 7.0pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.
-tfm
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Requested font "msbm10" at 14.4pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10
-.tfm
-Requested font "msbm10" at 10.0pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10
-.tfm
-Requested font "msbm7" at 7.0pt
- -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.
-tfm
 Requested font "cmr8" at 8.0pt
  -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 Requested font "cmr6" at 6.0pt
@@ -1585,6 +1543,11 @@ tfm
 Requested font "cmex7" at 6.0pt
  -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.
 tfm
+LaTeX Font Info:    Try loading font information for U+msa on input line 57.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
 Requested font "msam10" at 12.0pt
  -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10
 .tfm
@@ -1594,6 +1557,11 @@ Requested font "msam10" at 8.0pt
 Requested font "msam7" at 6.0pt
  -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.
 tfm
+LaTeX Font Info:    Try loading font information for U+msb on input line 57.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 Requested font "msbm10" at 12.0pt
  -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10
 .tfm
@@ -1604,13 +1572,39 @@ Requested font "msbm7" at 6.0pt
  -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.
 tfm
 
-Excluding 'steps' comment. Excluding 'steps' comment.
-Excluding 'steps' comment. Excluding 'steps' comment.
-Excluding 'steps' comment. Excluding 'steps' comment.
-Excluding 'steps' comment. [1
-
-] Excluding 'steps' comment.
 Excluding 'steps' comment.
+Requested font "cmr12" at 14.4pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+Requested font "cmmi12" at 14.4pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+Requested font "cmsy10" at 14.4pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+Requested font "cmex10" at 14.4pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+Requested font "cmex7" at 7.0pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.
+tfm
+Requested font "msam10" at 14.4pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10
+.tfm
+Requested font "msam10" at 10.0pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10
+.tfm
+Requested font "msam7" at 7.0pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.
+tfm
+Requested font "msbm10" at 14.4pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10
+.tfm
+Requested font "msbm10" at 10.0pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10
+.tfm
+Requested font "msbm7" at 7.0pt
+ -> /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.
+tfm
+ Excluding 'steps' comment.
+Excluding 'steps' comment. Excluding 'steps' comment.
+Excluding 'steps' comment. Excluding 'steps' comment.
 Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;mapping=tex-text;+tnum;+lnum;" at 12.0pt
  -> /usr/local/texlive/2016/texmf-dist/fonts/opentype/public/libertine/LinLiber
@@ -1631,25 +1625,17 @@ Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;mapping=tex-text;+tnum;+lnum;" at 6.0pt
  -> /usr/local/texlive/2016/texmf-dist/fonts/opentype/public/libertine/LinLiber
 tine_RI.otf
- Excluding 'steps' comment. [2]
-Excluding 'steps' comment. Excluding 'steps' comment.
-Excluding 'steps' comment. Excluding 'steps' comment.
-Excluding 'steps' comment. [3]
-Underfull \hbox (badness 3108) in paragraph at lines 8672--8673
-[]\EU1/LinLibertine(0)/m/n/12 Take $\OML/cmm/m/it/12 x$ \EU1/LinLibertine(0)/m/
-n/12 and $\OML/cmm/m/it/12 ^^O > \OT1/cmr/m/n/12 0$\EU1/LinLibertine(0)/m/n/12 
-. We would like to find $\OML/cmm/m/it/12 ^^N > \OT1/cmr/m/n/12 0$ \EU1/LinLibe
-rtine(0)/m/n/12 s.t.
- []
+ [1
 
-Excluding 'steps' comment. Excluding 'steps' comment. [4] (./all.aux) ) 
+]
+Excluding 'steps' comment. Excluding 'steps' comment. [2] (./sep14.aux) ) 
 Here is how much of TeX's memory you used:
  35470 strings out of 493591
- 735819 string characters out of 6143546
- 607160 words of memory out of 5000000
+ 735837 string characters out of 6143546
+ 608208 words of memory out of 5000000
  38475 multiletter control sequences out of 15000+600000
  11417 words of font info for 74 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 55i,6n,68p,10346b,248s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,10n,68p,10356b,248s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on all.pdf (4 pages).
+Output written on sep14.pdf (2 pages).

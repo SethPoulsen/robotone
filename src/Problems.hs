@@ -48,7 +48,8 @@ problems = [ifGandFareSurjectionsThenGoFisSurjection,
             --boundedMonotoneImpliesConvergence,
             compOfIntersectionEqualsUnionOfComps1,
             compOfIntersectionEqualsUnionOfComps2,
-            compOfUnionEqualsIntersectionOfComps,
+            compOfUnionEqualsIntersectionOfComps1,
+            compOfUnionEqualsIntersectionOfComps2,
             intersection3OpenSets,
             unionClosedSets
            ]
@@ -110,27 +111,27 @@ ffminusoneAsubsetA = Problem "Prove that $f(f^{-1}(A))\\subset A$"
     "subsetof(image(f,preimage(f,A)),A)"
 
 fAintersectBsubsetfAintersectfB = Problem -- New
-    "Prove that $f(A \\cap B) \\subset f(A) \\cap f(B)$"
+    "Prove that $f(A \\cap B) \\subseteq f(A) \\cap f(B)$"
     ["in(y, image(f,intersect(A,B)))"]
     "in(y, intersect(image(f,A), image(f,B)))"
 
 preimAcapBequalsPreimAcapPreimB1 = Problem -- New
-    "Prove that $f^{-1}(A \\cap B) \\subset f^{-1}(A) \\cap f^{-1}(B)$"
+    "Prove that $f^{-1}(A \\cap B) \\subseteq f^{-1}(A) \\cap f^{-1}(B)$"
     ["in(x, preimage(f, intersect(A,B)))"]
     "in(x,intersect(preimage(f,A), preimage(f,B)))"
 
 preimAcapBequalsPreimAcapPreimB2 = Problem -- New
-    "Prove that $f^{-1}(A) \\cap f^{-1}(B) \\subset f^{-1}(A \\cap B)$"
+    "Prove that $f^{-1}(A) \\cap f^{-1}(B) \\subseteq f^{-1}(A \\cap B)$"
     []
     "subsetof(intersect(preimage(f,A),preimage(f,B)), preimage(f, intersect(A,B)))"
     
 preimAcupBequalsPreimAcupPreimB1 = Problem -- New
-    "Prove that $f^{-1}(A \\cup B) \\subset f^{-1}(A) \\cup f^{-1}(B)$"
+    "Prove that $f^{-1}(A \\cup B) \\subseteq f^{-1}(A) \\cup f^{-1}(B)$"
     []
     "subsetof(preimage(f, union(A,B)), union(preimage(f,A), preimage(f,B)))"
 
 preimAcupBequalsPreimAcupPreimB2 = Problem -- New
-    "Prove that $f^{-1}(A) \\cup f^{-1}(B) \\subset f^{-1}(A \\cup B)$"
+    "Prove that $f^{-1}(A) \\cup f^{-1}(B) \\subseteq f^{-1}(A \\cup B)$"
     []
     "subsetof(union(preimage(f,A), preimage(f,B)), preimage(f, union(A,B)))"
 
@@ -148,11 +149,15 @@ compOfIntersectionEqualsUnionOfComps2 = Problem -- not working
     "subsetof( union(complement(A), complement(B)), complement(intersect(A,B)))"
 
 
-compOfUnionEqualsIntersectionOfComps = Problem -- not working
+compOfUnionEqualsIntersectionOfComps1 = Problem -- not working
     "Prove that $(A \\cup B)^c = A^c \\cap B^c$"
     []
-    "issameas(complement(union(A,B)), intersect(complement(A), complement(B)))"
+    "subsetof(complement(union(A,B)), intersect(complement(A), complement(B)))"
 
+compOfUnionEqualsIntersectionOfComps2 = Problem -- New
+    "Prove that $A^c \\cap B^c \\subseteq (A \\cup B)^c$."
+    []
+    "subsetof(intersect(complement(A), complement(B)), complement(union(A,B)))"
 
 union3OpenSets = Problem
     "If $A$, $B$,and $C$ are open sets, then $A \\cup (B \\cup C)$ is also open." --"The union of three open sets is open."

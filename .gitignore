@@ -1,0 +1,3 @@
+src/ApplyingMoves.o src/DeletionMoves.o src/Expansion.o src/Library.o src/Main.o src/Match.o src/Move.o src/Parser.o src/Printing.o src/Problems.o src/RealAnalysis.o src/Rename.o src/RobotM.o src/Suspension.o src/Tex.o src/TexBase.o src/TidyingMoves.o src/Types.o src/Writeup.o
+src/ApplyingMoves.hi src/DeletionMoves.hi src/Expansion.hi src/Library.hi src/Main.hi src/Match.hi src/Move.hi src/Parser.hi src/Printing.hi src/Problems.hi src/RealAnalysis.hi src/Rename.hi src/RobotM.hi src/Suspension.hi src/Tex.hi src/TexBase.hi src/TidyingMoves.hi src/Types.hi src/Writeup.hi
+TAGS
