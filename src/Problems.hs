@@ -20,36 +20,34 @@ import Types
 --             preimAcupBequalsPreimAcupPreimB2
 --             ]
 
-
+----- ALL 25 PROBLEMS -----
 -- All working problems
--- problems = [iffInjectionThenfAcapfBsubsetfAcapB,
---             ifGandFareInjectionsThenGoFisInjection,
---             setAisSubsetOfPreimageOfImageOfA,
---             ffminusoneAsubsetA,
---             fAintersectBsubsetfAintersectfB,
---             preimAcapBequalsPreimAcapPreimB1,
---             preimAcapBequalsPreimAcapPreimB2,
---             preimAcupBequalsPreimAcupPreimB1,
---             preimAcupBequalsPreimAcupPreimB2,
---             unionOpenSets,
---             union3OpenSets,
---             intersectionOpenSets,
---             intersectionClosedSets,
---             continuousPreimageClosed,
---             continuousPreimageOpen,
---             compositionContinuousFunctions,
---             continuousFunctionsPreserveLimits
---            ]
-
+problems = [iffInjectionThenfAcapfBsubsetfAcapB,
+            ifGandFareInjectionsThenGoFisInjection,
+            setAisSubsetOfPreimageOfImageOfA,
+            ffminusoneAsubsetA,
+            fAintersectBsubsetfAintersectfB,
+            preimAcapBequalsPreimAcapPreimB1,
+            preimAcapBequalsPreimAcapPreimB2,
+            preimAcupBequalsPreimAcupPreimB1,
+            preimAcupBequalsPreimAcupPreimB2,
+            unionOpenSets,
+            union3OpenSets,
+            intersectionOpenSets,
+            intersectionClosedSets,
+            continuousPreimageClosed,
+            continuousPreimageOpen,
+            compositionContinuousFunctions,
+            continuousFunctionsPreserveLimits,
+            compOfUnionEqualsIntersectionOfComps2,
 -- All non-working problems
-problems = [ifGandFareSurjectionsThenGoFisSurjection,
+            ifGandFareSurjectionsThenGoFisSurjection,
             ifSurjectionThenCompfASubsetfCompA,
             --convergenceIsCauchy,
             --boundedMonotoneImpliesConvergence,
             compOfIntersectionEqualsUnionOfComps1,
             compOfIntersectionEqualsUnionOfComps2,
             compOfUnionEqualsIntersectionOfComps1,
-            compOfUnionEqualsIntersectionOfComps2,
             intersection3OpenSets,
             unionClosedSets
            ]
@@ -64,13 +62,13 @@ iffInjectionThenfAcapfBsubsetfAcapB = Problem
         "subsetof(intersect(image(f,A),image(f,B)),image(f,intersect(A,B)))"
 
 ifGandFareInjectionsThenGoFisInjection = Problem --New
-    "If g,f are injections then (g o f) is an injection."
+    "If $g,f$ are injections then $(g \\circ f)$ is an injection."
     ["injection(f)",
      "injection(g)"]
     "injection(compose(g,f))"
 
 ifGandFareSurjectionsThenGoFisSurjection = Problem --Not working
-    "If g,f are surjections then (g o f) is a surjection."
+    "If $g,f$ are surjections then $(g \\circ f)$ is a surjection."
     ["surjection(f, A, B)",
      "surjection(g, B, C)"]
     "surjection(compose(g,f), A, C)"
@@ -90,7 +88,7 @@ convergenceIsCauchy = Problem -- not working/cause error, proof needs eps/2
     ["tendsto(an, a)"]
     "cauchy(an)"
 
-boundedMonotoneImpliesConvergence = Problem -- not working/loop, proof needs alg 
+boundedMonotoneImpliesConvergence = Problem -- not working/loop, needs algebra
     "If $a_n$ is bounded and monotone, then $a_n$ converges."
     ["bounded(an)",
      "monotone(an)"]

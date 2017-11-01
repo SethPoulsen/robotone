@@ -116,6 +116,7 @@ instance Pretty Term where
 instance Pretty Formula where
     pretty (AtomicFormula (Predicate "in") [a,b]) = pretty a ++ " in " ++ pretty b
     pretty (AtomicFormula (Predicate "lessthan") [a,b]) = pretty a ++ "<" ++ pretty b
+    pretty (AtomicFormula (Predicate "greaterthan") [a,b]) = pretty a ++ ">" ++ pretty b
     pretty (AtomicFormula (Predicate "open") [a]) = pretty a ++ " is open"
 
     pretty (AtomicFormula pred args) = pretty pred ++ "(" ++ intercalate "," (pretty <$> args) ++ ")"
@@ -244,6 +245,8 @@ mapTableauM fn (Tableau id vs hs t) = fn =<< Tableau id vs hs `liftM` inTargetM 
         g = eitherM return $ mapM (mapTableauM fn)
     inTargetM Contradiction = return Contradiction
 mapTableauM fn d@(Done _) = fn d
+
+
 
 --TODO: tidy this next function
 mapDirectVariableInTableauM :: forall m. Monad m => (Variable -> m Variable) -> Tableau -> m Tableau

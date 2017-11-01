@@ -45,6 +45,8 @@ unlockExistentialUniversalConditionalTarget = tableauwise onTableau where
                         markBulletedIndependencies uvs . s . addDiamondsInTableau evs $ Tableau tID tVs hs (Target  [Right [newTableau']]))
     onTableau _ _ _ = mzero
 
+
+
 --  If the target is existential, then unlock it to create a diamonded tableau.
 unlockExistentialTarget :: MoveType
 unlockExistentialTarget = tableauwise onTableau where

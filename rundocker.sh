@@ -43,7 +43,7 @@ pushd "$(dirname $1)"
 # latex compile to generate pdf
 read -p "Show proof steps? Y/N " yn
     case $yn in
-        [Yy]* ) xelatex "\def\showsteps{1} \input{$outfile}" ; break;;
+        [Yy]* ) xelatex "\def\showsteps{1} \input{$outfile}" ;;
         * )	xelatex "\input{$outfile}" ;;
     esac
 popd

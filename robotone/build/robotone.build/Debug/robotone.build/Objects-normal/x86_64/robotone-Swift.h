@@ -123,6 +123,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class NSButtonCell;
+@class NSTextFieldCell;
 @class NSWindow;
 
 SWIFT_CLASS("_TtC8robotone11AppDelegate")
@@ -130,8 +131,11 @@ SWIFT_CLASS("_TtC8robotone11AppDelegate")
 @property (nonatomic, weak) IBOutlet NSWindow * _Null_unspecified window;
 - (void)applicationDidFinishLaunching:(NSNotification * _Nonnull)aNotification;
 - (void)applicationWillTerminate:(NSNotification * _Nonnull)aNotification;
+- (void)bashCommandCall:(NSString * _Nonnull)path :(NSArray<NSString *> * _Nonnull)arguments;
 - (IBAction)load_proofs:(NSButtonCell * _Nonnull)sender;
-- (IBAction)build_docker_image:(NSButtonCell * _Nonnull)sender;
+- (IBAction)run_docker_image:(NSButtonCell * _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet NSTextFieldCell * _Null_unspecified pathToFile;
+- (IBAction)browseFile:(NSButtonCell * _Nonnull)sender;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

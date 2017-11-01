@@ -162,7 +162,7 @@ library = Library [
         parse formula "sequencein(an,F)",
         parse formula "tendsto(an,a)"]
         (parse formula "in(a,F)"),
-    Result "Monotone Subsequence Theorem" [
+    Result "Monotone Convergence Theorem" [
         parse formula "bounded(an)",
         parse formula "monotone(an)"]
         (parse formula "converges(an)"),
