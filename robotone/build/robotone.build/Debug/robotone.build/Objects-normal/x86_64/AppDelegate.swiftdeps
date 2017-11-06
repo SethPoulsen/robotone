@@ -6,36 +6,45 @@ provides-nominal:
 provides-member:
 - ["C8robotone11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillTerminate"
-- "run_docker_image"
 - "window"
-- "bashCommandCall"
+- "runDockerScript"
+- "applicationWillTerminate"
+- "openProblemsFile"
+- "run_docker_image"
 - "browseFile"
 - "pathToFile"
-- "load_proofs"
 - "applicationDidFinishLaunching"
+- "pwd"
 depends-top-level:
-- "String"
 - "NSWindow"
-- !private "BooleanLiteralType"
-- !private "NSSavePanel"
-- !private "NSModalResponseOK"
-- !private "Process"
-- !private "Array"
-- !private "!="
-- "NSApplicationDelegate"
-- "NSObject"
-- "NSTextFieldCell"
-- "Notification"
-- !private "StringLiteralType"
-- "AssignmentPrecedence"
-- "AppDelegate"
-- !private "=="
+- !private "print"
+- "Int32"
+- "NSButton"
+- !private "+"
+- "StringLiteralType"
 - "NSButtonCell"
+- "Notification"
+- "String"
+- !private "Array"
+- "NSObject"
+- "NSApplicationDelegate"
+- !private "Process"
+- !private "BooleanLiteralType"
+- !private "NSModalResponseOK"
+- "NSTextFieldCell"
+- !private "!="
+- !private "Pipe"
+- !private "NSSavePanel"
+- !private "UnicodeScalarType"
+- "AppDelegate"
+- "AssignmentPrecedence"
+- !private "=="
 depends-member:
 - !private ["Ps9AnyObject", "NSModalResponseOK"]
 - !private ["Ps9AnyObject", "NSSavePanel"]
+- !private ["Ps9AnyObject", "Pipe"]
 - !private ["Ps9AnyObject", "Process"]
+- !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "allowedFileTypes"]
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
@@ -59,30 +68,45 @@ depends-member:
 - ["Ps9AnyObject", "applicationWillTerminate"]
 - ["Ps9AnyObject", "applicationWillUnhide"]
 - ["Ps9AnyObject", "applicationWillUpdate"]
-- ["Ps9AnyObject", "bashCommandCall"]
+- !private ["Ps9AnyObject", "arguments"]
 - ["Ps9AnyObject", "browseFile"]
 - !private ["Ps9AnyObject", "canCreateDirectories"]
-- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "components"]
+- ["Ps9AnyObject", "executeBashCommand"]
+- !private ["Ps9AnyObject", "fileHandleForReading"]
+- ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "isEnabled"]
-- !private ["Ps9AnyObject", "launchedProcess"]
-- ["Ps9AnyObject", "load_proofs"]
+- !private ["Ps9AnyObject", "launch"]
+- !private ["Ps9AnyObject", "launchPath"]
+- ["Ps9AnyObject", "openProblemsFile"]
 - ["Ps9AnyObject", "pathToFile"]
+- !private ["Ps9AnyObject", "print"]
+- ["Ps9AnyObject", "pwd"]
+- !private ["Ps9AnyObject", "readDataToEndOfFile"]
+- ["Ps9AnyObject", "runDockerScript"]
 - !private ["Ps9AnyObject", "runModal"]
 - ["Ps9AnyObject", "run_docker_image"]
 - !private ["Ps9AnyObject", "showsHiddenFiles"]
 - !private ["Ps9AnyObject", "showsResizeIndicator"]
+- !private ["Ps9AnyObject", "standardError"]
+- !private ["Ps9AnyObject", "standardOutput"]
 - !private ["Ps9AnyObject", "stringValue"]
+- !private ["Ps9AnyObject", "terminationStatus"]
 - !private ["Ps9AnyObject", "title"]
+- !private ["Ps9AnyObject", "trimmingCharacters"]
 - !private ["Ps9AnyObject", "url"]
 - !private ["Ps9AnyObject", "waitUntilExit"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
+- ["C8robotone11AppDelegate", "Int32"]
+- ["C8robotone11AppDelegate", "NSButton"]
 - ["C8robotone11AppDelegate", "NSButtonCell"]
 - !private ["C8robotone11AppDelegate", "NSModalResponseOK"]
 - !private ["C8robotone11AppDelegate", "NSSavePanel"]
 - ["C8robotone11AppDelegate", "NSTextFieldCell"]
 - ["C8robotone11AppDelegate", "NSWindow"]
 - ["C8robotone11AppDelegate", "Notification"]
+- !private ["C8robotone11AppDelegate", "Pipe"]
 - !private ["C8robotone11AppDelegate", "Process"]
 - ["C8robotone11AppDelegate", "String"]
 - ["C8robotone11AppDelegate", "application"]
@@ -107,12 +131,15 @@ depends-member:
 - ["C8robotone11AppDelegate", "applicationWillTerminate"]
 - ["C8robotone11AppDelegate", "applicationWillUnhide"]
 - ["C8robotone11AppDelegate", "applicationWillUpdate"]
-- ["C8robotone11AppDelegate", "bashCommandCall"]
 - ["C8robotone11AppDelegate", "browseFile"]
 - ["C8robotone11AppDelegate", "deinit"]
+- ["C8robotone11AppDelegate", "executeBashCommand"]
 - ["C8robotone11AppDelegate", "init"]
-- ["C8robotone11AppDelegate", "load_proofs"]
+- ["C8robotone11AppDelegate", "openProblemsFile"]
 - ["C8robotone11AppDelegate", "pathToFile"]
+- !private ["C8robotone11AppDelegate", "print"]
+- ["C8robotone11AppDelegate", "pwd"]
+- ["C8robotone11AppDelegate", "runDockerScript"]
 - ["C8robotone11AppDelegate", "run_docker_image"]
 - ["C8robotone11AppDelegate", "window"]
 - !private ["Sa", "Element"]
@@ -124,7 +151,9 @@ depends-member:
 - !private ["Ps7CVarArg", "Element"]
 - !private ["Ps7CVarArg", "NSModalResponseOK"]
 - !private ["Ps7CVarArg", "NSSavePanel"]
+- !private ["Ps7CVarArg", "Pipe"]
 - !private ["Ps7CVarArg", "Process"]
+- !private ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "allowedFileTypes"]
 - ["Ps7CVarArg", "application"]
 - ["Ps7CVarArg", "applicationDidBecomeActive"]
@@ -148,30 +177,48 @@ depends-member:
 - ["Ps7CVarArg", "applicationWillTerminate"]
 - ["Ps7CVarArg", "applicationWillUnhide"]
 - ["Ps7CVarArg", "applicationWillUpdate"]
-- ["Ps7CVarArg", "bashCommandCall"]
+- !private ["Ps7CVarArg", "arguments"]
 - ["Ps7CVarArg", "browseFile"]
 - !private ["Ps7CVarArg", "canCreateDirectories"]
-- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "components"]
+- ["Ps7CVarArg", "executeBashCommand"]
+- !private ["Ps7CVarArg", "fileHandleForReading"]
+- ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "isEnabled"]
-- !private ["Ps7CVarArg", "launchedProcess"]
-- ["Ps7CVarArg", "load_proofs"]
+- !private ["Ps7CVarArg", "launch"]
+- !private ["Ps7CVarArg", "launchPath"]
+- ["Ps7CVarArg", "openProblemsFile"]
 - ["Ps7CVarArg", "pathToFile"]
+- !private ["Ps7CVarArg", "print"]
+- ["Ps7CVarArg", "pwd"]
+- !private ["Ps7CVarArg", "readDataToEndOfFile"]
+- ["Ps7CVarArg", "runDockerScript"]
 - !private ["Ps7CVarArg", "runModal"]
 - ["Ps7CVarArg", "run_docker_image"]
 - !private ["Ps7CVarArg", "showsHiddenFiles"]
 - !private ["Ps7CVarArg", "showsResizeIndicator"]
+- !private ["Ps7CVarArg", "standardError"]
+- !private ["Ps7CVarArg", "standardOutput"]
 - !private ["Ps7CVarArg", "stringValue"]
+- !private ["Ps7CVarArg", "terminationStatus"]
 - !private ["Ps7CVarArg", "title"]
+- !private ["Ps7CVarArg", "trimmingCharacters"]
 - !private ["Ps7CVarArg", "url"]
 - !private ["Ps7CVarArg", "waitUntilExit"]
 - ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
+- ["V10Foundation12CharacterSet", "deinit"]
+- !private ["V10Foundation12CharacterSet", "newlines"]
 - !private ["Ps10Collection", "Element"]
-- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "components"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "trimmingCharacters"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "NSModalResponseOK"]
 - !private ["Ps28CustomDebugStringConvertible", "NSSavePanel"]
+- !private ["Ps28CustomDebugStringConvertible", "Pipe"]
 - !private ["Ps28CustomDebugStringConvertible", "Process"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "allowedFileTypes"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
@@ -195,35 +242,54 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillUnhide"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillUpdate"]
-- ["Ps28CustomDebugStringConvertible", "bashCommandCall"]
+- !private ["Ps28CustomDebugStringConvertible", "arguments"]
 - ["Ps28CustomDebugStringConvertible", "browseFile"]
 - !private ["Ps28CustomDebugStringConvertible", "canCreateDirectories"]
-- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "components"]
+- ["Ps28CustomDebugStringConvertible", "executeBashCommand"]
+- !private ["Ps28CustomDebugStringConvertible", "fileHandleForReading"]
+- ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "isEnabled"]
-- !private ["Ps28CustomDebugStringConvertible", "launchedProcess"]
-- ["Ps28CustomDebugStringConvertible", "load_proofs"]
+- !private ["Ps28CustomDebugStringConvertible", "launch"]
+- !private ["Ps28CustomDebugStringConvertible", "launchPath"]
+- !private ["Ps28CustomDebugStringConvertible", "newlines"]
+- ["Ps28CustomDebugStringConvertible", "openProblemsFile"]
 - !private ["Ps28CustomDebugStringConvertible", "path"]
 - ["Ps28CustomDebugStringConvertible", "pathToFile"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- ["Ps28CustomDebugStringConvertible", "pwd"]
+- !private ["Ps28CustomDebugStringConvertible", "readDataToEndOfFile"]
+- ["Ps28CustomDebugStringConvertible", "runDockerScript"]
 - !private ["Ps28CustomDebugStringConvertible", "runModal"]
 - ["Ps28CustomDebugStringConvertible", "run_docker_image"]
 - !private ["Ps28CustomDebugStringConvertible", "showsHiddenFiles"]
 - !private ["Ps28CustomDebugStringConvertible", "showsResizeIndicator"]
+- !private ["Ps28CustomDebugStringConvertible", "standardError"]
+- !private ["Ps28CustomDebugStringConvertible", "standardOutput"]
 - !private ["Ps28CustomDebugStringConvertible", "stringValue"]
+- !private ["Ps28CustomDebugStringConvertible", "terminationStatus"]
 - !private ["Ps28CustomDebugStringConvertible", "title"]
+- !private ["Ps28CustomDebugStringConvertible", "trimmingCharacters"]
 - !private ["Ps28CustomDebugStringConvertible", "url"]
 - !private ["Ps28CustomDebugStringConvertible", "waitUntilExit"]
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "components"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "path"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "trimmingCharacters"]
 - !private ["Ps17CustomReflectable", "Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
-- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "components"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "trimmingCharacters"]
 - !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "NSModalResponseOK"]
 - !private ["Ps23CustomStringConvertible", "NSSavePanel"]
+- !private ["Ps23CustomStringConvertible", "Pipe"]
 - !private ["Ps23CustomStringConvertible", "Process"]
+- !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "allowedFileTypes"]
 - ["Ps23CustomStringConvertible", "application"]
@@ -248,28 +314,47 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
 - ["Ps23CustomStringConvertible", "applicationWillUnhide"]
 - ["Ps23CustomStringConvertible", "applicationWillUpdate"]
-- ["Ps23CustomStringConvertible", "bashCommandCall"]
+- !private ["Ps23CustomStringConvertible", "arguments"]
 - ["Ps23CustomStringConvertible", "browseFile"]
 - !private ["Ps23CustomStringConvertible", "canCreateDirectories"]
-- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "components"]
+- ["Ps23CustomStringConvertible", "executeBashCommand"]
+- !private ["Ps23CustomStringConvertible", "fileHandleForReading"]
+- ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "isEnabled"]
-- !private ["Ps23CustomStringConvertible", "launchedProcess"]
-- ["Ps23CustomStringConvertible", "load_proofs"]
+- !private ["Ps23CustomStringConvertible", "launch"]
+- !private ["Ps23CustomStringConvertible", "launchPath"]
+- !private ["Ps23CustomStringConvertible", "newlines"]
+- ["Ps23CustomStringConvertible", "openProblemsFile"]
 - !private ["Ps23CustomStringConvertible", "path"]
 - ["Ps23CustomStringConvertible", "pathToFile"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- ["Ps23CustomStringConvertible", "pwd"]
+- !private ["Ps23CustomStringConvertible", "readDataToEndOfFile"]
+- ["Ps23CustomStringConvertible", "runDockerScript"]
 - !private ["Ps23CustomStringConvertible", "runModal"]
 - ["Ps23CustomStringConvertible", "run_docker_image"]
 - !private ["Ps23CustomStringConvertible", "showsHiddenFiles"]
 - !private ["Ps23CustomStringConvertible", "showsResizeIndicator"]
+- !private ["Ps23CustomStringConvertible", "standardError"]
+- !private ["Ps23CustomStringConvertible", "standardOutput"]
 - !private ["Ps23CustomStringConvertible", "stringValue"]
+- !private ["Ps23CustomStringConvertible", "terminationStatus"]
 - !private ["Ps23CustomStringConvertible", "title"]
+- !private ["Ps23CustomStringConvertible", "trimmingCharacters"]
 - !private ["Ps23CustomStringConvertible", "url"]
+- !private ["Ps23CustomStringConvertible", "utf8"]
 - !private ["Ps23CustomStringConvertible", "waitUntilExit"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
+- ["V10Foundation4Data", "deinit"]
+- ["VE10FoundationSS8Encoding", "deinit"]
+- !private ["VE10FoundationSS8Encoding", "utf8"]
 - !private ["Ps9Equatable", "NSModalResponseOK"]
 - !private ["Ps9Equatable", "NSSavePanel"]
+- !private ["Ps9Equatable", "Pipe"]
 - !private ["Ps9Equatable", "Process"]
+- !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "allowedFileTypes"]
 - ["Ps9Equatable", "application"]
@@ -294,34 +379,61 @@ depends-member:
 - ["Ps9Equatable", "applicationWillTerminate"]
 - ["Ps9Equatable", "applicationWillUnhide"]
 - ["Ps9Equatable", "applicationWillUpdate"]
-- ["Ps9Equatable", "bashCommandCall"]
+- !private ["Ps9Equatable", "arguments"]
 - ["Ps9Equatable", "browseFile"]
 - !private ["Ps9Equatable", "canCreateDirectories"]
-- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "components"]
+- ["Ps9Equatable", "executeBashCommand"]
+- !private ["Ps9Equatable", "fileHandleForReading"]
+- ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "isEnabled"]
-- !private ["Ps9Equatable", "launchedProcess"]
-- ["Ps9Equatable", "load_proofs"]
+- !private ["Ps9Equatable", "launch"]
+- !private ["Ps9Equatable", "launchPath"]
+- !private ["Ps9Equatable", "newlines"]
+- ["Ps9Equatable", "openProblemsFile"]
 - !private ["Ps9Equatable", "path"]
 - ["Ps9Equatable", "pathToFile"]
+- !private ["Ps9Equatable", "print"]
+- ["Ps9Equatable", "pwd"]
+- !private ["Ps9Equatable", "readDataToEndOfFile"]
+- ["Ps9Equatable", "runDockerScript"]
 - !private ["Ps9Equatable", "runModal"]
 - ["Ps9Equatable", "run_docker_image"]
 - !private ["Ps9Equatable", "showsHiddenFiles"]
 - !private ["Ps9Equatable", "showsResizeIndicator"]
+- !private ["Ps9Equatable", "standardError"]
+- !private ["Ps9Equatable", "standardOutput"]
 - !private ["Ps9Equatable", "stringValue"]
+- !private ["Ps9Equatable", "terminationStatus"]
 - !private ["Ps9Equatable", "title"]
+- !private ["Ps9Equatable", "trimmingCharacters"]
 - !private ["Ps9Equatable", "url"]
+- !private ["Ps9Equatable", "utf8"]
 - !private ["Ps9Equatable", "waitUntilExit"]
 - ["Ps9Equatable", "window"]
 - ["Ps9Equatable", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "Element"]
+- !private ["Ps25ExpressibleByArrayLiteral", "newlines"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps32ExpressibleByStringInterpolation", "init"]
-- !private ["Ps26ExpressibleByStringLiteral", "init"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "components"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "trimmingCharacters"]
+- !private ["Ps32ExpressibleByStringInterpolation", "components"]
+- ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "trimmingCharacters"]
+- !private ["Ps26ExpressibleByStringLiteral", "components"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "trimmingCharacters"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "components"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "trimmingCharacters"]
+- ["CSo10FileHandle", "deinit"]
+- !private ["CSo10FileHandle", "readDataToEndOfFile"]
 - !private ["Ps8Hashable", "NSModalResponseOK"]
 - !private ["Ps8Hashable", "NSSavePanel"]
+- !private ["Ps8Hashable", "Pipe"]
 - !private ["Ps8Hashable", "Process"]
+- !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "allowedFileTypes"]
 - ["Ps8Hashable", "application"]
@@ -346,22 +458,36 @@ depends-member:
 - ["Ps8Hashable", "applicationWillTerminate"]
 - ["Ps8Hashable", "applicationWillUnhide"]
 - ["Ps8Hashable", "applicationWillUpdate"]
-- ["Ps8Hashable", "bashCommandCall"]
+- !private ["Ps8Hashable", "arguments"]
 - ["Ps8Hashable", "browseFile"]
 - !private ["Ps8Hashable", "canCreateDirectories"]
-- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "components"]
+- ["Ps8Hashable", "executeBashCommand"]
+- !private ["Ps8Hashable", "fileHandleForReading"]
+- ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "isEnabled"]
-- !private ["Ps8Hashable", "launchedProcess"]
-- ["Ps8Hashable", "load_proofs"]
+- !private ["Ps8Hashable", "launch"]
+- !private ["Ps8Hashable", "launchPath"]
+- !private ["Ps8Hashable", "newlines"]
+- ["Ps8Hashable", "openProblemsFile"]
 - !private ["Ps8Hashable", "path"]
 - ["Ps8Hashable", "pathToFile"]
+- !private ["Ps8Hashable", "print"]
+- ["Ps8Hashable", "pwd"]
+- !private ["Ps8Hashable", "readDataToEndOfFile"]
+- ["Ps8Hashable", "runDockerScript"]
 - !private ["Ps8Hashable", "runModal"]
 - ["Ps8Hashable", "run_docker_image"]
 - !private ["Ps8Hashable", "showsHiddenFiles"]
 - !private ["Ps8Hashable", "showsResizeIndicator"]
+- !private ["Ps8Hashable", "standardError"]
+- !private ["Ps8Hashable", "standardOutput"]
 - !private ["Ps8Hashable", "stringValue"]
+- !private ["Ps8Hashable", "terminationStatus"]
 - !private ["Ps8Hashable", "title"]
+- !private ["Ps8Hashable", "trimmingCharacters"]
 - !private ["Ps8Hashable", "url"]
+- !private ["Ps8Hashable", "utf8"]
 - !private ["Ps8Hashable", "waitUntilExit"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
@@ -369,9 +495,14 @@ depends-member:
 - !private ["Ps9Indexable", "Element"]
 - !private ["Ps13IndexableBase", "Element"]
 - ["Si", "deinit"]
+- ["Vs5Int32", "deinit"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps25LosslessStringConvertible", "init"]
-- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps25LosslessStringConvertible", "components"]
+- ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps25LosslessStringConvertible", "trimmingCharacters"]
+- !private ["Ps10MirrorPath", "components"]
+- ["Ps10MirrorPath", "init"]
+- !private ["Ps10MirrorPath", "trimmingCharacters"]
 - !private ["Ps17MutableCollection", "Element"]
 - !private ["Ps16MutableIndexable", "Element"]
 - !private ["PSo15NSAccessibility", "allowedFileTypes"]
@@ -414,7 +545,9 @@ depends-member:
 - !private ["PSo25NSAppearanceCustomization", "url"]
 - !private ["PSo21NSApplicationDelegate", "NSModalResponseOK"]
 - !private ["PSo21NSApplicationDelegate", "NSSavePanel"]
+- !private ["PSo21NSApplicationDelegate", "Pipe"]
 - !private ["PSo21NSApplicationDelegate", "Process"]
+- !private ["PSo21NSApplicationDelegate", "String"]
 - ["PSo21NSApplicationDelegate", "application"]
 - ["PSo21NSApplicationDelegate", "applicationDidBecomeActive"]
 - ["PSo21NSApplicationDelegate", "applicationDidChangeOcclusionState"]
@@ -437,8 +570,11 @@ depends-member:
 - ["PSo21NSApplicationDelegate", "applicationWillTerminate"]
 - ["PSo21NSApplicationDelegate", "applicationWillUnhide"]
 - ["PSo21NSApplicationDelegate", "applicationWillUpdate"]
-- !private ["PSo21NSApplicationDelegate", "bashCommandCall"]
+- !private ["PSo21NSApplicationDelegate", "executeBashCommand"]
 - !private ["PSo21NSApplicationDelegate", "pathToFile"]
+- !private ["PSo21NSApplicationDelegate", "print"]
+- !private ["PSo21NSApplicationDelegate", "pwd"]
+- !private ["PSo21NSApplicationDelegate", "runDockerScript"]
 - ["PSo21NSApplicationDelegate", ""]
 - ["CSo12NSButtonCell", "deinit"]
 - !private ["CSo12NSButtonCell", "isEnabled"]
@@ -446,24 +582,34 @@ depends-member:
 - !private ["CSo6NSCell", "stringValue"]
 - !private ["PSo8NSCoding", "allowedFileTypes"]
 - !private ["PSo8NSCoding", "canCreateDirectories"]
-- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "components"]
+- ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "isEnabled"]
+- !private ["PSo8NSCoding", "readDataToEndOfFile"]
 - !private ["PSo8NSCoding", "runModal"]
 - !private ["PSo8NSCoding", "showsHiddenFiles"]
 - !private ["PSo8NSCoding", "showsResizeIndicator"]
 - !private ["PSo8NSCoding", "stringValue"]
 - !private ["PSo8NSCoding", "title"]
+- !private ["PSo8NSCoding", "trimmingCharacters"]
 - !private ["PSo8NSCoding", "url"]
-- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "components"]
+- ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "isEnabled"]
 - !private ["PSo9NSCopying", "stringValue"]
-- !private ["PSo16NSMutableCopying", "init"]
+- !private ["PSo9NSCopying", "trimmingCharacters"]
+- !private ["PSo16NSMutableCopying", "components"]
+- ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "trimmingCharacters"]
+- ["CSo8NSObject", "Int32"]
+- ["CSo8NSObject", "NSButton"]
 - ["CSo8NSObject", "NSButtonCell"]
 - !private ["CSo8NSObject", "NSModalResponseOK"]
 - !private ["CSo8NSObject", "NSSavePanel"]
 - ["CSo8NSObject", "NSTextFieldCell"]
 - ["CSo8NSObject", "NSWindow"]
 - ["CSo8NSObject", "Notification"]
+- !private ["CSo8NSObject", "Pipe"]
 - !private ["CSo8NSObject", "Process"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "allowedFileTypes"]
@@ -489,28 +635,42 @@ depends-member:
 - ["CSo8NSObject", "applicationWillTerminate"]
 - ["CSo8NSObject", "applicationWillUnhide"]
 - ["CSo8NSObject", "applicationWillUpdate"]
-- ["CSo8NSObject", "bashCommandCall"]
+- !private ["CSo8NSObject", "arguments"]
 - ["CSo8NSObject", "browseFile"]
 - !private ["CSo8NSObject", "canCreateDirectories"]
+- !private ["CSo8NSObject", "components"]
 - ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "executeBashCommand"]
+- !private ["CSo8NSObject", "fileHandleForReading"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "isEnabled"]
-- !private ["CSo8NSObject", "launchedProcess"]
-- ["CSo8NSObject", "load_proofs"]
+- !private ["CSo8NSObject", "launch"]
+- !private ["CSo8NSObject", "launchPath"]
+- ["CSo8NSObject", "openProblemsFile"]
 - ["CSo8NSObject", "pathToFile"]
+- !private ["CSo8NSObject", "print"]
+- ["CSo8NSObject", "pwd"]
+- !private ["CSo8NSObject", "readDataToEndOfFile"]
+- ["CSo8NSObject", "runDockerScript"]
 - !private ["CSo8NSObject", "runModal"]
 - ["CSo8NSObject", "run_docker_image"]
 - !private ["CSo8NSObject", "showsHiddenFiles"]
 - !private ["CSo8NSObject", "showsResizeIndicator"]
+- !private ["CSo8NSObject", "standardError"]
+- !private ["CSo8NSObject", "standardOutput"]
 - !private ["CSo8NSObject", "stringValue"]
+- !private ["CSo8NSObject", "terminationStatus"]
 - !private ["CSo8NSObject", "title"]
+- !private ["CSo8NSObject", "trimmingCharacters"]
 - !private ["CSo8NSObject", "url"]
 - !private ["CSo8NSObject", "waitUntilExit"]
 - ["CSo8NSObject", "window"]
 - ["CSo8NSObject", ""]
 - !private ["PSo16NSObjectProtocol", "NSModalResponseOK"]
 - !private ["PSo16NSObjectProtocol", "NSSavePanel"]
+- !private ["PSo16NSObjectProtocol", "Pipe"]
 - !private ["PSo16NSObjectProtocol", "Process"]
+- !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "allowedFileTypes"]
 - ["PSo16NSObjectProtocol", "application"]
 - ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
@@ -534,20 +694,32 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
 - ["PSo16NSObjectProtocol", "applicationWillUnhide"]
 - ["PSo16NSObjectProtocol", "applicationWillUpdate"]
-- ["PSo16NSObjectProtocol", "bashCommandCall"]
+- !private ["PSo16NSObjectProtocol", "arguments"]
 - ["PSo16NSObjectProtocol", "browseFile"]
 - !private ["PSo16NSObjectProtocol", "canCreateDirectories"]
-- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "components"]
+- ["PSo16NSObjectProtocol", "executeBashCommand"]
+- !private ["PSo16NSObjectProtocol", "fileHandleForReading"]
+- ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "isEnabled"]
-- !private ["PSo16NSObjectProtocol", "launchedProcess"]
-- ["PSo16NSObjectProtocol", "load_proofs"]
+- !private ["PSo16NSObjectProtocol", "launch"]
+- !private ["PSo16NSObjectProtocol", "launchPath"]
+- ["PSo16NSObjectProtocol", "openProblemsFile"]
 - ["PSo16NSObjectProtocol", "pathToFile"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- ["PSo16NSObjectProtocol", "pwd"]
+- !private ["PSo16NSObjectProtocol", "readDataToEndOfFile"]
+- ["PSo16NSObjectProtocol", "runDockerScript"]
 - !private ["PSo16NSObjectProtocol", "runModal"]
 - ["PSo16NSObjectProtocol", "run_docker_image"]
 - !private ["PSo16NSObjectProtocol", "showsHiddenFiles"]
 - !private ["PSo16NSObjectProtocol", "showsResizeIndicator"]
+- !private ["PSo16NSObjectProtocol", "standardError"]
+- !private ["PSo16NSObjectProtocol", "standardOutput"]
 - !private ["PSo16NSObjectProtocol", "stringValue"]
+- !private ["PSo16NSObjectProtocol", "terminationStatus"]
 - !private ["PSo16NSObjectProtocol", "title"]
+- !private ["PSo16NSObjectProtocol", "trimmingCharacters"]
 - !private ["PSo16NSObjectProtocol", "url"]
 - !private ["PSo16NSObjectProtocol", "waitUntilExit"]
 - ["PSo16NSObjectProtocol", "window"]
@@ -560,8 +732,12 @@ depends-member:
 - !private ["CSo7NSPanel", "showsResizeIndicator"]
 - !private ["CSo7NSPanel", "title"]
 - !private ["CSo7NSPanel", "url"]
-- !private ["PSo19NSPasteboardReading", "init"]
-- !private ["PSo19NSPasteboardWriting", "init"]
+- !private ["PSo19NSPasteboardReading", "components"]
+- ["PSo19NSPasteboardReading", "init"]
+- !private ["PSo19NSPasteboardReading", "trimmingCharacters"]
+- !private ["PSo19NSPasteboardWriting", "components"]
+- ["PSo19NSPasteboardWriting", "init"]
+- !private ["PSo19NSPasteboardWriting", "trimmingCharacters"]
 - !private ["CSo11NSResponder", "allowedFileTypes"]
 - !private ["CSo11NSResponder", "canCreateDirectories"]
 - !private ["CSo11NSResponder", "init"]
@@ -579,8 +755,13 @@ depends-member:
 - !private ["CSo11NSSavePanel", "showsResizeIndicator"]
 - !private ["CSo11NSSavePanel", "title"]
 - !private ["CSo11NSSavePanel", "url"]
-- !private ["PSo14NSSecureCoding", "init"]
-- !private ["CSo8NSString", "init"]
+- !private ["PSo14NSSecureCoding", "components"]
+- ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "readDataToEndOfFile"]
+- !private ["PSo14NSSecureCoding", "trimmingCharacters"]
+- !private ["CSo8NSString", "components"]
+- ["CSo8NSString", "init"]
+- !private ["CSo8NSString", "trimmingCharacters"]
 - !private ["CSo15NSTextFieldCell", "stringValue"]
 - !private ["PSo18NSTouchBarProvider", "allowedFileTypes"]
 - !private ["PSo18NSTouchBarProvider", "canCreateDirectories"]
@@ -617,33 +798,63 @@ depends-member:
 - !private ["CSo8NSWindow", "title"]
 - !private ["CSo8NSWindow", "url"]
 - ["Sq", "deinit"]
+- ["CSo4Pipe", "deinit"]
+- !private ["CSo4Pipe", "fileHandleForReading"]
+- !private ["CSo4Pipe", "init"]
+- !private ["CSo7Process", "arguments"]
 - ["CSo7Process", "deinit"]
-- !private ["CSo7Process", "launchedProcess"]
+- !private ["CSo7Process", "init"]
+- !private ["CSo7Process", "launch"]
+- !private ["CSo7Process", "launchPath"]
+- !private ["CSo7Process", "standardError"]
+- !private ["CSo7Process", "standardOutput"]
+- !private ["CSo7Process", "terminationStatus"]
 - !private ["CSo7Process", "waitUntilExit"]
 - !private ["Ps22RandomAccessCollection", "Element"]
 - !private ["Ps21RandomAccessIndexable", "Element"]
 - !private ["Ps26RangeReplaceableCollection", "Element"]
 - !private ["Ps25RangeReplaceableIndexable", "Element"]
+- !private ["Ps16RawRepresentable", "utf8"]
+- !private ["P10Foundation20ReferenceConvertible", "newlines"]
 - !private ["P10Foundation20ReferenceConvertible", "path"]
 - !private ["Ps8Sequence", "Element"]
+- !private ["Ps10SetAlgebra", "newlines"]
+- !private ["SS", "components"]
 - ["SS", "deinit"]
-- !private ["SS", "init"]
-- !private ["Ps16TextOutputStream", "init"]
-- !private ["Ps20TextOutputStreamable", "init"]
+- ["SS", "init"]
+- !private ["SS", "trimmingCharacters"]
+- !private ["Ps16TextOutputStream", "components"]
+- ["Ps16TextOutputStream", "init"]
+- !private ["Ps16TextOutputStream", "trimmingCharacters"]
+- !private ["Ps20TextOutputStreamable", "components"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps20TextOutputStreamable", "trimmingCharacters"]
 - ["V10Foundation3URL", "deinit"]
 - !private ["V10Foundation3URL", "path"]
 - !private ["Ps14_ArrayProtocol", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "components"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "trimmingCharacters"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "components"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "trimmingCharacters"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "components"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "trimmingCharacters"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "components"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "trimmingCharacters"]
 - !private ["Ps34_ExpressibleByFileReferenceLiteral", "path"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "components"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "trimmingCharacters"]
 - !private ["Ps9_Hashable", "NSModalResponseOK"]
 - !private ["Ps9_Hashable", "NSSavePanel"]
+- !private ["Ps9_Hashable", "Pipe"]
 - !private ["Ps9_Hashable", "Process"]
+- !private ["Ps9_Hashable", "String"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "allowedFileTypes"]
 - ["Ps9_Hashable", "application"]
@@ -668,29 +879,47 @@ depends-member:
 - ["Ps9_Hashable", "applicationWillTerminate"]
 - ["Ps9_Hashable", "applicationWillUnhide"]
 - ["Ps9_Hashable", "applicationWillUpdate"]
-- ["Ps9_Hashable", "bashCommandCall"]
+- !private ["Ps9_Hashable", "arguments"]
 - ["Ps9_Hashable", "browseFile"]
 - !private ["Ps9_Hashable", "canCreateDirectories"]
-- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "components"]
+- ["Ps9_Hashable", "executeBashCommand"]
+- !private ["Ps9_Hashable", "fileHandleForReading"]
+- ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "isEnabled"]
-- !private ["Ps9_Hashable", "launchedProcess"]
-- ["Ps9_Hashable", "load_proofs"]
+- !private ["Ps9_Hashable", "launch"]
+- !private ["Ps9_Hashable", "launchPath"]
+- !private ["Ps9_Hashable", "newlines"]
+- ["Ps9_Hashable", "openProblemsFile"]
 - !private ["Ps9_Hashable", "path"]
 - ["Ps9_Hashable", "pathToFile"]
+- !private ["Ps9_Hashable", "print"]
+- ["Ps9_Hashable", "pwd"]
+- !private ["Ps9_Hashable", "readDataToEndOfFile"]
+- ["Ps9_Hashable", "runDockerScript"]
 - !private ["Ps9_Hashable", "runModal"]
 - ["Ps9_Hashable", "run_docker_image"]
 - !private ["Ps9_Hashable", "showsHiddenFiles"]
 - !private ["Ps9_Hashable", "showsResizeIndicator"]
+- !private ["Ps9_Hashable", "standardError"]
+- !private ["Ps9_Hashable", "standardOutput"]
 - !private ["Ps9_Hashable", "stringValue"]
+- !private ["Ps9_Hashable", "terminationStatus"]
 - !private ["Ps9_Hashable", "title"]
+- !private ["Ps9_Hashable", "trimmingCharacters"]
 - !private ["Ps9_Hashable", "url"]
+- !private ["Ps9_Hashable", "utf8"]
 - !private ["Ps9_Hashable", "waitUntilExit"]
 - ["Ps9_Hashable", "window"]
 - ["Ps9_Hashable", ""]
+- !private ["P10Foundation18_MutablePairBoxing", "newlines"]
 - !private ["Ps21_ObjectiveCBridgeable", "Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "components"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "newlines"]
 - !private ["Ps21_ObjectiveCBridgeable", "path"]
+- !private ["Ps21_ObjectiveCBridgeable", "trimmingCharacters"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 depends-nominal:
 - "Ps9AnyObject"
@@ -700,26 +929,31 @@ depends-nominal:
 - !private "Ps22BidirectionalIndexable"
 - "Sb"
 - "Ps7CVarArg"
+- "V10Foundation12CharacterSet"
 - !private "Ps10Collection"
-- !private "Ps10Comparable"
+- "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
-- !private "Ps29CustomPlaygroundQuickLookable"
-- !private "Ps17CustomReflectable"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
+- "V10Foundation4Data"
+- "VE10FoundationSS8Encoding"
 - "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
-- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
-- !private "Ps32ExpressibleByStringInterpolation"
-- !private "Ps26ExpressibleByStringLiteral"
-- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps32ExpressibleByStringInterpolation"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "CSo10FileHandle"
 - "Ps8Hashable"
 - "SQ"
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
 - "Si"
-- !private "Ps25LosslessStringConvertible"
-- !private "Ps10MirrorPath"
+- "Vs5Int32"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
 - !private "Ps16MutableIndexable"
 - !private "PSo15NSAccessibility"
@@ -730,46 +964,50 @@ depends-nominal:
 - "PSo21NSApplicationDelegate"
 - "CSo12NSButtonCell"
 - !private "CSo6NSCell"
-- !private "PSo8NSCoding"
-- !private "PSo9NSCopying"
-- !private "PSo16NSMutableCopying"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "CSo7NSPanel"
-- !private "PSo19NSPasteboardReading"
-- !private "PSo19NSPasteboardWriting"
+- "PSo19NSPasteboardReading"
+- "PSo19NSPasteboardWriting"
 - !private "CSo11NSResponder"
 - "CSo11NSSavePanel"
-- !private "PSo14NSSecureCoding"
-- !private "CSo8NSString"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
 - !private "CSo15NSTextFieldCell"
 - !private "PSo18NSTouchBarProvider"
 - !private "PSo33NSUserInterfaceItemIdentification"
 - !private "PSo26NSUserInterfaceValidations"
 - !private "CSo8NSWindow"
 - "Sq"
+- "CSo4Pipe"
 - "CSo7Process"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps21RandomAccessIndexable"
 - !private "Ps26RangeReplaceableCollection"
 - !private "Ps25RangeReplaceableIndexable"
+- !private "Ps16RawRepresentable"
 - !private "P10Foundation20ReferenceConvertible"
 - !private "Ps8Sequence"
+- !private "Ps10SetAlgebra"
 - "SS"
-- !private "Ps16TextOutputStream"
-- !private "Ps20TextOutputStreamable"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
 - "V10Foundation3URL"
 - !private "Ps14_ArrayProtocol"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
-- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
-- !private "Ps34_ExpressibleByBuiltinStringLiteral"
-- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
-- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
 - !private "Ps34_ExpressibleByFileReferenceLiteral"
-- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
-- !private "Ps21_ObjectiveCBridgeable"
+- !private "P10Foundation18_MutablePairBoxing"
+- "Ps21_ObjectiveCBridgeable"
 - !private "Vs26_OptionalNilComparisonType"
 depends-dynamic-lookup:
 depends-external:
@@ -786,4 +1024,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
-interface-hash: "de8922846edd58ed25678224ac9bc63b"
+interface-hash: "a0b6176fedad3656206db249bb08f766"

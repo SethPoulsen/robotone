@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/Assets.car</key>
+		<data>
+		ciOvZEFzqclzDs1EHwvaxorbetk=
+		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<data>
-		JQPI00tvGx81vg45GSrRvcA1O9c=
+		81g8db3hZZg9s5YayEQYpvhkMAg=
 		</data>
 		<key>Resources/libswiftRemoteMirror.dylib</key>
 		<data>
@@ -132,11 +136,18 @@
 			<key>requirement</key>
 			<string>cdhash H"99cc3ddfb84c737d6c8144e4799ae0bfdd5b7f04" or cdhash H"53b0e4d574bfcc22bef4d5a6f0152d827a701d23"</string>
 		</dict>
+		<key>Resources/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vgyLZvXdg6eHC0urfp+uw21Ajisi3SF0CG07xbWi8Ag=
+			</data>
+		</dict>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z84Bn9G7XDujHK8D794V8l2RBrn7Lq1Ag3HMKI97248=
+			S32Tl0kEmSN+qqovLIDiZ/TJO1qc8f+kH222ob4JP2E=
 			</data>
 		</dict>
 		<key>Resources/libswiftRemoteMirror.dylib</key>
