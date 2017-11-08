@@ -3,7 +3,7 @@
 docker=$(which docker)
 xelatex=$(which xelatex)
 
-#docker build -t robotone . #uncomment this line out if building new Docker image
+#docker build -t robotone . # building new Docker image
 
 # enter desired output file
 outfile=$1 #path to desired output file

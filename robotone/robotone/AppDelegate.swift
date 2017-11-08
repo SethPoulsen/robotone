@@ -12,72 +12,86 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-    let pwd = "/Users/KhoaNguyen/Documents/CollegeOfWooster/ISProject/source/is-robotone/"
+    var settingsWindowController: SettingsWindowController?
+    var resourcePaths: NSDictionary?
+    var pwd: String = ""
     
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
+        // Detect first time setup by checking for existence of .plist file
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        let plistPathInDocument = documentsPath + "/RobotonePaths.plist"
+        if !FileManager.default.fileExists(atPath: plistPathInDocument){
+            let _ = Helper.dialogOKCancel(question: "First-time Setup Required", text: "Please click Settings to set up appropriate configurations for robotone.")
+        }
+        else {
+            resourcePaths = NSDictionary(contentsOfFile: plistPathInDocument)
+        }
+        
+        // placeholder text for path text field
+        pathToFile.stringValue = documentsPath + "/proofs.tex"
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
 
-    func executeBashCommand(cmd : String, args : String...) -> (output: [String], error: [String], exitCode: Int32){
-        
-        var output : [String] = []
-        var error : [String] = []
-        
-        let task = Process()
-        task.launchPath = cmd
-        task.arguments = args
-        
-        let outpipe = Pipe()
-        task.standardOutput = outpipe
-        let errpipe = Pipe()
-        task.standardError = errpipe
-        
-        task.launch()
-        
-        let outdata = outpipe.fileHandleForReading.readDataToEndOfFile()
-        if var string = String(data: outdata, encoding: .utf8) {
-            string = string.trimmingCharacters(in: .newlines)
-            output = string.components(separatedBy: "\n")
-        }
-        
-        let errdata = errpipe.fileHandleForReading.readDataToEndOfFile()
-        if var string = String(data: errdata, encoding: .utf8) {
-            string = string.trimmingCharacters(in: .newlines)
-            error = string.components(separatedBy: "\n")
-        }
-        
-        task.waitUntilExit()
-        let status = task.terminationStatus
-        
-        return (output, error, status)
-    }
-    
     func runDockerScript() {
+        // Pull paths of docker & xelatex binaries from RobotonePaths.plist
+        resourcePaths = NSDictionary(contentsOfFile: plistPathInDocument)
+        let docker = resourcePaths?.object(forKey: "docker") as! String
+        let xelatex = resourcePaths?.object(forKey: "xelatex") as! String
+        
         // Call robotone Docker image and execute the proof writing engine
-        let (_, _, status) = executeBashCommand(cmd: "/usr/local/bin/docker", args: "exec", "-i", "cont_robotone", "bash", "-c", "cd root-robotone && bash run.sh /root-robotone/build/robotone.tex")
-        print(status)
+        let (_, _, status) = Helper.executeBashCommand(cmd: docker, args: "exec", "-i", "cont_robotone", "bash", "-c", "cd root-robotone && bash run.sh /root-robotone/build/robotone.tex")
+//        print(status)
         
         if (status == 0) {
-            let (_,_,s0) = executeBashCommand(cmd: "/usr/bin/touch", args: pathToFile.stringValue)
-            print(s0)
             
-            let (_,_,s1) = executeBashCommand(cmd: "/bin/cp",
-                                             args: "-f", pwd + "build/robotone.tex", pathToFile.stringValue)
-            print(s1)
+            //    let pwd = "/Users/KhoaNguyen/Documents/CollegeOfWooster/ISProject/source/is-robotone/"
+            pwd = resourcePaths?.object(forKey: "pwd") as! String
             
-//            let (out,err,s2) = executeBashCommand(cmd: "/Library/TeX/texbin/xelatex",
-//                                             args: "\\input{" + pathToFile.stringValue + "}")
-//            
-//            print(out, err, s2)
-            let (_,_,_) = executeBashCommand(cmd: "/usr/bin/open", args: pathToFile.stringValue)
+            let dir = (pathToFile.stringValue as NSString).deletingLastPathComponent + "/"
+            let fileName = (pathToFile.stringValue as NSString).lastPathComponent
+            
+            let (_,_,_) = Helper.executeBashCommand(cmd: "/usr/bin/touch", args: pathToFile.stringValue)
+            let (_,_,_) = Helper.executeBashCommand(cmd: "/bin/cp", args: "-f",
+                                                    pwd + "build/robotone.tex", pathToFile.stringValue)
+
+            let (_,_,_) = Helper.executeBashCommand(cmd: "/bin/cp",
+                                                    args: "-f", pwd + "build/robotone.tex", fileName)
+            
+            let (_,_,_) = Helper.executeBashCommand(cmd: xelatex,
+                                                    args: "\\input{" + fileName + "}")
+//            print(s2)
+            
+            let pdfFileName = (fileName as NSString).deletingPathExtension + ".pdf"
+            let (_,_,_) = Helper.executeBashCommand(cmd: "/usr/bin/touch", args: dir + pdfFileName)
+            let (_,_,_) = Helper.executeBashCommand(cmd: "/bin/cp",
+                                                    args: "-f", pdfFileName, dir + pdfFileName)
+//            print(s3)
+            
+            let (_,_,_) = Helper.executeBashCommand(cmd: "/usr/bin/open", args: dir + pdfFileName)
+            
+            // clean temp files
+            let fileManager = FileManager.default
+            
+            do {
+                let bareFileName = (fileName as NSString).deletingPathExtension
+                try fileManager.removeItem(atPath: bareFileName + ".pdf")
+                try fileManager.removeItem(atPath: bareFileName + ".tex")
+                try fileManager.removeItem(atPath: bareFileName + ".log")
+                try fileManager.removeItem(atPath: bareFileName + ".aux")
+            }
+            catch let error as NSError {
+                print("Ooops! Something went wrong: \(error)")
+            }
+            
         }
-        
+        else {
+            let _ = Helper.dialogOKCancel(question: "Error", text: "The robotone Docker container is not running properly. Please review Problems.hs or your current Settings.")
+        }
     }
     
     @IBAction func run_docker_image(_ sender: NSButtonCell) {
@@ -111,7 +125,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func openProblemsFile(_ sender: NSButton) {
-        let (_,_,_) = executeBashCommand(cmd: "/usr/bin/open", args: pwd + "src/Problems.hs")
+        let (_,_,_) = Helper.executeBashCommand(cmd: "/usr/bin/open", args: pwd + "src/Problems.hs")
+    }
+    
+    @IBAction func openSettings(_ sender: NSButtonCell) {
+        settingsWindowController = SettingsWindowController(windowNibName: "SettingsWindowController")
+        settingsWindowController!.loadWindow()
+        settingsWindowController!.windowDidLoad()
+        settingsWindowController!.showWindow(self)
     }
 }
 

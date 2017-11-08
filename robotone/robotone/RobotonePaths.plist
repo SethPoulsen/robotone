@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>xelatex</key>
+	<string>/Library/TeX/texbin/xelatex</string>
+	<key>docker</key>
+	<string>/usr/local/bin/docker</string>
+	<key>pwd</key>
+	<string>/Users/KhoaNguyen/Documents/CollegeOfWooster/ISProject/source/is-robotone/</string>
+</dict>
+</plist>
