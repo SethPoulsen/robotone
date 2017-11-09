@@ -27,7 +27,7 @@ fi
 # wait
 
 # write the proofs 
-"$docker" "exec -i cont_robotone bash -c" "cd root-robotone && bash run.sh /root-robotone/build/$outfile"
+"$docker" exec -i cont_robotone bash -c "cd root-robotone && bash run.sh /root-robotone/build/$outfile"
 wait
 
 # # stop that container

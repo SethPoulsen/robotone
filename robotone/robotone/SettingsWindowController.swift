@@ -86,7 +86,7 @@ class SettingsWindowController: NSWindowController {
         let pwd = resourcePaths?.object(forKey: "pwd") as! String
         
         // #docker build -t robotone . # building new Docker image
-        let (_,_,s1) = Helper.executeBashCommand(cmd: docker, args: "build", "-t", "robotone")
+        let (_,_,s1) = Helper.executeBashCommand(cmd: docker, args: "build", "-f", pwd + "/Dockerfile", "-t", "robotone")
         
         // # docker create -v $(pwd):/root-robotone --name cont_robotone robotone /bin/bash
         let (_,_,s2) = Helper.executeBashCommand(cmd: docker, args: "create", "-v", pwd + ":/root-robotone", "--name", "cont_robotone", "robotone", "bin/bash")

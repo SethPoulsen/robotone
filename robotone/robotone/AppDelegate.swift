@@ -15,13 +15,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var settingsWindowController: SettingsWindowController?
     var resourcePaths: NSDictionary?
     var pwd: String = ""
+    var plistPathInDocument: String = ""
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
         // Detect first time setup by checking for existence of .plist file
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-        let plistPathInDocument = documentsPath + "/RobotonePaths.plist"
+        plistPathInDocument = documentsPath + "/RobotonePaths.plist"
         if !FileManager.default.fileExists(atPath: plistPathInDocument){
             let _ = Helper.dialogOKCancel(question: "First-time Setup Required", text: "Please click Settings to set up appropriate configurations for robotone.")
         }
@@ -57,10 +58,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             let (_,_,_) = Helper.executeBashCommand(cmd: "/usr/bin/touch", args: pathToFile.stringValue)
             let (_,_,_) = Helper.executeBashCommand(cmd: "/bin/cp", args: "-f",
-                                                    pwd + "build/robotone.tex", pathToFile.stringValue)
+                                                    pwd + "/build/robotone.tex", pathToFile.stringValue)
 
             let (_,_,_) = Helper.executeBashCommand(cmd: "/bin/cp",
-                                                    args: "-f", pwd + "build/robotone.tex", fileName)
+                                                    args: "-f", pwd + "/build/robotone.tex", fileName)
             
             let (_,_,_) = Helper.executeBashCommand(cmd: xelatex,
                                                     args: "\\input{" + fileName + "}")
@@ -125,7 +126,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func openProblemsFile(_ sender: NSButton) {
-        let (_,_,_) = Helper.executeBashCommand(cmd: "/usr/bin/open", args: pwd + "src/Problems.hs")
+        resourcePaths = NSDictionary(contentsOfFile: plistPathInDocument)
+        pwd = resourcePaths?.object(forKey: "pwd") as! String
+
+        let (_,_,_) = Helper.executeBashCommand(cmd: "/usr/bin/open", args: pwd + "/src/Problems.hs")
     }
     
     @IBAction func openSettings(_ sender: NSButtonCell) {

@@ -100,36 +100,36 @@ boundedMonotoneImpliesConvergence = Problem -- not working/loop, needs algebra
 ----------------------------------------------------------------------
 
 setAisSubsetOfPreimageOfImageOfA = Problem
-    "Prove that $A \\subseteq f^{-1}(f(A))$"
+    "$A \\subseteq f^{-1}(f(A))$"
     []
     "subsetof(A, preimage(f, image(f, A)))"
 
-ffminusoneAsubsetA = Problem "Prove that $f(f^{-1}(A))\\subset A$"
+ffminusoneAsubsetA = Problem "$f(f^{-1}(A))\\subset A$"
     []
     "subsetof(image(f,preimage(f,A)),A)"
 
 fAintersectBsubsetfAintersectfB = Problem -- New
-    "Prove that $f(A \\cap B) \\subseteq f(A) \\cap f(B)$"
+    "$f(A \\cap B) \\subseteq f(A) \\cap f(B)$"
     ["in(y, image(f,intersect(A,B)))"]
     "in(y, intersect(image(f,A), image(f,B)))"
 
 preimAcapBequalsPreimAcapPreimB1 = Problem -- New
-    "Prove that $f^{-1}(A \\cap B) \\subseteq f^{-1}(A) \\cap f^{-1}(B)$"
+    "$f^{-1}(A \\cap B) \\subseteq f^{-1}(A) \\cap f^{-1}(B)$"
     ["in(x, preimage(f, intersect(A,B)))"]
     "in(x,intersect(preimage(f,A), preimage(f,B)))"
 
 preimAcapBequalsPreimAcapPreimB2 = Problem -- New
-    "Prove that $f^{-1}(A) \\cap f^{-1}(B) \\subseteq f^{-1}(A \\cap B)$"
+    "$f^{-1}(A) \\cap f^{-1}(B) \\subseteq f^{-1}(A \\cap B)$"
     []
     "subsetof(intersect(preimage(f,A),preimage(f,B)), preimage(f, intersect(A,B)))"
     
 preimAcupBequalsPreimAcupPreimB1 = Problem -- New
-    "Prove that $f^{-1}(A \\cup B) \\subseteq f^{-1}(A) \\cup f^{-1}(B)$"
+    "$f^{-1}(A \\cup B) \\subseteq f^{-1}(A) \\cup f^{-1}(B)$"
     []
     "subsetof(preimage(f, union(A,B)), union(preimage(f,A), preimage(f,B)))"
 
 preimAcupBequalsPreimAcupPreimB2 = Problem -- New
-    "Prove that $f^{-1}(A) \\cup f^{-1}(B) \\subseteq f^{-1}(A \\cup B)$"
+    "$f^{-1}(A) \\cup f^{-1}(B) \\subseteq f^{-1}(A \\cup B)$"
     []
     "subsetof(union(preimage(f,A), preimage(f,B)), preimage(f, union(A,B)))"
 
@@ -137,23 +137,23 @@ preimAcupBequalsPreimAcupPreimB2 = Problem -- New
 -- SETS PROOFS ------------------------------
 ----------------------------------------------------------------------
 compOfIntersectionEqualsUnionOfComps1 = Problem -- not working
-    "Prove that $(A \\cap B)^c \\subset A^c \\cup B^c$"
+    "$(A \\cap B)^c \\subset A^c \\cup B^c$"
     []
     "subsetof(complement(intersect(A,B)), union(complement(A), complement(B)))"
 
 compOfIntersectionEqualsUnionOfComps2 = Problem -- not working
-    "Prove that $A^c \\cup B^c \\subset (A \\cap B)^c $"
+    "$A^c \\cup B^c \\subset (A \\cap B)^c $"
     []
     "subsetof( union(complement(A), complement(B)), complement(intersect(A,B)))"
 
 
 compOfUnionEqualsIntersectionOfComps1 = Problem -- not working
-    "Prove that $(A \\cup B)^c = A^c \\cap B^c$"
+    "$(A \\cup B)^c = A^c \\cap B^c$"
     []
     "subsetof(complement(union(A,B)), intersect(complement(A), complement(B)))"
 
 compOfUnionEqualsIntersectionOfComps2 = Problem -- New
-    "Prove that $A^c \\cap B^c \\subseteq (A \\cup B)^c$."
+    "$A^c \\cap B^c \\subseteq (A \\cup B)^c$."
     []
     "subsetof(intersect(complement(A), complement(B)), complement(union(A,B)))"
 

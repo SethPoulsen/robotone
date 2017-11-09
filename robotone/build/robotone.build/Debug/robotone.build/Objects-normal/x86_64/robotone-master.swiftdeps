@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "76d952c13abc23a2b1c7c934cbeac2bf"
+build_time: [563556816, 493813000]
+inputs:
+  "/Users/KhoaNguyen/Documents/CollegeOfWooster/ISProject/source/is-robotone/robotone/robotone/SettingsWindowController.swift": [563556402, 0]
+  "/Users/KhoaNguyen/Documents/CollegeOfWooster/ISProject/source/is-robotone/robotone/robotone/AppDelegate.swift": [563556795, 0]
+  "/Users/KhoaNguyen/Documents/CollegeOfWooster/ISProject/source/is-robotone/robotone/robotone/Helper.swift": [563430777, 0]
