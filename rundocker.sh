@@ -20,6 +20,7 @@ fi
 
 # # create container for the robotone image
 # docker create -v $(pwd):/root-robotone --name cont_robotone robotone /bin/bash
+# docker run -v $(pwd):/root-robotone --name cont_robotone -it robotone /bin/bash &
 # wait
 
 # # start that container

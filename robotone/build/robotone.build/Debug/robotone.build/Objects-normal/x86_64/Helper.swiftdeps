@@ -7,18 +7,18 @@ provides-member:
 - ["C8robotone6Helper", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
-- !private "StringLiteralType"
-- !private "UnicodeScalarType"
-- "Int32"
-- !private "Process"
-- !private "Pipe"
-- !private "NSAlert"
-- "Bool"
-- "Helper"
-- !private "NSAlertFirstButtonReturn"
 - "AssignmentPrecedence"
 - !private "=="
+- !private "NSAlert"
+- !private "Process"
+- !private "Pipe"
+- "Bool"
+- "Int32"
+- !private "UnicodeScalarType"
+- !private "StringLiteralType"
+- "String"
+- "Helper"
+- !private "NSAlertFirstButtonReturn"
 depends-member:
 - !private ["Ps9AnyObject", "NSAlert"]
 - !private ["Ps9AnyObject", "NSAlertFirstButtonReturn"]

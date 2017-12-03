@@ -6,49 +6,47 @@ provides-nominal:
 provides-member:
 - ["C8robotone11AppDelegate", ""]
 provides-dynamic-lookup:
-- "pathToFile"
-- "window"
 - "resourcePaths"
-- "runDockerScript"
-- "applicationDidFinishLaunching"
-- "applicationWillTerminate"
-- "openSettings"
-- "settingsWindowController"
-- "plistPathInDocument"
 - "run_docker_image"
-- "openProblemsFile"
+- "runDockerScript"
+- "settingsWindowController"
 - "pwd"
+- "window"
+- "applicationWillTerminate"
+- "plistPathInDocument"
+- "pathToFile"
+- "openSettings"
+- "applicationDidFinishLaunching"
+- "openProblemsFile"
 - "browseFile"
 depends-top-level:
-- "SettingsWindowController"
-- "NSButton"
-- "NSObject"
-- "StringLiteralType"
+- "AssignmentPrecedence"
 - !private "FileManager"
-- !private "NSError"
-- "Notification"
-- !private "!="
-- "NSButtonCell"
+- !private "=="
 - "NSWindow"
-- "NSApplicationDelegate"
-- "NSTextFieldCell"
-- !private "BooleanLiteralType"
-- !private "NSSavePanel"
-- !private "!"
+- "CastingPrecedence"
+- "NSDictionary"
 - !private "NSModalResponseOK"
-- "String"
+- !private "NSSavePanel"
+- !private "Array"
+- "SettingsWindowController"
+- !private "!="
+- !private "!"
+- "NSTextFieldCell"
+- "Notification"
+- !private "Helper"
+- "NSObject"
 - !private "NSString"
+- !private "UnicodeScalarType"
+- !private "+"
+- "NSApplicationDelegate"
+- !private "BooleanLiteralType"
+- "String"
+- "StringLiteralType"
+- "NSButton"
 - "AppDelegate"
 - !private "NSSearchPathForDirectoriesInDomains"
-- !private "UnicodeScalarType"
-- !private "print"
-- !private "+"
-- !private "Helper"
-- !private "Array"
-- "NSDictionary"
-- "CastingPrecedence"
-- "AssignmentPrecedence"
-- !private "=="
+- "NSButtonCell"
 depends-member:
 - !private ["Ps9AnyObject", "FileManager"]
 - !private ["Ps9AnyObject", "Helper"]
@@ -97,9 +95,7 @@ depends-member:
 - ["Ps9AnyObject", "openSettings"]
 - ["Ps9AnyObject", "pathToFile"]
 - ["Ps9AnyObject", "plistPathInDocument"]
-- !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "pwd"]
-- !private ["Ps9AnyObject", "removeItem"]
 - ["Ps9AnyObject", "resourcePaths"]
 - ["Ps9AnyObject", "runDockerScript"]
 - !private ["Ps9AnyObject", "runModal"]
@@ -119,7 +115,6 @@ depends-member:
 - ["C8robotone11AppDelegate", "NSButton"]
 - ["C8robotone11AppDelegate", "NSButtonCell"]
 - ["C8robotone11AppDelegate", "NSDictionary"]
-- !private ["C8robotone11AppDelegate", "NSError"]
 - !private ["C8robotone11AppDelegate", "NSModalResponseOK"]
 - !private ["C8robotone11AppDelegate", "NSSavePanel"]
 - !private ["C8robotone11AppDelegate", "NSSearchPathForDirectoriesInDomains"]
@@ -158,7 +153,6 @@ depends-member:
 - ["C8robotone11AppDelegate", "openSettings"]
 - ["C8robotone11AppDelegate", "pathToFile"]
 - ["C8robotone11AppDelegate", "plistPathInDocument"]
-- !private ["C8robotone11AppDelegate", "print"]
 - ["C8robotone11AppDelegate", "pwd"]
 - ["C8robotone11AppDelegate", "resourcePaths"]
 - ["C8robotone11AppDelegate", "runDockerScript"]
@@ -248,9 +242,7 @@ depends-member:
 - ["Ps7CVarArg", "openSettings"]
 - ["Ps7CVarArg", "pathToFile"]
 - ["Ps7CVarArg", "plistPathInDocument"]
-- !private ["Ps7CVarArg", "print"]
 - ["Ps7CVarArg", "pwd"]
-- !private ["Ps7CVarArg", "removeItem"]
 - ["Ps7CVarArg", "resourcePaths"]
 - ["Ps7CVarArg", "runDockerScript"]
 - !private ["Ps7CVarArg", "runModal"]
@@ -266,7 +258,6 @@ depends-member:
 - ["Ps7CVarArg", "window"]
 - !private ["Ps7CVarArg", "windowDidLoad"]
 - ["Ps7CVarArg", ""]
-- !private ["Vs9Character", "deinit"]
 - !private ["Ps10Collection", "Element"]
 - !private ["Ps10Collection", "Index"]
 - !private ["Ps10Collection", "IndexDistance"]
@@ -328,9 +319,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "path"]
 - ["Ps28CustomDebugStringConvertible", "pathToFile"]
 - ["Ps28CustomDebugStringConvertible", "plistPathInDocument"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", "pwd"]
-- !private ["Ps28CustomDebugStringConvertible", "removeItem"]
 - ["Ps28CustomDebugStringConvertible", "resourcePaths"]
 - ["Ps28CustomDebugStringConvertible", "runDockerScript"]
 - !private ["Ps28CustomDebugStringConvertible", "runModal"]
@@ -418,9 +407,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "path"]
 - ["Ps23CustomStringConvertible", "pathToFile"]
 - ["Ps23CustomStringConvertible", "plistPathInDocument"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", "pwd"]
-- !private ["Ps23CustomStringConvertible", "removeItem"]
 - ["Ps23CustomStringConvertible", "resourcePaths"]
 - ["Ps23CustomStringConvertible", "runDockerScript"]
 - !private ["Ps23CustomStringConvertible", "runModal"]
@@ -446,7 +433,6 @@ depends-member:
 - !private ["Vs26DefaultRandomAccessIndices", "Iterator"]
 - !private ["Vs26DefaultRandomAccessIndices", "SubSequence"]
 - !private ["Vs26DefaultRandomAccessIndices", "_Element"]
-- !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "FileManager"]
 - !private ["Ps9Equatable", "Helper"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
@@ -498,9 +484,7 @@ depends-member:
 - !private ["Ps9Equatable", "path"]
 - ["Ps9Equatable", "pathToFile"]
 - ["Ps9Equatable", "plistPathInDocument"]
-- !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", "pwd"]
-- !private ["Ps9Equatable", "removeItem"]
 - ["Ps9Equatable", "resourcePaths"]
 - ["Ps9Equatable", "runDockerScript"]
 - !private ["Ps9Equatable", "runModal"]
@@ -543,8 +527,6 @@ depends-member:
 - !private ["CSo11FileManager", "default"]
 - ["CSo11FileManager", "deinit"]
 - !private ["CSo11FileManager", "fileExists"]
-- !private ["CSo11FileManager", "removeItem"]
-- !private ["Sf", "deinit"]
 - !private ["Ps8Hashable", "FileManager"]
 - !private ["Ps8Hashable", "Helper"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
@@ -596,9 +578,7 @@ depends-member:
 - !private ["Ps8Hashable", "path"]
 - ["Ps8Hashable", "pathToFile"]
 - ["Ps8Hashable", "plistPathInDocument"]
-- !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "pwd"]
-- !private ["Ps8Hashable", "removeItem"]
 - ["Ps8Hashable", "resourcePaths"]
 - ["Ps8Hashable", "runDockerScript"]
 - !private ["Ps8Hashable", "runModal"]
@@ -637,10 +617,7 @@ depends-member:
 - !private ["Si", "Stride"]
 - !private ["Si", "_DisabledRangeIndex"]
 - ["Si", "deinit"]
-- !private ["Vs5Int16", "deinit"]
 - ["Vs5Int32", "deinit"]
-- !private ["Vs5Int64", "deinit"]
-- !private ["Vs4Int8", "deinit"]
 - !private ["Ps7Integer", "IntegerLiteralType"]
 - !private ["Ps7Integer", "Stride"]
 - !private ["Ps7Integer", "_DisabledRangeIndex"]
@@ -731,7 +708,6 @@ depends-member:
 - ["PSo21NSApplicationDelegate", "applicationWillUpdate"]
 - !private ["PSo21NSApplicationDelegate", "pathToFile"]
 - !private ["PSo21NSApplicationDelegate", "plistPathInDocument"]
-- !private ["PSo21NSApplicationDelegate", "print"]
 - !private ["PSo21NSApplicationDelegate", "pwd"]
 - !private ["PSo21NSApplicationDelegate", "resourcePaths"]
 - !private ["PSo21NSApplicationDelegate", "runDockerScript"]
@@ -767,7 +743,6 @@ depends-member:
 - !private ["PSo9NSCopying", "stringValue"]
 - !private ["CSo12NSDictionary", "init"]
 - !private ["CSo12NSDictionary", "object"]
-- ["CSo7NSError", "deinit"]
 - !private ["PSo17NSFastEnumeration", "init"]
 - !private ["PSo17NSFastEnumeration", "object"]
 - !private ["PSo20NSFetchRequestResult", "init"]
@@ -782,7 +757,6 @@ depends-member:
 - ["CSo8NSObject", "NSButton"]
 - ["CSo8NSObject", "NSButtonCell"]
 - ["CSo8NSObject", "NSDictionary"]
-- !private ["CSo8NSObject", "NSError"]
 - !private ["CSo8NSObject", "NSModalResponseOK"]
 - !private ["CSo8NSObject", "NSSavePanel"]
 - !private ["CSo8NSObject", "NSSearchPathForDirectoriesInDomains"]
@@ -831,9 +805,7 @@ depends-member:
 - ["CSo8NSObject", "openSettings"]
 - ["CSo8NSObject", "pathToFile"]
 - ["CSo8NSObject", "plistPathInDocument"]
-- !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "pwd"]
-- !private ["CSo8NSObject", "removeItem"]
 - ["CSo8NSObject", "resourcePaths"]
 - ["CSo8NSObject", "runDockerScript"]
 - !private ["CSo8NSObject", "runModal"]
@@ -893,9 +865,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "openSettings"]
 - ["PSo16NSObjectProtocol", "pathToFile"]
 - ["PSo16NSObjectProtocol", "plistPathInDocument"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "pwd"]
-- !private ["PSo16NSObjectProtocol", "removeItem"]
 - ["PSo16NSObjectProtocol", "resourcePaths"]
 - ["PSo16NSObjectProtocol", "runDockerScript"]
 - !private ["PSo16NSObjectProtocol", "runModal"]
@@ -1074,14 +1044,8 @@ depends-member:
 - ["SS", "init"]
 - ["Ps16TextOutputStream", "init"]
 - ["Ps20TextOutputStreamable", "init"]
-- !private ["Su", "deinit"]
-- !private ["Vs6UInt16", "deinit"]
-- !private ["Vs6UInt32", "deinit"]
-- !private ["Vs6UInt64", "deinit"]
-- !private ["Vs5UInt8", "deinit"]
 - ["V10Foundation3URL", "deinit"]
 - !private ["V10Foundation3URL", "path"]
-- !private ["Sc", "deinit"]
 - !private ["Ps14_ArrayProtocol", "Element"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "SubSequence"]
@@ -1154,9 +1118,7 @@ depends-member:
 - !private ["Ps9_Hashable", "path"]
 - ["Ps9_Hashable", "pathToFile"]
 - ["Ps9_Hashable", "plistPathInDocument"]
-- !private ["Ps9_Hashable", "print"]
 - ["Ps9_Hashable", "pwd"]
-- !private ["Ps9_Hashable", "removeItem"]
 - ["Ps9_Hashable", "resourcePaths"]
 - ["Ps9_Hashable", "runDockerScript"]
 - !private ["Ps9_Hashable", "runModal"]
@@ -1207,7 +1169,6 @@ depends-nominal:
 - !private "Ps17BitwiseOperations"
 - "Sb"
 - "Ps7CVarArg"
-- !private "Vs9Character"
 - !private "Ps10Collection"
 - "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
@@ -1216,7 +1177,6 @@ depends-nominal:
 - "Ps23CustomStringConvertible"
 - !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
-- !private "Sd"
 - "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
@@ -1227,7 +1187,6 @@ depends-nominal:
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
 - "CSo11FileManager"
-- !private "Sf"
 - "Ps8Hashable"
 - !private "C8robotone6Helper"
 - "SQ"
@@ -1235,10 +1194,7 @@ depends-nominal:
 - !private "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
 - "Si"
-- !private "Vs5Int16"
 - "Vs5Int32"
-- !private "Vs5Int64"
-- !private "Vs4Int8"
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
@@ -1257,7 +1213,6 @@ depends-nominal:
 - "PSo8NSCoding"
 - "PSo9NSCopying"
 - !private "CSo12NSDictionary"
-- "CSo7NSError"
 - !private "PSo17NSFastEnumeration"
 - !private "PSo20NSFetchRequestResult"
 - "PSo16NSMutableCopying"
@@ -1298,13 +1253,7 @@ depends-nominal:
 - "SS"
 - "Ps16TextOutputStream"
 - "Ps20TextOutputStreamable"
-- !private "Su"
-- !private "Vs6UInt16"
-- !private "Vs6UInt32"
-- !private "Vs6UInt64"
-- !private "Vs5UInt8"
 - "V10Foundation3URL"
-- !private "Sc"
 - !private "Ps14_ArrayProtocol"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"

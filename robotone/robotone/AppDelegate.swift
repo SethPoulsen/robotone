@@ -60,11 +60,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let (_,_,_) = Helper.executeBashCommand(cmd: "/bin/cp", args: "-f",
                                                     pwd + "/build/robotone.tex", pathToFile.stringValue)
 
-            let (_,_,_) = Helper.executeBashCommand(cmd: "/bin/cp",
-                                                    args: "-f", pwd + "/build/robotone.tex", fileName)
-            
-            let (_,_,_) = Helper.executeBashCommand(cmd: xelatex,
-                                                    args: "\\input{" + fileName + "}")
+//            let (_,_,_) = Helper.executeBashCommand(cmd: "/bin/cp",
+//                                                    args: "-f", pwd + "/build/robotone.tex", fileName)
+//            
+//            let (_,_,_) = Helper.executeBashCommand(cmd: xelatex,
+//                                                    args: "\\input{" + fileName + "}")
+//            let (_,_,_) = Helper.executeBashCommand(cmd: xelatex,
+//                                                    args: "\\input{" + pathToFile.stringValue + "}")
 //            print(s2)
             
             let pdfFileName = (fileName as NSString).deletingPathExtension + ".pdf"
@@ -73,21 +75,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                                     args: "-f", pdfFileName, dir + pdfFileName)
 //            print(s3)
             
-            let (_,_,_) = Helper.executeBashCommand(cmd: "/usr/bin/open", args: dir + pdfFileName)
+            let (_,_,_) = Helper.executeBashCommand(cmd: "/usr/bin/open", args: pathToFile.stringValue)
             
             // clean temp files
-            let fileManager = FileManager.default
-            
-            do {
-                let bareFileName = (fileName as NSString).deletingPathExtension
-                try fileManager.removeItem(atPath: bareFileName + ".pdf")
-                try fileManager.removeItem(atPath: bareFileName + ".tex")
-                try fileManager.removeItem(atPath: bareFileName + ".log")
-                try fileManager.removeItem(atPath: bareFileName + ".aux")
-            }
-            catch let error as NSError {
-                print("Ooops! Something went wrong: \(error)")
-            }
+//            let fileManager = FileManager.default
+//            
+//            do {
+//                let bareFileName = (fileName as NSString).deletingPathExtension
+//                try fileManager.removeItem(atPath: bareFileName + ".pdf")
+//                try fileManager.removeItem(atPath: bareFileName + ".tex")
+//                try fileManager.removeItem(atPath: bareFileName + ".log")
+//                try fileManager.removeItem(atPath: bareFileName + ".aux")
+//            }
+//            catch let error as NSError {
+//                print("Ooops! Something went wrong: \(error)")
+//            }
             
         }
         else {

@@ -86,14 +86,22 @@ class SettingsWindowController: NSWindowController {
         let pwd = resourcePaths?.object(forKey: "pwd") as! String
         
         // #docker build -t robotone . # building new Docker image
-        let (_,_,s1) = Helper.executeBashCommand(cmd: docker, args: "build", "-f", pwd + "/Dockerfile", "-t", "robotone")
+        let (_,e1,s1) = Helper.executeBashCommand(cmd: docker, args: "build", "--file", pwd + "/Dockerfile", "-t", "robotone", pwd)
         
         // # docker create -v $(pwd):/root-robotone --name cont_robotone robotone /bin/bash
-        let (_,_,s2) = Helper.executeBashCommand(cmd: docker, args: "create", "-v", pwd + ":/root-robotone", "--name", "cont_robotone", "robotone", "bin/bash")
+        // docker run -v $(pwd):/root-robotone --name cont_robotone -it robotone /bin/bash &
+        let (_,e2,s2) = Helper.executeBashCommand(cmd: docker, args: "create", "-v", pwd + ":/root-robotone", "--name", "cont_robotone", "robotone", "/bin/bash")
         
         // # docker container start cont_robotone
-        let (_,_,s3) = Helper.executeBashCommand(cmd: docker, args: "container", "start", "cont_robotone")
-        
+        let (_,e3,s3) = Helper.executeBashCommand(cmd: docker, args: "container", "start", "cont_robotone")
+//        let task = Process()
+//        task.launchPath = docker
+//        task.arguments = ["container", "start", "cont_robotone"]
+//        task.launch()
+//
         print(s1, s2, s3)
+        print(e1)
+        print(e2)
+        print(e3)
     }
 }
