@@ -59,7 +59,7 @@ problems = [iffInjectionThenfAcapfBsubsetfAcapB,
 iffInjectionThenfAcapfBsubsetfAcapB = Problem
     "If $f$ is an injection then $f(A)\\cap f(B)\\subset f(A\\cap B)$"
         ["injection(f)"]
-        "subsetof(intersect(image(f,A),image(f,B)),image(f,intersect(A,B)))""
+        "subsetof(intersect(image(f,A),image(f,B)),image(f,intersect(A,B)))"
 
 ifGandFareInjectionsThenGoFisInjection = Problem --New
     "If $g,f$ are injections then $(g \\circ f)$ is an injection."
