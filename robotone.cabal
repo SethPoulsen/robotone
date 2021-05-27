@@ -15,7 +15,7 @@ executable robotone
     hs-source-dirs: src
     other-modules: Writeup Types TidyingMoves TexBase Tex TestData TestData2
                    Suspension RobotM Rename Printing Parser Move Match Library
-                   Expansion DeletionMoves ApplyingMoves
+                   Expansion DeletionMoves ApplyingMoves Problems RealAnalysis
     ghc-options: -fwarn-unused-binds
  
 test-suite test-robotone
