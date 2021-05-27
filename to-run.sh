@@ -1,10 +1,4 @@
 # Steps to run
-
-docker container start cont_robotone
-
-docker exec -t -i cont_robotone /bin/bash
-
-# Now in the docker container shell do...
-
-cabal build robotone
-runghc Main.hs ../build/all.tex
+stack build robotone
+cd src
+stack runghc Main.hs all.tex # (or whatever other tex file name you want)
