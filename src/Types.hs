@@ -9,6 +9,7 @@ import Control.Applicative
 import Data.Functor.Identity
 import Control.Monad
 import Control.Monad.Writer.Lazy (Writer, tell, runWriter)
+import Control.Monad.Writer.Class (MonadWriter)
 import Data.Monoid
 import Data.List
 import Debug.Trace
@@ -23,7 +24,7 @@ data Predicate = Predicate String                                           deri
 type ID = Int
 type HasBullet = Bool  --TODO: rename to isKey/hasDagger
 
-data Type_ = TPoint | TSet | TFunction | TPositiveRealNumber | TSequence | TNaturalNumber | TGroup | TRealNumber 
+data Type_ = TPoint | TSet | TFunction | TPositiveRealNumber | TSequence | TNaturalNumber | TGroup | TRealNumber
                                                                             deriving (Eq, Ord, Show)
 data VariableType = VTNormal | VTDiamond | VTBullet                         deriving (Eq, Ord, Show)
 
@@ -311,11 +312,13 @@ mapDirectFormulaInTableau = nonmonadic mapDirectFormulaInTableauM
 mapFormulaInTableau = nonmonadic mapFormulaInTableauM
 
 ----------------------------------------------------------------------------------------------------
+writef :: MonadWriter w m => (a -> w) -> a -> m a
+writef f = liftM2 (>>) (tell . f) return
 
-accumulate :: forall w. forall a. forall b. (Monoid w) => ((a -> Writer w a) -> b-> Writer w b) -> (a -> w) -> b -> w
-accumulate mm f = snd . runWriter . mm write
-  where write :: a -> Writer w a
-        write = liftM2 (>>) (tell . f) return
+accumulate :: forall w. forall a. forall b. (Monoid w) => ((a -> Writer w a) -> b -> Writer w b) -> (a -> w) -> b -> w
+accumulate mm f = snd . runWriter . mm (writef f)
+--   where write :: c -> Writer w c
+--         write = liftM2 (>>) (tell . f) return
 
 accumulateVariable = accumulate mapVariableM
 accumulateTerm = accumulate mapTermM

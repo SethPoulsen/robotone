@@ -64,7 +64,7 @@ intersectionSubgroupsClosed = Problem
         ["subgroup(H)","subgroup(K)"]
         "forall x y.(in(x,intersect(H,K)) & in(y,intersect(H,K)) => in(product(x,y),intersect(H,K)))"
 
-problems = [negativeEx1,
+problems = [-- negativeEx1,
             iffInjectionThenfAcapfBsubsetfAcapB,
             intersectionOpenSets,
             continuousPreimageOpen,

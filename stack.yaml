@@ -12,7 +12,24 @@
 # resolver: nightly-2015-09-21
 # resolver: ghc-7.8.4
 # resolver: ghc-7.10.2
-resolver: lts-3.22
+
+resolver: lts-17.13 # for ghc-8.10.4, published 2 days ago
+# resolver: lts-17.2  # for ghc-8.10.3, published 4 months ago
+# resolver: lts-16.31 # for ghc-8.8.4, published 4 months ago
+# resolver: lts-16.11 # for ghc-8.8.3, published 9 months ago
+# resolver: lts-15.3  # for ghc-8.8.2, published a year ago
+# resolver: lts-14.27 # for ghc-8.6.5, published a year ago
+# resolver: lts-13.19 # for ghc-8.6.4, published 2 years ago
+# resolver: lts-13.11 # for ghc-8.6.3, published 2 years ago
+# resolver: lts-12.26 # for ghc-8.4.4, published 2 years ago
+# resolver: lts-12.14 # for ghc-8.4.3, published 3 years ago
+# resolver: lts-11.22 # for ghc-8.2.2, published 3 years ago
+# resolver: lts-9.21  # for ghc-8.0.2, published 3 years ago
+# resolver: lts-7.24  # for ghc-8.0.1, published 4 years ago
+# resolver: lts-6.35  # for ghc-7.10.3, published 4 years ago
+# resolver: lts-3.22  # for ghc-7.10.2, published 5 years ago
+# resolver: lts-2.22  # for ghc-7.8.4, published 6 years ago
+# resolver: lts-0.7   # for ghc-7.8.3, published 7 years ago
 
 #
 # The location of a snapshot can be provided as a file or url. Stack assumes
@@ -37,44 +54,12 @@ packages:
 # These entries can reference officially published versions as well as
 # forks / in-progress versions pinned to a git hash. For example:
 #
-extra-deps:
-- QuickCheck-2.14.2
-- logict-0.6.0.2
-- mtl-2.1.3.1
-- parsec-3.1.14.0
-
-- fail-4.9.0.0@sha256:35d1ee29364447c1b7d616bb1ee31f162b73e85fea91d7ca6441cf901398f572,1051
-- random-1.2.0@sha256:30d72df4cc1d2fe2d445c88f0ee9d21965af7ce86660c43a6c32a6a1d90d51c9,6094
-- semigroups-0.19.1@sha256:ecae129621e0d2f77bef2f01e4458c2e0567ab6e1f39579c61d7cec8058ebb0e,6262
-- splitmix-0.1.0.3@sha256:fc3aae74c467f4b608050bef53aec17904a618731df9407e655d8f3bf8c32d5c,6049
-
-
-
-# - fail-4.9.0.0@sha256:35d1ee29364447c1b7d616bb1ee31f162b73e85fea91d7ca6441cf901398f572,1051
-# - random-1.2.0@sha256:30d72df4cc1d2fe2d445c88f0ee9d21965af7ce86660c43a6c32a6a1d90d51c9,6094
-# - semigroups-0.19.1@sha256:ecae129621e0d2f77bef2f01e4458c2e0567ab6e1f39579c61d7cec8058ebb0e,6262
-# - splitmix-0.1.0.3@sha256:fc3aae74c467f4b608050bef53aec17904a618731df9407e655d8f3bf8c32d5c,6049
-# - text-1.2.4.1@sha256:e12b468008b3c2bbc1f39bd2dcb75ba8f563c65aa5e54ee223b76463a845b6f1,7184
-
-
-
-# - QuickCheck-2.14.2@sha256:4ce29211223d5e6620ebceba34a3ca9ccf1c10c0cf387d48aea45599222ee5aa,7736
+# extra-deps:
+# - QuickCheck-2.14.2
 # - logict-0.6.0.2
-# - mtl-2.2.2@sha256:1050fb71acd9f5d67da7d992583f5bd0eb14407b9dc7acc122af1b738b706ca3,2261
-# - parsec-3.1.14.0@sha256:72d5c57e6e126adaa781ab97b19dc76f68490c0a3d88f14038219994cabe94e1,4356
+# - mtl-2.1.3.1
+# - parsec-3.1.14.0
 
-# - fail-4.9.0.0@sha256:35d1ee29364447c1b7d616bb1ee31f162b73e85fea91d7ca6441cf901398f572,1051
-# - random-1.2.0@sha256:30d72df4cc1d2fe2d445c88f0ee9d21965af7ce86660c43a6c32a6a1d90d51c9,6094
-# - semigroups-0.19.1@sha256:ecae129621e0d2f77bef2f01e4458c2e0567ab6e1f39579c61d7cec8058ebb0e,6262
-# - splitmix-0.1.0.3@sha256:fc3aae74c467f4b608050bef53aec17904a618731df9407e655d8f3bf8c32d5c,6049
-# - text-1.2.4.1@sha256:e12b468008b3c2bbc1f39bd2dcb75ba8f563c65aa5e54ee223b76463a845b6f1,7184
-
-# - hashable-1.3.2.0@sha256:02bc544e3546713b1d76a3c5bfc836a5fd19a5b4348ef4a52bb973d0c35a4b89,3992
-# - tagged-0.8.6.1@sha256:5ddf1e324c3cd644f097a48bf490f0bedf467f723fd240afb3ab3b750577f8e7,2874
-# - transformers-compat-0.6.6@sha256:510709db2b12d1510d70de824ee544ca0a9e6f27aa7e299218cbacc0750b4a5e,5560
-# - unordered-containers-0.2.14.0@sha256:2fe789f78246b7c7ec10d7b85c72d898a9f72fdda5b60d581e839d21016bc628,4992
-
-# - generic-deriving-1.14@sha256:c9c6782a3cdce2f2bcaf891e0ffbf06df871e68498574b73a565771dc084273c,6835
 
 # - acme-missiles-0.3
 # - git: https://github.com/commercialhaskell/stack.git

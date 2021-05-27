@@ -171,9 +171,12 @@ extractEquations (Exists vs f) (Exists v's f') = do
 extractEquations _ _ = Nothing
 
 
+helper :: Variable -> Term -> [Bool]
+helper v = accumulateVariableInTerm (return . (== v))
+
 --TODO: rewrite occursIn using the Any monoid
 occursIn :: Variable -> Term -> Bool
-occursIn v = or . accumulateVariableInTerm (return . (== v))
+occursIn v = or . helper v
 
 --we don't want the matching algorithm to recurse into dependencies, so we will simply strip them out
 removeDependencies :: Variable -> Variable
