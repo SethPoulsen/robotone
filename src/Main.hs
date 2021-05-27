@@ -13,7 +13,6 @@ import qualified Data.Map as Map
 import Data.Map (Map)
 import Data.List
 import Control.Monad.Logic
-import Control.Monad.Trans.List
 import Control.Monad.Trans.State.Lazy
 import Control.Monad.Identity hiding (msum)
 
@@ -183,12 +182,12 @@ main = do
     [filepath] <- getArgs
     output <- openFile filepath WriteMode
     hDuplicateTo output stdout
-    
+
     putStrLn texHeader
 
     -- Maps the function <attemptProblem> to each element in array <problems>
     mapM_ attemptProblem Problems.problems
-    
+
     putStrLn texFooter
 
 -- main = do
@@ -196,7 +195,7 @@ main = do
 
 --     -- Maps the function <attemptProblem> to each element in array Problems.problems
 --     mapM_ attemptProblem Problems.problems
-    
+
 --     putStrLn texFooter
 
 ----------------------------------------------------------------------------------------------------

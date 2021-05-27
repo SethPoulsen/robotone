@@ -6,7 +6,6 @@ import Control.Applicative
 import Control.Arrow
 --import Control.Monad.RWS hiding (msum)
 import Control.Monad.Logic hiding (msum)
-import Control.Monad.Trans.List
 import Control.Monad.Trans.State.Lazy
 import Control.Monad.Identity hiding (msum)
 --import Control.Monad
