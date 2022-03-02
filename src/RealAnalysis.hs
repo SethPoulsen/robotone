@@ -55,10 +55,17 @@ expansionTableSource = [
     ("decreasing(an)", "forall m n.(lessthan(m,n) => lessthan(kthterm(an, n), kthterm(an, m)))"), --new
     ("monotone(an)", "increasing(an) | decreasing(an)"),--new
     ("sup(s, A)", "forall a.(in(a, A) => lessthan(a, s)) & forall v.(lessthan(v, s) => exists b.(in(b, A) & lessthan(v, b)))"), -- new
-    ("inf(s, A)", "forall a.(in(a, A) => lessthan(s, A)) & forall v.(lessthan(s, v) => exists b.(in(b, A) & lessthan(b, v)))") -- new
+    ("inf(s, A)", "forall a.(in(a, A) => lessthan(s, A)) & forall v.(lessthan(s, v) => exists b.(in(b, A) & lessthan(b, v)))"), -- new
     
     --("surjection(f)","forall y.(exists x.(equals(applyfn(f,x), y)))"),
 --    ("isEmptySet(A)", "forall x.(notin(x, A))")
+
+    --- Number Theory ---
+    -- forall q : Z, b = (q * a)%Z -> divide a b.
+    -- ("divides(n, m)", "exists k.(equals(product(n, k), m))"),
+    ("divides(n, m)", "forall k.(equals(product(n, k), m) => divides(n, m))"),
+    ("even(m)", "exists n.(equals(sum(n, n), m))"), 
+    ("sum(product(n, k), product(m, k))", "product(sum(n, m), k)")
     ]
 
 expansionTable :: [(FormulaWithSlots, Formula)]
@@ -172,7 +179,25 @@ library = Library [
     Result "" [
         parse formula "in(x, complement(A))",
         parse formula "in(x, complement(B))"]
-        (parse formula "notin(x, union(A, B))")
+        (parse formula "notin(x, union(A, B))"),
+    Result "" [
+        parse formula "notin(x, union(A, B))" ]
+        (parse formula "and(in(x, complement(A)), in(x, complement(B)))"),
+    -- Result "" [
+    --     parse formula "equals(n, m)" ]
+    --     (parse formula "equals(m, n)"),
+    Result "" [
+        parse formula "equals(n, m)",
+        parse formula "equals(l, k)"]
+        (parse formula "equals(sum(n, l), sum(m, k))"),
+    -- Result "" [
+    --     -- parse formula "equals(n, m)",
+    --     parse formula "equals(l, k)"]
+    --     (parse formula "equals(product(n, l), product(n, k))"),
+    Result "" [
+        -- parse formula "equals(n, m)",
+        parse formula "equals(product(n, l), product(n, k))"]
+        (parse formula "equals(l, k)")
     ]
 -- library = Library [
 --     Result "" [

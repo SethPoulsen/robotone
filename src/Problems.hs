@@ -49,7 +49,28 @@ problems = [iffInjectionThenfAcapfBsubsetfAcapB,
             compOfIntersectionEqualsUnionOfComps2,
             compOfUnionEqualsIntersectionOfComps1,
             intersection3OpenSets,
-            unionClosedSets
+            unionClosedSets, 
+
+            --Number Theory
+            -- evenNumber, 
+            -- divideMultLeft, 
+            -- dividePlus
+            -- , dividesOne
+
+            -- Extra Set Theory
+            -- demorgans1,
+            demorgans2,
+            -- demorgans3,
+            -- demorgans4,
+
+            unionSubsetBiggerUnion,
+            -- intersectSubsetSmallerIntersect, 
+
+
+            intersectionDistributivity1, 
+            -- intersectionDistributivity2, 
+            -- unionDistributivity1, 
+            unionDistributivity2
            ]
 ----------------------------------------------------------------------
 -- INJECTION & SURJECTION FUNCTIONS PROOFS ------------------------------
@@ -224,3 +245,85 @@ continuousFunctionsPreserveLimits = Problem
     "tendsto(an,a)"]
     "tendsto(applyfnpointwise(f,an),applyfn(f,a))"
 
+
+----------------------------------------------------------------------
+-- NUMBER THEORY PROOFS ------------------------------
+----------------------------------------------------------------------
+evenNumber = Problem 
+    "If n is a natural number, 2 * n is even"
+   ["equals(m, sum(n, n))"]
+    "even(m)"
+
+divideMultLeft = Problem 
+    "If n | m, then ln | lm"
+   ["divides(n, m)"]
+    "divides(product(l, n), product(l, m))"
+
+dividePlus = Problem 
+    "If "
+    ["divides(n, m)", 
+    "divides(n, k)"]
+    "divides(n, sum(m, k))"
+
+-- dividesOne = Problem 
+--     "If "
+--     []
+--     "divides(1, n)"
+
+
+
+----------------------------------------------------------------------
+-- More Set THEORY PROOFS ------------------------------
+----------------------------------------------------------------------
+
+demorgans1 = Problem 
+    ""
+    []
+    "subsetof(complement(union(A, B)), intersect(complement(A), complement(B)))"
+
+demorgans2 = Problem 
+    "$A^c \\cap B^c \\subset (A \\cup B)^c$"--"Partial De Morgan's Law"
+    []
+    "subsetof(intersect(complement(A), complement(B)), complement(union(A, B)))"
+
+demorgans3 = Problem 
+    ""
+    []
+    "subsetof(complement(intersect(A, B)), union(complement(A), complement(B)))"
+
+demorgans4 = Problem 
+    ""
+    []
+    "subsetof(union(complement(A), complement(B)), complement(intersect(A, B)))"
+
+
+unionSubsetBiggerUnion = Problem 
+    "$A \\cup B \\subset A \\cup B \\cup C$"--"The Union of Sets is the Subset of a Bigger Union"
+    []
+    "subsetof(union(A, B), union(A, union(B, C)))"
+
+intersectSubsetSmallerIntersect = Problem 
+    ""
+    []
+    "subsetof(intersect(A, intersect(B,C)), intersect(A, B))"
+
+
+intersectionDistributivity1 = Problem 
+    "$A \\cap (B \\cup C) \\subset (A \\cap B) \\cup (A \\cap C)$"--"Distributivity of Intersection" 
+    []
+    "subsetof(intersect(A, union(B, C)), union(intersect(A, B), intersect(A, C)))"
+
+intersectionDistributivity2 = Problem 
+    "" 
+    []
+    "subsetof(union(intersect(A, B), intersect(A, C)), intersect(A, union(B, C)))"
+
+unionDistributivity1 = Problem 
+    "" 
+    []
+    "subsetof(union(A, intersect(B, C)), intersect(union(A, B), union(A, C)))"
+
+unionDistributivity2 = Problem 
+    "$(A \\cup B) \\cap (A \\cap C) \\subset A \\cup (B \\cap C)$" --"Distributivity of Union" 
+    []
+    "subsetof(intersect(union(A, B), union(A, C)), union(A, intersect(B, C)))"
